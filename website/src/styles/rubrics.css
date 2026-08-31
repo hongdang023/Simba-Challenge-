@@ -136,12 +136,14 @@
   color: var(--color-midnight-blue);
   cursor: pointer;
   text-align: left;
+  gap: var(--space-md);
 }
 
 .rubric-toggle-icon {
   font-size: 0.75rem;
   color: var(--color-text-muted);
   transition: transform var(--transition-normal);
+  flex-shrink: 0;
 }
 
 .rubric-item.open .rubric-toggle-icon {
@@ -158,11 +160,16 @@
   display: block;
 }
 
-/* 5 Levels Grid Matrix (Exact match to Simba photo 3) */
+/* 5 Levels Grid Matrix */
 .rubric-levels-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
+}
+
+/* 4 Levels Grid Matrix for Video Rubric */
+.rubric-levels-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .rubric-level-card {
@@ -192,7 +199,7 @@
   margin: 0;
 }
 
-/* Highlight level 4 */
+/* Highlight highest level card */
 .rubric-level-card:last-child {
   background: #FFF9EE;
   border-color: var(--color-savannah-gold);
@@ -202,39 +209,13 @@
   color: var(--color-sunset-orange);
 }
 
-/* 4F Reflection Blocks */
-.rubric-reflection-container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xl);
-}
-
-.rubric-reflection-block {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-}
-
-.rubric-reflection-block__header {
-  margin-bottom: var(--space-md);
-}
-
-.rubric-reflection-block__header h4 {
-  color: var(--color-midnight-blue);
-  margin-bottom: 2px;
-}
-
-.rubric-reflection-block__header p {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
 /* Responsive Rubrics Grid */
 @media (max-width: 1023px) {
   .rubric-levels-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .rubric-levels-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -249,7 +230,8 @@
     justify-content: center;
   }
 
-  .rubric-levels-grid {
+  .rubric-levels-grid,
+  .rubric-levels-grid--4 {
     grid-template-columns: 1fr;
   }
 }

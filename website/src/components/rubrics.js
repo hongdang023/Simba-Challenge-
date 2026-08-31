@@ -3,7 +3,7 @@ import { t } from '../i18n.js';
 
 /**
  * Dedicated Page 2: Tiêu chuẩn đánh giá (Assessment Rubrics).
- * Clean header with no badge tag above title.
+ * Supports toggle accordion on all 3 Tabs (Website, Reflection, Video).
  */
 export function renderRubricsPage() {
   const page = document.createElement('div');
@@ -13,7 +13,7 @@ export function renderRubricsPage() {
   page.innerHTML = `
     <section class="section rubrics-section">
       <div class="container">
-        <!-- Clean Centered Aligned Header (No tag badge) -->
+        <!-- Clean Centered Aligned Header -->
         <div class="section-header">
           <h2 data-i18n="rubrics.heading">${t('rubrics.heading')}</h2>
           <p class="text-muted" style="max-width: 650px; margin: var(--space-xs) auto 0; font-size: var(--font-size-base);" data-i18n="rubrics.intro">
@@ -77,56 +77,64 @@ export function renderRubricsPage() {
           `).join('')}
         </div>
 
-        <!-- Tab 2: 4F Reflection -->
+        <!-- Tab 2: 4F Reflection (Collapsible Accordion) -->
         <div class="rubrics-tab-content" id="tab-reflection">
           <div class="rubrics-header-card">
             <h4>${RUBRICS_DATA.reflection.title}</h4>
             <p>${RUBRICS_DATA.reflection.desc}</p>
           </div>
 
-          <div class="rubric-reflection-container">
+          <div class="rubric-items-container">
             ${RUBRICS_DATA.reflection.criteria.map((crit, idx) => `
-              <div class="rubric-reflection-block">
-                <div class="rubric-reflection-block__header">
-                  <h4>${crit.title}</h4>
-                  <p>${crit.desc}</p>
-                </div>
-                
-                <div class="rubric-levels-grid">
-                  ${crit.levels.map(lvl => `
-                    <div class="rubric-level-card">
-                      <div class="rubric-level-card__title">${lvl.lvl}</div>
-                      <p class="rubric-level-card__desc">${lvl.text}</p>
-                    </div>
-                  `).join('')}
+              <div class="rubric-item ${idx === 0 ? 'open' : ''}">
+                <button class="rubric-item__header" type="button" aria-expanded="${idx === 0 ? 'true' : 'false'}">
+                  <div>
+                    <span style="font-weight: 700;">${crit.title}</span>
+                    <span style="font-size: 0.8125rem; font-weight: 400; color: var(--color-text-muted); margin-left: 8px;">— ${crit.desc}</span>
+                  </div>
+                  <span class="rubric-toggle-icon">▼</span>
+                </button>
+                <div class="rubric-item__body">
+                  <div class="rubric-levels-grid">
+                    ${crit.levels.map(lvl => `
+                      <div class="rubric-level-card">
+                        <div class="rubric-level-card__title">${lvl.lvl}</div>
+                        <p class="rubric-level-card__desc">${lvl.text}</p>
+                      </div>
+                    `).join('')}
+                  </div>
                 </div>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Tab 3: Video -->
+        <!-- Tab 3: Video (Official 4 Criteria with Level 1 to 4 Collapsible Accordion) -->
         <div class="rubrics-tab-content" id="tab-video">
           <div class="rubrics-header-card">
             <h4>${RUBRICS_DATA.video.title}</h4>
             <p>${RUBRICS_DATA.video.desc}</p>
           </div>
 
-          <div class="rubric-reflection-container">
+          <div class="rubric-items-container">
             ${RUBRICS_DATA.video.criteria.map((crit, idx) => `
-              <div class="rubric-reflection-block">
-                <div class="rubric-reflection-block__header">
-                  <h4>${crit.title}</h4>
-                  <p>${crit.desc}</p>
-                </div>
-                
-                <div class="rubric-levels-grid">
-                  ${crit.levels.map(lvl => `
-                    <div class="rubric-level-card">
-                      <div class="rubric-level-card__title">${lvl.lvl}</div>
-                      <p class="rubric-level-card__desc">${lvl.text}</p>
-                    </div>
-                  `).join('')}
+              <div class="rubric-item ${idx === 0 ? 'open' : ''}">
+                <button class="rubric-item__header" type="button" aria-expanded="${idx === 0 ? 'true' : 'false'}">
+                  <div>
+                    <span style="font-weight: 700;">${crit.title}</span>
+                    <span style="font-size: 0.8125rem; font-weight: 400; color: var(--color-text-muted); margin-left: 8px;">— ${crit.desc}</span>
+                  </div>
+                  <span class="rubric-toggle-icon">▼</span>
+                </button>
+                <div class="rubric-item__body">
+                  <div class="rubric-levels-grid rubric-levels-grid--4">
+                    ${crit.levels.map(lvl => `
+                      <div class="rubric-level-card">
+                        <div class="rubric-level-card__title">${lvl.lvl}</div>
+                        <p class="rubric-level-card__desc">${lvl.text}</p>
+                      </div>
+                    `).join('')}
+                  </div>
                 </div>
               </div>
             `).join('')}
@@ -157,7 +165,7 @@ export function renderRubricsPage() {
     });
   });
 
-  // Accordion toggle in Website tab
+  // Accordion toggle on ALL rubric items across all tabs
   page.querySelectorAll('.rubric-item__header').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.rubric-item');

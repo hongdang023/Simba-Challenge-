@@ -1,5 +1,6 @@
 /**
  * Detailed Assessment Rubrics Data for Website, 4F Reflection, and Video.
+ * Official Video Rubrics updated with 4 Criteria (Level 1 to Level 4).
  */
 
 export const RUBRICS_DATA = {
@@ -101,8 +102,8 @@ export const RUBRICS_DATA = {
             levels: [
               { lvl: '0. Novice', text: 'Không giải thích lý do chọn domain hay chọn người xem.' },
               { lvl: '1. Beginner', text: 'Giải thích ngắn ngủn, thiếu chiều sâu.' },
-              { lvl: '2. Developing', text: 'Nêu được lý do chọn domain và ý nghĩa của tên miền đối với bản thân.' },
-              { lvl: '3. Proficient', text: 'Lập luận thuyết phục về câu chuyện đằng sau tên miền và nội dung website.' },
+              { lvl: '2. Developing', text: 'Nêu được lý do chọn domain và ý nghĩa của domain đối với bản thân.' },
+              { lvl: '3. Proficient', text: 'Lập luận thuyết phục về câu chuyện đằng sau domain và nội dung website.' },
               { lvl: '4. Excellent', text: 'Câu chuyện chọn domain và thiết kế website truyền cảm hứng sâu sắc.' },
             ]
           },
@@ -177,43 +178,51 @@ export const RUBRICS_DATA = {
   },
 
   video: {
-    title: 'Video Giới Thiệu Rubric',
-    desc: 'Đánh giá sự tự tin, mạch lạc và khả năng trình bày sản phẩm qua video ngắn 60–90s.',
+    title: 'Video Assessment Rubric',
+    desc: 'The mentor assesses the video using four criteria. Each criterion is scored from Level 1 to Level 4.',
     criteria: [
       {
-        id: 'presence',
-        title: 'Khuôn mặt & Giọng nói tự tin',
-        desc: 'Xuất hiện khuôn mặt thật, giọng nói rõ ràng và phong thái tự tin trước ống kính.',
+        id: 'criterion-1',
+        title: 'Criterion 1. Website introduction is clear',
+        desc: 'Đánh giá mức độ rõ ràng, mạch lạc và hấp dẫn khi giới thiệu về website.',
         levels: [
-          { lvl: '0. Chưa đạt', text: 'Không quay mặt thật hoặc không có tiếng nói.' },
-          { lvl: '1. Bắt đầu', text: 'Có mặt hoặc giọng nói nhưng còn ngập ngừng, âm thanh khó nghe.' },
-          { lvl: '2. Đang phát triển', text: 'Nói rõ ràng, nhìn vào ống kính, âm thanh và ánh sáng chấp nhận được.' },
-          { lvl: '3. Đạt', text: 'Trình bày tự tin, giọng nói truyền cảm, năng lượng tích cực.' },
-          { lvl: '4. Tốt', text: 'Phong thái cuốn hút, biểu cảm sinh động, kết nối tự nhiên với người xem.' },
+          { lvl: '1 — Beginning', text: 'The student mentions the website but the viewer does not clearly understand what it is about.' },
+          { lvl: '2 — Developing', text: 'The student introduces the website and some content, but the explanation is incomplete or difficult to follow.' },
+          { lvl: '3 — Achieved', text: 'The student clearly explains the website, its main content and what the viewer can find there.' },
+          { lvl: '4 — Strong', text: 'The student gives a concise, engaging introduction that makes the viewer want to explore the website.' },
         ]
       },
       {
-        id: 'product-demo',
-        title: 'Nội dung giới thiệu Website',
-        desc: 'Chiếu màn hình website và giải thích mạch lạc các phần nổi bật.',
+        id: 'criterion-2',
+        title: 'Criterion 2. Personal identity and domain story',
+        desc: 'Đánh giá sự thể hiện dấu ấn cá nhân và câu chuyện đằng sau domain được chọn.',
         levels: [
-          { lvl: '0. Chưa đạt', text: 'Không chiếu màn hình website hoặc không giới thiệu về trang web.' },
-          { lvl: '1. Bắt đầu', text: 'Có chiếu website nhưng chỉ lướt qua, chưa nói rõ nội dung.' },
-          { lvl: '2. Đang phát triển', text: 'Giới thiệu được các phần chính trên website và người xem mục tiêu.' },
-          { lvl: '3. Đạt', text: 'Dẫn dắt mạch lạc qua các phần, giải thích được lý do chọn domain và điều con tự hào.' },
-          { lvl: '4. Tốt', text: 'Kể câu chuyện sản phẩm hấp dẫn, làm nổi bật giá trị cốt lõi và trải nghiệm người dùng.' },
+          { lvl: '1 — Beginning', text: 'The student states the domain or personal topic without explaining its meaning.' },
+          { lvl: '2 — Developing', text: 'The student gives a general reason for the domain or topic.' },
+          { lvl: '3 — Achieved', text: 'The student clearly explains how the domain and website reflect their identity, interests or experience.' },
+          { lvl: '4 — Strong', text: 'The explanation is specific, memorable and helps the viewer understand the student as a person.' },
         ]
       },
       {
-        id: 'timing-quality',
-        title: 'Thời lượng & Chất lượng quay',
-        desc: 'Đảm bảo thời lượng chuẩn 60–90s, góc quay gọn gàng và âm thanh rõ ràng.',
+        id: 'criterion-3',
+        title: 'Criterion 3. Connection with the audience',
+        desc: 'Đánh giá mức độ thấu hiểu và kết nối với đối tượng người xem mục tiêu.',
         levels: [
-          { lvl: '0. Chưa đạt', text: 'Video quá ngắn (<30s) hoặc quá dài (>3 phút), chất lượng mờ rè.' },
-          { lvl: '1. Bắt đầu', text: 'Video hơi lệch thời lượng (dưới 50s hoặc trên 2 phút).' },
-          { lvl: '2. Đang phát triển', text: 'Thời lượng gần chuẩn (50-100s), hình ảnh và âm thanh rõ.' },
-          { lvl: '3. Đạt', text: 'Chuẩn thời lượng 60–90s, nhịp độ vừa phải, bố cục màn hình gọn gàng.' },
-          { lvl: '4. Tốt', text: 'Thời lượng hoàn hảo 60–90s, phân bổ thời gian cực kỳ cô đọng, súc tích và hiệu quả.' },
+          { lvl: '1 — Beginning', text: 'The student does not identify who the website is for or why that person should view it.' },
+          { lvl: '2 — Developing', text: 'The student mentions an audience but does not clearly connect the website to that person’s needs.' },
+          { lvl: '3 — Achieved', text: 'The student explains who the website is for and what that person can gain from viewing it.' },
+          { lvl: '4 — Strong', text: 'The student demonstrates a clear understanding of the audience and presents the website from the audience’s point of view.' },
+        ]
+      },
+      {
+        id: 'criterion-4',
+        title: 'Criterion 4. Learning and next step',
+        desc: 'Đánh giá bài học đúc kết (Finding) và hành động tiếp theo (Future).',
+        levels: [
+          { lvl: '1 — Beginning', text: 'The student only says that they completed the website, without explaining what they learned or will do next.' },
+          { lvl: '2 — Developing', text: 'The student mentions a general lesson or next step, but it is not connected clearly to the process.' },
+          { lvl: '3 — Achieved', text: 'The student explains one specific thing they learned or did, and one realistic next step.' },
+          { lvl: '4 — Strong', text: 'The student explains a meaningful Finding and a concrete Future action, showing how the experience may influence their next product or learning activity.' },
         ]
       }
     ]
