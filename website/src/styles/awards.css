@@ -242,68 +242,65 @@
   color: #B45309;
 }
 
-/* 4. Mentor Domains Showcase */
-.awards-clean-mentor {
-  margin-top: var(--space-xl);
-  padding: 16px 20px;
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+/* 4. Mentor Domains Showcase — Flat Horizontal Strip (No giant container card) */
+.awards-mentor-flat-row {
+  margin-top: var(--space-2xl);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .awards-mentor-label {
   display: block;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  margin-bottom: 10px;
 }
 
-.mentor-pills-row {
+.mentor-pills-horizontal {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  align-items: center;
   justify-content: center;
+  gap: 12px;
+  width: 100%;
 }
 
-.mentor-pill {
+.mentor-pill-clean {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: var(--color-card-warm);
-  border: 1px solid var(--color-border);
-  padding: 5px 12px;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  padding: 8px 18px;
   border-radius: var(--radius-full);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--color-midnight-blue);
   text-decoration: none;
   transition: all var(--transition-fast);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
 }
 
-.mentor-pill:hover {
+.mentor-pill-clean:hover {
   border-color: var(--color-sunset-orange);
-  background: #FFFFFF;
   color: var(--color-sunset-orange);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(219, 103, 24, 0.08);
 }
 
-.mentor-pill__dot {
-  width: 6px;
-  height: 6px;
+.mentor-pill-clean .mentor-pill__dot {
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #10B981;
 }
 
-.mentor-pill__domain {
+.mentor-pill-clean .mentor-pill__domain {
   font-weight: 800;
-}
-
-.mentor-pill__name {
-  color: var(--color-text-muted);
-  font-size: 0.75rem;
 }
 
 /* Responsive */
@@ -313,5 +310,15 @@
   .awards-grid-3 {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .mentor-pills-horizontal {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mentor-pill-clean {
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -2,12 +2,12 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Awards section — Big prominent 3 Top 3 Perk Cards with 2D stroke icons:
+ * Awards section:
  * 1. Sub-section 1: Dành cho tất cả học sinh tham gia (2 separate clean cards)
  * 2. Sub-section 2: Top 3 Vinh danh xuất sắc
  *    - 3 Big Prominent Perk Cards (200.000 VNĐ, Bài mẫu Simba, Featured Sư Tử Con)
  *    - 3 Title Recognitions (Best Experience, Best Story, Best Reflection)
- * 3. Sub-section 3: Tham khảo domain của các Mentor
+ * 3. Sub-section 3: Tham khảo domain của các Mentor (Phẳng, không có card to bọc ngoài, 4 domain nằm trên 1 hàng ngang)
  */
 export function renderAwards() {
   const section = document.createElement('section');
@@ -137,17 +137,16 @@ export function renderAwards() {
       </div>
 
       <!-- ==========================================
-           3. MENTOR DOMAINS SHOWCASE
+           3. MENTOR DOMAINS SHOWCASE (Không có card to bọc ngoài, 4 domain ngang hàng)
            ========================================== -->
-      <div class="awards-clean-mentor">
+      <div class="awards-mentor-flat-row">
         <span class="awards-mentor-label" data-i18n="awards.mentorTitle">${t('awards.mentorTitle')}</span>
-        <div class="mentor-pills-row">
+        <div class="mentor-pills-horizontal">
           ${CONFIG.mentorDomains.map(m => `
-            <a href="${m.url}" target="_blank" rel="noopener" class="mentor-pill" title="Xem website của ${m.name}">
+            <a href="${m.url}" target="_blank" rel="noopener" class="mentor-pill-clean" title="Xem website ${m.domain}">
               <span class="mentor-pill__dot"></span>
               <strong class="mentor-pill__domain">${m.domain}</strong>
-              <span class="mentor-pill__name">${m.name}</span>
-              <svg class="icon icon--sm" style="opacity: 0.45;" aria-hidden="true"><use href="/icons.svg#icon-external"></use></svg>
+              <svg class="icon icon--sm" style="opacity: 0.4;" aria-hidden="true"><use href="/icons.svg#icon-external"></use></svg>
             </a>
           `).join('')}
         </div>
