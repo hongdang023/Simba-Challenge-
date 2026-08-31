@@ -40,7 +40,6 @@ export function renderFAQ() {
         { q: 'faq.q4_1', a: 'faq.a4_1' },
         { q: 'faq.q4_2', a: 'faq.a4_2' },
         { q: 'faq.q4_3', a: 'faq.a4_3' },
-        { q: 'faq.q4_4', a: 'faq.a4_4' },
       ],
     },
   ];
