@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t, getLang, setLanguage } from '../i18n.js';
 
 /**
- * Navbar component with concise 1-line nav links, clean active state, and responsive drawer.
+ * Navbar with 3 main sections: 1. Tổng quan, 2. Đánh giá (Rubrics), 3. FAQ.
  */
 export function renderNavbar() {
   const nav = document.createElement('nav');
@@ -10,13 +10,10 @@ export function renderNavbar() {
   nav.setAttribute('role', 'navigation');
   nav.setAttribute('aria-label', 'Main navigation');
 
-  const sections = [
-    { id: 'overview', key: 'nav.overview' },
-    { id: 'challenge', key: 'nav.challenge' },
-    { id: 'how-to-join', key: 'nav.howToJoin' },
-    { id: 'rules', key: 'nav.rules' },
-    { id: 'awards', key: 'nav.awards' },
-    { id: 'faq', key: 'nav.faq' },
+  const mainNavs = [
+    { id: 'overview', key: 'nav.overview', href: '#overview' },
+    { id: 'rubrics', key: 'nav.rubrics', href: '#rubrics' },
+    { id: 'faq', key: 'nav.faq', href: '#faq' },
   ];
 
   const currentLang = getLang();
@@ -28,8 +25,8 @@ export function renderNavbar() {
       </a>
       
       <ul class="navbar__links">
-        ${sections.map(s => `
-          <li><a href="#${s.id}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a></li>
+        ${mainNavs.map(s => `
+          <li><a href="${s.href}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a></li>
         `).join('')}
       </ul>
 
@@ -47,19 +44,17 @@ export function renderNavbar() {
 
   const mobileMenu = document.createElement('div');
   mobileMenu.className = 'mobile-menu';
-  mobileMenu.innerHTML = sections.map(s => `
-    <a href="#${s.id}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a>
+  mobileMenu.innerHTML = mainNavs.map(s => `
+    <a href="${s.href}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a>
   `).join('');
 
   document.body.prepend(mobileMenu);
   document.body.prepend(nav);
 
-  // Scroll shadow
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 
-  // Language toggle
   nav.querySelectorAll('.lang-toggle__btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.dataset.lang;
@@ -68,7 +63,6 @@ export function renderNavbar() {
     });
   });
 
-  // Hamburger
   const hamburger = nav.querySelector('.hamburger');
   hamburger.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
@@ -101,7 +95,7 @@ export function renderNavbar() {
   );
 
   requestAnimationFrame(() => {
-    sections.forEach(s => {
+    mainNavs.forEach(s => {
       const el = document.getElementById(s.id);
       if (el) observer.observe(el);
     });

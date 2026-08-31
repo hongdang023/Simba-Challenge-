@@ -4,25 +4,22 @@
 
 const translations = {
   vi: {
-    // Navbar
+    // Navbar (3 mục lớn sitemap)
     'nav.overview': 'Tổng quan',
-    'nav.challenge': 'Thử thách',
-    'nav.howToJoin': 'Cách tham gia',
-    'nav.rules': 'Quy định',
-    'nav.awards': 'Giải thưởng',
+    'nav.rubrics': 'Đánh giá (Rubrics)',
     'nav.faq': 'FAQ',
 
-    // Hero (CTA hướng dẫn khám phá đề bài)
+    // Hero
     'hero.badge': 'AI Teen Challenge',
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'Nếu có một góc trên Internet để giới thiệu thế giới của mình, em muốn cho người đó xem gì?',
     'hero.deadline': 'Hạn nộp: 23:59, 06/09/2026',
     'hero.prizeTitle': '100% Hoàn thành = Nhận ngay 1 Tên Miền (Domain) riêng trong 1 năm',
     'hero.ctaPrimary': 'Khám phá thử thách',
-    'hero.ctaSecondary': 'Cách thức tham gia',
+    'hero.ctaSecondary': 'Tiêu chuẩn đánh giá',
     'hero.mentorTitle': 'Tham khảo website & domain của các Mentor:',
 
-    // Challenge (Sửa câu intro theo yêu cầu ảnh 3)
+    // Challenge
     'challenge.badge': 'Website Cá Nhân',
     'challenge.heading': 'Em sẽ tạo sản phẩm gì?',
     'challenge.intro': 'Tạo Website cá nhân giúp một người xem cụ thể hiểu về:',
@@ -37,7 +34,7 @@ const translations = {
     'challenge.note': 'Website không cần giống bài mẫu. Điều quan trọng là con hiểu người xem, giải thích được lựa chọn của mình và có bằng chứng phù hợp.',
     'challenge.cta': 'Làm Website trên Simba',
 
-    // How to Join (Nút bấm chuẩn 1 dòng)
+    // How to Join
     'howToJoin.heading': 'Cách tham gia',
     'howToJoin.subheading': 'Các bước làm bài trên Simba thì con đã quá quen thuộc rồi! Điểm mới mẻ duy nhất là chiếc video ngắn 60–90s để con tự tin giới thiệu sản phẩm của mình thôi!',
     'howToJoin.sub1Title': '1. Website / Product',
@@ -69,9 +66,9 @@ const translations = {
     'rules.card4Title': '4. Video & Reflection',
     'rules.card4_1': 'Video 60–90s có mặt thật, giọng thật và quay màn hình website.',
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
-    'rules.assessmentNote': 'Rubric đánh giá chi tiết cho Website và 4F Reflection đều có sẵn trực tiếp trên Simba như mọi tuần con nhé!',
+    'rules.assessmentNote': 'Đọc bảng tiêu chuẩn chi tiết (Rubric) ở bên dưới để tự tin đạt điểm xuất sắc con nhé!',
 
-    // Awards (Layout Phương Án 1)
+    // Awards
     'awards.heading': 'Giải thưởng',
     'awards.everyoneBadge': '100% GUARANTEED',
     'awards.everyoneTitle': 'Phần Thưởng Cho Tất Cả Học Sinh Hoàn Thành',
@@ -138,10 +135,7 @@ const translations = {
   en: {
     // Navbar
     'nav.overview': 'Overview',
-    'nav.challenge': 'Challenge',
-    'nav.howToJoin': 'How to Join',
-    'nav.rules': 'Rules',
-    'nav.awards': 'Awards',
+    'nav.rubrics': 'Rubrics',
     'nav.faq': 'FAQ',
 
     // Hero
@@ -151,7 +145,7 @@ const translations = {
     'hero.deadline': 'Deadline: 23:59, 06/09/2026',
     'hero.prizeTitle': '100% Completion = 1 Custom Domain for 1 Full Year',
     'hero.ctaPrimary': 'Explore Challenge',
-    'hero.ctaSecondary': 'How to Join',
+    'hero.ctaSecondary': 'Assessment Rubrics',
     'hero.mentorTitle': 'Explore Mentors\' websites & domains:',
 
     // Challenge
@@ -201,7 +195,7 @@ const translations = {
     'rules.card4Title': '4. Video & Reflection',
     'rules.card4_1': '60–90s video with your real face, voice and screen recording.',
     'rules.card4_2': 'Complete 4F Reflection on the Simba platform.',
-    'rules.assessmentNote': 'Detailed assessment rubrics for Website and 4F Reflection are available directly on Simba as usual!',
+    'rules.assessmentNote': 'Read the detailed Rubrics below to aim for excellence!',
 
     // Awards
     'awards.heading': 'Awards & Prizes',
@@ -252,14 +246,6 @@ const translations = {
     'faq.a3_3': 'No fancy editing needed! A clear screen and audio recording from your phone or laptop is perfect.',
     'faq.q3_4': 'Where do I submit the video?',
     'faq.a3_4': 'Upload your video to Google Drive or YouTube, then send the link in the AI Teen Zalo group.',
-
-    'faq.cat4': 'Submitting on Simba',
-    'faq.q4_1': 'Where do I submit the website and reflection?',
-    'faq.a4_1': 'Log in to Simba, and find the Website/Product and 4F Reflection sections to submit as usual.',
-    'faq.q4_2': 'Can I save my work and finish later?',
-    'faq.a4_2': 'Yes! Simba allows you to save drafts and return before 23:59 on 06/09/2026.',
-    'faq.q4_3': 'Is a high AI score the main goal of 4F Reflection?',
-    'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
     'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',
