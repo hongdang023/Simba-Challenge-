@@ -2,6 +2,7 @@ import { t } from '../i18n.js';
 
 /**
  * Dedicated Page 3: FAQ (Câu hỏi thường gặp).
+ * Clean header with no badge tag.
  */
 export function renderFAQPage() {
   const page = document.createElement('div');
@@ -47,13 +48,11 @@ export function renderFAQPage() {
   page.innerHTML = `
     <section class="section">
       <div class="container">
+        <!-- Clean Centered Aligned Header (No tag badge) -->
         <div class="section-header">
-          <div style="margin-bottom: var(--space-xs);">
-            <span class="badge badge--brand">FAQ</span>
-          </div>
           <h2 data-i18n="faq.heading">${t('faq.heading')}</h2>
           <p class="text-muted" style="max-width: 600px; margin: var(--space-xs) auto 0;">
-            Tổng hợp các thắc mắc thường gặp về thử thách, tên miền, video và cách nộp bài.
+            Tổng hợp các thắc mắc thường gặp về thử thách, domain, video và cách nộp bài.
           </p>
         </div>
 

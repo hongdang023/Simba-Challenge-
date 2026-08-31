@@ -3,7 +3,7 @@ import { t } from '../i18n.js';
 
 /**
  * Dedicated Page 2: Tiêu chuẩn đánh giá (Assessment Rubrics).
- * Clean aligned header, 3 tabs for Website, Reflection, and Video.
+ * Clean header with no badge tag above title.
  */
 export function renderRubricsPage() {
   const page = document.createElement('div');
@@ -13,11 +13,8 @@ export function renderRubricsPage() {
   page.innerHTML = `
     <section class="section rubrics-section">
       <div class="container">
-        <!-- Clean Centered Aligned Header -->
+        <!-- Clean Centered Aligned Header (No tag badge) -->
         <div class="section-header">
-          <div style="margin-bottom: var(--space-xs);">
-            <span class="badge badge--brand" data-i18n="rubrics.badge">${t('rubrics.badge')}</span>
-          </div>
           <h2 data-i18n="rubrics.heading">${t('rubrics.heading')}</h2>
           <p class="text-muted" style="max-width: 650px; margin: var(--space-xs) auto 0; font-size: var(--font-size-base);" data-i18n="rubrics.intro">
             ${t('rubrics.intro')}
