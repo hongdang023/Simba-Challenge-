@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>Sư Tử Con</title>
+  
+<g transform="translate(512,512) scale(1.6)">
+    <path d="M0.0,-232.0 A68.8,68.8 0 0 1 107.8,-205.4 A68.8,68.8 0 0 1 190.9,-131.8 A68.8,68.8 0 0 1 230.3,-28.0 A68.8,68.8 0 0 1 216.9,82.3 A68.8,68.8 0 0 1 153.8,173.7 A68.8,68.8 0 0 1 55.5,225.3 A68.8,68.8 0 0 1 -55.5,225.3 A68.8,68.8 0 0 1 -153.8,173.7 A68.8,68.8 0 0 1 -216.9,82.3 A68.8,68.8 0 0 1 -230.3,-28.0 A68.8,68.8 0 0 1 -190.9,-131.8 A68.8,68.8 0 0 1 -107.8,-205.4 A68.8,68.8 0 0 1 -0.0,-232.0 Z" fill="#F58220"/>
+    <circle cx="0" cy="0" r="238" fill="#E8952B"/>
+    <circle cx="-176" cy="-118" r="46" fill="#F2C077"/>
+    <circle cx="176" cy="-118" r="46" fill="#F2C077"/>
+    <circle cx="0" cy="0" r="186" fill="#F2C077"/>
+    <ellipse cx="-58" cy="66" rx="72" ry="56" fill="#FBEBC4"/>
+    <ellipse cx="58" cy="66" rx="72" ry="56" fill="#FBEBC4"/>
+    <ellipse cx="-72" cy="-24" rx="20" ry="24" fill="#3A2A18"/>
+    <ellipse cx="72" cy="-24" rx="20" ry="24" fill="#3A2A18"/>
+    <path d="M-32,22 h64 a10,10 0 0 1 8,16 l-26,26 a18,18 0 0 1 -28,0 l-26,-26 a10,10 0 0 1 8,-16 Z" fill="#3A2A18"/>
+    <path d="M0,70 v18" stroke="#3A2A18" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M0,88 c0,26 -38,28 -46,4" stroke="#3A2A18" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M0,88 c0,26 38,28 46,4" stroke="#3A2A18" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <g fill="#D9A441">
+      <circle cx="-108" cy="52" r="7"/><circle cx="-92" cy="86" r="7"/>
+      <circle cx="108" cy="52" r="7"/><circle cx="92" cy="86" r="7"/>
+    </g>
+  </g>
+</svg>
