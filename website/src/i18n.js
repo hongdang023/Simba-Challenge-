@@ -4,7 +4,7 @@
 
 const translations = {
   vi: {
-    // Navbar (Ngắn gọn 1 dòng tuyệt đối không wrap)
+    // Navbar
     'nav.overview': 'Tổng quan',
     'nav.challenge': 'Thử thách',
     'nav.howToJoin': 'Cách tham gia',
@@ -12,7 +12,7 @@ const translations = {
     'nav.awards': 'Giải thưởng',
     'nav.faq': 'FAQ',
 
-    // Hero (Đã bỏ dòng description thừa theo ảnh 1)
+    // Hero
     'hero.badge': 'AI Teen Challenge',
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'Nếu có một góc trên Internet để giới thiệu thế giới của mình, em muốn cho người đó xem gì?',
@@ -22,7 +22,7 @@ const translations = {
     'hero.ctaSecondary': 'Làm 4F Reflection',
     'hero.mentorTitle': 'Tham khảo website & domain của các Mentor:',
 
-    // Challenge (Đã thêm dòng Website cá nhân theo ảnh 2)
+    // Challenge
     'challenge.badge': 'Website Cá Nhân',
     'challenge.heading': 'Em sẽ tạo sản phẩm gì?',
     'challenge.intro': 'Website của em sẽ giúp một người xem cụ thể hiểu về:',
@@ -35,9 +35,9 @@ const translations = {
     'challenge.example2Title': 'Ví dụ 2',
     'challenge.example2': '"Thế Giới Của Mình" cho ba mẹ — bao gồm trò chơi yêu thích, môn học yêu thích, một ngày ở trường và một trò chơi nhỏ em tự tạo.',
     'challenge.note': 'Website không cần giống bài mẫu. Điều quan trọng là con hiểu người xem, giải thích được lựa chọn của mình và có bằng chứng phù hợp.',
-    'challenge.cta': 'Làm Website ngay trên Simba',
+    'challenge.cta': 'Làm Website trên Simba',
 
-    // How to Join (3 Yêu cầu làm bài)
+    // How to Join (Nút bấm ngắn gọn, 1 dòng chuẩn xác)
     'howToJoin.heading': 'Cách tham gia',
     'howToJoin.subheading': 'Các bước làm bài trên Simba thì con đã quá quen thuộc rồi! Điểm mới mẻ duy nhất là chiếc video ngắn 60–90s để con tự tin giới thiệu sản phẩm của mình thôi!',
     'howToJoin.sub1Title': '1. Website / Product',
@@ -49,9 +49,9 @@ const translations = {
     'howToJoin.sub3Title': '3. Video Giới Thiệu',
     'howToJoin.sub3Where': 'Gửi vào nhóm Zalo AI Teen',
     'howToJoin.sub3What': 'Video 60–90s có mặt thật, giọng thật và màn hình website của con. Upload lên Google Drive/YouTube rồi gửi link vào Zalo.',
-    'howToJoin.ctaWebsite': 'Nộp Website trên Simba',
-    'howToJoin.ctaReflection': 'Làm 4F Reflection trên Simba',
-    'howToJoin.videoNote': 'Vào Nhóm Zalo AI Teen Gửi Video',
+    'howToJoin.ctaWebsite': 'Nộp trên Simba',
+    'howToJoin.ctaReflection': 'Làm Reflection',
+    'howToJoin.videoNote': 'Gửi Video qua Zalo',
 
     // Rules
     'rules.heading': 'Quy định bài làm',
@@ -148,8 +148,8 @@ const translations = {
     'hero.question': 'If you had a corner on the Internet to introduce your world, what would you show?',
     'hero.deadline': 'Deadline: 23:59, 06/09/2026',
     'hero.prizeTitle': '100% Completion = 1 Custom Domain for 1 Full Year',
-    'hero.ctaPrimary': 'Submit Website on Simba',
-    'hero.ctaSecondary': 'Do 4F Reflection',
+    'hero.ctaPrimary': 'Submit on Simba',
+    'hero.ctaSecondary': 'Do Reflection',
     'hero.mentorTitle': 'Explore Mentors\' websites & domains:',
 
     // Challenge
@@ -165,7 +165,7 @@ const translations = {
     'challenge.example2Title': 'Example 2',
     'challenge.example2': '"My World" for a parent — including favourite games, favourite subjects, a day at school and a small game you created.',
     'challenge.note': 'Your website does not need to look like the examples. What matters is that you understand your viewer, explain your choices and provide suitable evidence.',
-    'challenge.cta': 'Submit Website on Simba',
+    'challenge.cta': 'Submit on Simba',
 
     // How to Join
     'howToJoin.heading': 'How to Join',
@@ -179,9 +179,9 @@ const translations = {
     'howToJoin.sub3Title': '3. Introduction Video',
     'howToJoin.sub3Where': 'Send to AI Teen Zalo Group',
     'howToJoin.sub3What': '60–90s video showing your face, real voice and website screen. Upload to Google Drive/YouTube and send link in Zalo.',
-    'howToJoin.ctaWebsite': 'Submit Website on Simba',
-    'howToJoin.ctaReflection': 'Do 4F Reflection on Simba',
-    'howToJoin.videoNote': 'Join Zalo Group & Send Video',
+    'howToJoin.ctaWebsite': 'Submit on Simba',
+    'howToJoin.ctaReflection': 'Do Reflection',
+    'howToJoin.videoNote': 'Send via Zalo',
 
     // Rules
     'rules.heading': 'Submission Rules',
@@ -259,7 +259,7 @@ const translations = {
     'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
-    'footer.message': 'Đây không chỉ là một cuộc thi làm website. Đây là cơ hội để con tạo ra một góc Internet thật sự thể hiện mình, rồi nhìn lại xem mình đã học được gì trong quá trình đó.',
+    'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',
     'footer.brand': '© 2026 Sư Tử Con · Nemo12',
   },
 };

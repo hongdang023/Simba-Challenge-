@@ -161,13 +161,14 @@ p {
   transform: translateY(-2px);
 }
 
-/* 2D Flat Buttons */
+/* 2D Flat Buttons - Strict Single-Line & Uniform Height */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
-  padding: 0.875rem 1.75rem;
+  height: 52px;
+  padding: 0 1.75rem;
   border-radius: var(--radius-full);
   font-family: var(--font-family);
   font-size: var(--font-size-base);
@@ -175,8 +176,10 @@ p {
   cursor: pointer;
   transition: all var(--transition-normal);
   text-decoration: none;
-  line-height: 1.4;
+  line-height: 1;
+  white-space: nowrap;
   border: 2px solid transparent;
+  box-sizing: border-box;
 }
 
 .btn--primary {
@@ -214,8 +217,10 @@ p {
 }
 
 .btn--small {
-  padding: 0.625rem 1.25rem;
+  height: 44px;
+  padding: 0 1.25rem;
   font-size: var(--font-size-sm);
+  width: 100%;
 }
 
 /* 2D Clean Badges */
@@ -228,6 +233,7 @@ p {
   font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .badge--brand {
