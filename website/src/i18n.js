@@ -66,15 +66,19 @@ const translations = {
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
     'rules.assessmentNote': 'Xem trang Tiêu chuẩn đánh giá để tự tin đạt điểm xuất sắc con nhé!',
 
-    // Awards (Exact match with user reference image)
+    // Awards (Divided into 2 clear subsections: Section 1 & Section 2)
     'awards.heading': 'Giải thưởng',
+    
+    // Sub-section 1: Dành cho tất cả học sinh tham gia
+    'awards.sec1Title': 'Dành cho tất cả học sinh tham gia',
     'awards.allTitle': 'Phần thưởng dành cho tất cả học sinh hoàn thành',
-    'awards.item1Title': 'Domain cá nhân 1 năm',
+    'awards.item1Title': 'Domain cá nhân 1 năm (trị giá 10$–15$)',
     'awards.item1Desc': 'Domain cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
     'awards.item2Title': 'Chứng nhận hoàn thành My Personal Website Challenge',
     'awards.item2Desc': 'Chứng nhận hoàn thành chương trình từ Sư Tử Con.',
     
-    'awards.topSectionTitle': 'TOP 3 — VINH DANH XUẤT SẮC',
+    // Sub-section 2: Top 3 Vinh danh xuất sắc
+    'awards.sec2Title': 'Top 3 Vinh danh xuất sắc',
     'awards.topSubTitle': 'Mỗi học sinh lọt Top 3 sẽ nhận thêm:',
     'awards.perk1Amount': '200.000 VNĐ',
     'awards.perk1Desc': 'tiền thưởng',
@@ -83,13 +87,17 @@ const translations = {
 
     'awards.award1Tag': 'Trải Nghiệm Tốt Nhất',
     'awards.award1Title': 'Best Website Experience',
-    'awards.award1Desc': 'Website tạo trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem mục tiêu.',
+    'awards.award1Desc': 'Website tạo trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem mục tiêu. Nhận thêm Chứng nhận danh dự Top 3.',
+    
     'awards.award2Tag': 'Câu Chuyện Hay Nhất',
     'awards.award2Title': 'Best Website Story',
-    'awards.award2Desc': 'Sự kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn domain và video giới thiệu.',
+    'awards.award2Desc': 'Sự kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn domain và video giới thiệu. Nhận thêm Chứng nhận danh dự Top 3.',
+    
     'awards.award3Tag': 'Đúc Kết Sâu Sắc Nhất',
     'awards.award3Title': 'Best Reflection',
-    'awards.award3Desc': 'Bài 4F Reflection thể hiện rõ nhất con đã học được gì, làm được gì và hướng đi tiếp theo.',
+    'awards.award3Desc': 'Bài 4F Reflection thể hiện rõ nhất con đã học được gì, làm được gì và hướng đi tiếp theo. Nhận thêm Chứng nhận danh dự Top 3.',
+    
+    'awards.certBadge': 'Kèm Chứng nhận Top 3',
     'awards.mentorTitle': 'THAM KHẢO DOMAIN CỦA CÁC MENTOR',
 
     // Rubrics
@@ -200,13 +208,14 @@ const translations = {
 
     // Awards
     'awards.heading': 'Awards & Prizes',
-    'awards.allTitle': 'Rewards For All Participants',
-    'awards.item1Title': '1-Year Personal Domain',
+    'awards.sec1Title': 'For All Participating Students',
+    'awards.allTitle': 'Rewards For All Participants Who Complete',
+    'awards.item1Title': '1-Year Custom Domain (valued $10–$15)',
     'awards.item1Desc': 'Your own custom domain for 1 year (just like our mentors).',
     'awards.item2Title': 'Certificate of Completion for My Personal Website Challenge',
     'awards.item2Desc': 'Official Certificate from Sư Tử Con.',
     
-    'awards.topSectionTitle': 'TOP 3 — FEATURED RECOGNITIONS',
+    'awards.sec2Title': 'Top 3 Outstanding Honors',
     'awards.topSubTitle': 'Each student reaching Top 3 will additionally receive:',
     'awards.perk1Amount': '200,000 VND',
     'awards.perk1Desc': 'cash prize',
@@ -215,13 +224,17 @@ const translations = {
 
     'awards.award1Tag': 'Best Experience',
     'awards.award1Title': 'Best Website Experience',
-    'awards.award1Desc': 'For the website that creates the clearest value and smoothest experience for its audience.',
+    'awards.award1Desc': 'For the website that creates the clearest value and smoothest experience. Includes Official Top 3 Certificate.',
+    
     'awards.award2Tag': 'Best Storytelling',
     'awards.award2Title': 'Best Website Story',
-    'awards.award2Desc': 'For the strongest combination of personal story, domain rationale and introduction video.',
+    'awards.award2Desc': 'For the strongest combination of personal story, domain rationale and video. Includes Official Top 3 Certificate.',
+    
     'awards.award3Tag': 'Best Reflection',
     'awards.award3Title': 'Best Reflection',
-    'awards.award3Desc': 'For the 4F Reflection that most clearly shows what the student learned, did and will do next.',
+    'awards.award3Desc': 'For the 4F Reflection that most clearly shows learnings and future steps. Includes Official Top 3 Certificate.',
+    
+    'awards.certBadge': 'Includes Top 3 Certificate',
     'awards.mentorTitle': 'EXPLORE MENTORS\' DOMAINS',
 
     // Rubrics
