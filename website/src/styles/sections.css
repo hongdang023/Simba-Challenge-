@@ -71,10 +71,6 @@
   font-weight: 700;
 }
 
-.navbar__link.active::after {
-  display: none; /* No clunky underline bar */
-}
-
 .navbar__actions {
   display: flex;
   align-items: center;
@@ -157,7 +153,7 @@
   padding: 12px 24px;
 }
 
-/* ---------- Hero (Spacious & Clean) ---------- */
+/* ---------- Hero ---------- */
 .hero {
   padding-top: calc(var(--nav-height) + var(--space-2xl));
   padding-bottom: var(--space-3xl);
@@ -199,7 +195,6 @@
   margin-bottom: var(--space-2xl);
 }
 
-/* 2D Mentor Domain Card */
 .hero__reward-card {
   max-width: 820px;
   margin: 0 auto var(--space-2xl);
@@ -411,95 +406,171 @@
   color: var(--color-sunset-orange);
 }
 
-/* ---------- Awards ---------- */
-.awards-everyone {
-  max-width: 680px;
-  margin: 0 auto var(--space-3xl);
-  text-align: center;
-}
-
-.awards-everyone .card {
-  padding: var(--space-2xl);
+/* ========================================================
+   AWARDS SECTION: Option 1 (Split Hero Banner & Podium)
+   ======================================================== */
+.awards-hero-banner {
   background: #FFFFFF;
   border: 2px solid var(--color-savannah-gold);
-}
-
-.awards-everyone__list {
-  list-style: none;
-  margin-top: var(--space-md);
-  display: inline-block;
-  text-align: left;
-}
-
-.awards-everyone__list li {
-  padding: var(--space-xs) 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  color: var(--color-midnight-blue);
-}
-
-.awards-everyone__list .icon {
-  color: var(--color-savannah-gold);
-}
-
-.awards-top {
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
-}
-
-.award-card {
-  text-align: center;
-  padding: var(--space-2xl) var(--space-lg);
-}
-
-.award-card__icon-box {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: rgba(229, 173, 24, 0.12);
-  color: var(--color-sunset-orange);
-  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
   align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-md);
+  margin-bottom: var(--space-3xl);
+  box-shadow: 0 4px 16px rgba(229, 173, 24, 0.08);
 }
 
-.award-card h4 {
+.awards-hero-banner__left {
+  border-right: 1.5px solid var(--color-border-subtle);
+  padding-right: var(--space-lg);
+}
+
+.awards-hero-banner__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: rgba(229, 173, 24, 0.15);
+  color: #B8860B;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+}
+
+.awards-hero-banner__icon-box {
+  color: var(--color-savannah-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.awards-hero-banner__left h3 {
+  font-size: 1.45rem;
   color: var(--color-midnight-blue);
   margin-bottom: var(--space-xs);
 }
 
-.award-card p {
-  font-size: var(--font-size-sm);
-}
-
-.awards-extra {
-  max-width: 720px;
-  margin: 0 auto var(--space-xl);
-}
-
-.awards-extra__list {
+.awards-hero-banner__list {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
-.awards-extra__list li {
+.awards-hero-banner__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: var(--font-size-base);
+  color: var(--color-midnight-blue);
+}
+
+.awards-check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.awards-extra__list .icon {
-  color: var(--color-savannah-gold);
+/* Top 3 Header & Grid */
+.awards-top-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.awards-top-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.award-podium-card {
+  position: relative;
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.award-podium-card__tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-sunset-orange);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  box-shadow: var(--shadow-subtle);
+}
+
+.award-podium-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(219, 103, 24, 0.08);
+  color: var(--color-sunset-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-xs) auto var(--space-md);
+}
+
+.award-podium-card h4 {
+  font-size: var(--font-size-md);
+  color: var(--color-midnight-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.award-podium-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Extra Perks Strip */
+.awards-perks-strip {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.awards-perks-strip__badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: rgba(229, 173, 24, 0.15);
+  color: #B8860B;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.awards-perks-strip__text {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-midnight-blue);
 }
 
 /* ---------- FAQ ---------- */

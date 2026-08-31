@@ -12,20 +12,20 @@ const translations = {
     'nav.awards': 'Giải thưởng',
     'nav.faq': 'FAQ',
 
-    // Hero
+    // Hero (CTA hướng dẫn khám phá đề bài)
     'hero.badge': 'AI Teen Challenge',
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'Nếu có một góc trên Internet để giới thiệu thế giới của mình, em muốn cho người đó xem gì?',
     'hero.deadline': 'Hạn nộp: 23:59, 06/09/2026',
     'hero.prizeTitle': '100% Hoàn thành = Nhận ngay 1 Tên Miền (Domain) riêng trong 1 năm',
-    'hero.ctaPrimary': 'Làm Website trên Simba',
-    'hero.ctaSecondary': 'Làm 4F Reflection',
+    'hero.ctaPrimary': 'Khám phá thử thách',
+    'hero.ctaSecondary': 'Cách thức tham gia',
     'hero.mentorTitle': 'Tham khảo website & domain của các Mentor:',
 
-    // Challenge
+    // Challenge (Sửa câu intro theo yêu cầu ảnh 3)
     'challenge.badge': 'Website Cá Nhân',
     'challenge.heading': 'Em sẽ tạo sản phẩm gì?',
-    'challenge.intro': 'Website của em sẽ giúp một người xem cụ thể hiểu về:',
+    'challenge.intro': 'Tạo Website cá nhân giúp một người xem cụ thể hiểu về:',
     'challenge.point1': 'Em là ai.',
     'challenge.point2': 'Em thích hoặc quan tâm điều gì.',
     'challenge.point3': 'Một sản phẩm, hoạt động, thành tích hoặc trải nghiệm mà em tự hào.',
@@ -37,7 +37,7 @@ const translations = {
     'challenge.note': 'Website không cần giống bài mẫu. Điều quan trọng là con hiểu người xem, giải thích được lựa chọn của mình và có bằng chứng phù hợp.',
     'challenge.cta': 'Làm Website trên Simba',
 
-    // How to Join (Nút bấm ngắn gọn, 1 dòng chuẩn xác)
+    // How to Join (Nút bấm chuẩn 1 dòng)
     'howToJoin.heading': 'Cách tham gia',
     'howToJoin.subheading': 'Các bước làm bài trên Simba thì con đã quá quen thuộc rồi! Điểm mới mẻ duy nhất là chiếc video ngắn 60–90s để con tự tin giới thiệu sản phẩm của mình thôi!',
     'howToJoin.sub1Title': '1. Website / Product',
@@ -71,25 +71,27 @@ const translations = {
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
     'rules.assessmentNote': 'Rubric đánh giá chi tiết cho Website và 4F Reflection đều có sẵn trực tiếp trên Simba như mọi tuần con nhé!',
 
-    // Awards
+    // Awards (Layout Phương Án 1)
     'awards.heading': 'Giải thưởng',
-    'awards.everyoneTitle': 'Phần Thưởng Cho Tất Cả Học Sinh Tham Gia',
-    'awards.everyoneDesc': 'Mỗi học sinh hoàn thành đủ 3 yêu cầu trên chắc chắn nhận được:',
-    'awards.everyoneItem1': '1 Tên miền (Domain) cá nhân riêng chính chủ dùng trong 1 năm.',
+    'awards.everyoneBadge': '100% GUARANTEED',
+    'awards.everyoneTitle': 'Phần Thưởng Cho Tất Cả Học Sinh Hoàn Thành',
+    'awards.everyoneDesc': 'Chỉ cần hoàn thành đủ 3 yêu cầu, mỗi học sinh chắc chắn nhận được:',
+    'awards.everyoneItem1': '1 Tên miền (Domain) cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
     'awards.everyoneItem2': 'Chứng nhận hoàn thành My Personal Website Challenge từ Sư Tử Con.',
-    'awards.topTitle': 'Top 3 — Giải Thưởng Nổi Bật',
-    'awards.topDesc': 'Ba giải thưởng xuất sắc vinh danh 3 gương mặt tiêu biểu:',
+    
+    'awards.topSectionTitle': 'Top 3 — Vinh Danh Xuất Sắc',
+    'awards.award1Tag': 'Trải Nghiệm Tốt Nhất',
     'awards.award1Title': 'Best Website Experience',
-    'awards.award1Desc': 'Website mang lại trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem.',
+    'awards.award1Desc': 'Website tạo trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem mục tiêu.',
+    'awards.award2Tag': 'Câu Chuyện Hay Nhất',
     'awards.award2Title': 'Best Website Story',
-    'awards.award2Desc': 'Website kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn domain và video giới thiệu.',
+    'awards.award2Desc': 'Sự kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn domain và video giới thiệu.',
+    'awards.award3Tag': 'Đúc Kết Sâu Sắc Nhất',
     'awards.award3Title': 'Best Reflection',
-    'awards.award3Desc': 'Bài 4F Reflection sâu sắc nhất, thể hiện rõ con đã học được gì, làm được gì và hướng đi tiếp theo.',
-    'awards.extraTitle': 'Quyền Lợi Dành Riêng Cho Top 3',
-    'awards.extra1': 'Thưởng thêm 200.000 VNĐ tiền mặt.',
-    'awards.extra2': 'Được chọn làm bài mẫu xuất sắc trên Simba.',
-    'awards.extra3': 'Được vinh danh trên trang chủ Sư Tử Con.',
-    'awards.extra4': 'Xuất hiện trong các ấn phẩm truyền thông của Nemo12.',
+    'awards.award3Desc': 'Bài 4F Reflection thể hiện rõ nhất con đã học được gì, làm được gì và hướng đi tiếp theo.',
+    
+    'awards.extraStripTitle': '⭐ ĐẶC QUYỀN TOP 3',
+    'awards.extraStripText': 'Thưởng thêm 200.000 VNĐ • Được chọn làm bài mẫu Simba • Vinh danh trên website Sư Tử Con & truyền thông Nemo12',
     'awards.ruleNote': 'Mỗi học sinh nhận tối đa 1 danh hiệu Top 3 để khích lệ nhiều bạn cùng toả sáng.',
 
     // FAQ
@@ -148,14 +150,14 @@ const translations = {
     'hero.question': 'If you had a corner on the Internet to introduce your world, what would you show?',
     'hero.deadline': 'Deadline: 23:59, 06/09/2026',
     'hero.prizeTitle': '100% Completion = 1 Custom Domain for 1 Full Year',
-    'hero.ctaPrimary': 'Submit on Simba',
-    'hero.ctaSecondary': 'Do Reflection',
+    'hero.ctaPrimary': 'Explore Challenge',
+    'hero.ctaSecondary': 'How to Join',
     'hero.mentorTitle': 'Explore Mentors\' websites & domains:',
 
     // Challenge
     'challenge.badge': 'Personal Website',
     'challenge.heading': 'What will you create?',
-    'challenge.intro': 'Your website should help a specific viewer understand:',
+    'challenge.intro': 'Create a Personal Website helping a specific viewer understand:',
     'challenge.point1': 'Who you are.',
     'challenge.point2': 'What you like or care about.',
     'challenge.point3': 'A product, activity, achievement or experience you are proud of.',
@@ -203,23 +205,24 @@ const translations = {
 
     // Awards
     'awards.heading': 'Awards & Prizes',
+    'awards.everyoneBadge': '100% GUARANTEED',
     'awards.everyoneTitle': 'Rewards For All Participants',
-    'awards.everyoneDesc': 'Every student who completes all 3 tasks will receive:',
-    'awards.everyoneItem1': '1 Custom personal domain for 1 full year.',
+    'awards.everyoneDesc': 'Complete all 3 requirements to guarantee receiving:',
+    'awards.everyoneItem1': '1 Custom personal domain for 1 full year (just like our mentors).',
     'awards.everyoneItem2': 'Certificate of Completion for My Personal Website Challenge from Sư Tử Con.',
-    'awards.topTitle': 'Top 3 Featured Awards',
-    'awards.topDesc': 'Three outstanding titles recognising three standout students:',
+    
+    'awards.topSectionTitle': 'Top 3 — Featured Recognitions',
+    'awards.award1Tag': 'Best Experience',
     'awards.award1Title': 'Best Website Experience',
     'awards.award1Desc': 'For the website that creates the clearest value and smoothest experience for its audience.',
-    'awards.award2Title': 'Best Website Story',
+    'awards.award2Tag': 'Best Storytelling',
     'awards.award2Desc': 'For the strongest combination of personal story, domain rationale and introduction video.',
+    'awards.award3Tag': 'Best Reflection',
     'awards.award3Title': 'Best Reflection',
     'awards.award3Desc': 'For the 4F Reflection that most clearly shows what the student learned, did and will do next.',
-    'awards.extraTitle': 'Top 3 Exclusive Perks',
-    'awards.extra1': 'An extra 200,000 VND cash prize.',
-    'awards.extra2': 'Opportunity to be featured as a model submission on Simba.',
-    'awards.extra3': 'Featured placement on the Sư Tử Con official website.',
-    'awards.extra4': 'Featured in Nemo12 media materials.',
+    
+    'awards.extraStripTitle': '⭐ TOP 3 PERKS',
+    'awards.extraStripText': '200,000 VND cash prize • Featured as a Simba model submission • Featured on Sư Tử Con website & media',
     'awards.ruleNote': 'Each student receives a maximum of one Top 3 title to celebrate multiple talents.',
 
     // FAQ

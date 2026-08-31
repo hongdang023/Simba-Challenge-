@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Hero section — cleaned description, no redundant paragraphs, spacious layout.
+ * Hero section — with smooth scroll CTA buttons (Explore Challenge / How to join).
  */
 export function renderHero() {
   const section = document.createElement('section');
@@ -52,11 +52,12 @@ export function renderHero() {
         </div>
       </div>
 
+      <!-- Hero CTAs: Guide students to read the challenge first -->
       <div class="hero__ctas">
-        <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="hero.ctaPrimary">
+        <a href="#challenge" class="btn btn--primary" data-i18n="hero.ctaPrimary">
           ${t('hero.ctaPrimary')}
         </a>
-        <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--secondary" data-i18n="hero.ctaSecondary">
+        <a href="#how-to-join" class="btn btn--outline" data-i18n="hero.ctaSecondary">
           ${t('hero.ctaSecondary')}
         </a>
       </div>

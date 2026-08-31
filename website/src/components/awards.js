@@ -1,7 +1,7 @@
 import { t } from '../i18n.js';
 
 /**
- * Awards section — 2D vector icons.
+ * Awards section — Option 1: 2-Tier Split Banner & Podium with Top 3 Badges.
  */
 export function renderAwards() {
   const section = document.createElement('section');
@@ -9,16 +9,24 @@ export function renderAwards() {
   section.className = 'section';
 
   const topAwards = [
-    { titleKey: 'awards.award1Title', descKey: 'awards.award1Desc', icon: 'icon-globe' },
-    { titleKey: 'awards.award2Title', descKey: 'awards.award2Desc', icon: 'icon-heart' },
-    { titleKey: 'awards.award3Title', descKey: 'awards.award3Desc', icon: 'icon-reflection' },
-  ];
-
-  const extras = [
-    'awards.extra1',
-    'awards.extra2',
-    'awards.extra3',
-    'awards.extra4',
+    { 
+      tagKey: 'awards.award1Tag',
+      titleKey: 'awards.award1Title', 
+      descKey: 'awards.award1Desc', 
+      icon: 'icon-globe' 
+    },
+    { 
+      tagKey: 'awards.award2Tag',
+      titleKey: 'awards.award2Title', 
+      descKey: 'awards.award2Desc', 
+      icon: 'icon-heart' 
+    },
+    { 
+      tagKey: 'awards.award3Tag',
+      titleKey: 'awards.award3Title', 
+      descKey: 'awards.award3Desc', 
+      icon: 'icon-reflection' 
+    },
   ];
 
   section.innerHTML = `
@@ -27,35 +35,49 @@ export function renderAwards() {
         <h2 data-i18n="awards.heading">${t('awards.heading')}</h2>
       </div>
 
-      <!-- Everyone Can Earn -->
-      <div class="awards-everyone">
-        <div class="card">
-          <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: var(--space-xs);">
-            <svg class="icon icon--lg" style="color: var(--color-savannah-gold);" aria-hidden="true"><use href="/icons.svg#icon-gift"></use></svg>
-            <h3 style="color: var(--color-midnight-blue);" data-i18n="awards.everyoneTitle">${t('awards.everyoneTitle')}</h3>
+      <!-- TIER 1: 100% Guaranteed Hero Banner -->
+      <div class="awards-hero-banner">
+        <div class="awards-hero-banner__left">
+          <div class="awards-hero-banner__badge" data-i18n="awards.everyoneBadge">${t('awards.everyoneBadge')}</div>
+          <div class="awards-hero-banner__icon-box">
+            <svg class="icon icon--xl" aria-hidden="true"><use href="/icons.svg#icon-gift"></use></svg>
           </div>
-          <p class="text-muted" style="font-size: var(--font-size-sm);" data-i18n="awards.everyoneDesc">${t('awards.everyoneDesc')}</p>
-          <ul class="awards-everyone__list">
+          <h3 data-i18n="awards.everyoneTitle">${t('awards.everyoneTitle')}</h3>
+          <p class="text-muted" style="font-size: var(--font-size-sm); margin: 0;" data-i18n="awards.everyoneDesc">${t('awards.everyoneDesc')}</p>
+        </div>
+        
+        <div class="awards-hero-banner__right">
+          <ul class="awards-hero-banner__list">
             <li>
-              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-sparkles"></use></svg>
-              <span data-i18n="awards.everyoneItem1">${t('awards.everyoneItem1')}</span>
+              <div class="awards-check-icon">
+                <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-check"></use></svg>
+              </div>
+              <div>
+                <strong data-i18n="awards.everyoneItem1">${t('awards.everyoneItem1')}</strong>
+              </div>
             </li>
             <li>
-              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-sparkles"></use></svg>
-              <span data-i18n="awards.everyoneItem2">${t('awards.everyoneItem2')}</span>
+              <div class="awards-check-icon">
+                <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-check"></use></svg>
+              </div>
+              <div>
+                <strong data-i18n="awards.everyoneItem2">${t('awards.everyoneItem2')}</strong>
+              </div>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Top 3 Featured Awards -->
-      <h3 class="text-center" style="margin-bottom: var(--space-xs);" data-i18n="awards.topTitle">${t('awards.topTitle')}</h3>
-      <p class="text-center text-muted" style="margin-bottom: var(--space-2xl); font-size: var(--font-size-sm);" data-i18n="awards.topDesc">${t('awards.topDesc')}</p>
+      <!-- TIER 2: Top 3 Podium Cards -->
+      <div class="awards-top-header">
+        <h3 data-i18n="awards.topSectionTitle">${t('awards.topSectionTitle')}</h3>
+      </div>
       
-      <div class="awards-top">
+      <div class="awards-top-grid">
         ${topAwards.map(a => `
-          <div class="card award-card">
-            <div class="award-card__icon-box">
+          <div class="card award-podium-card">
+            <div class="award-podium-card__tag" data-i18n="${a.tagKey}">${t(a.tagKey)}</div>
+            <div class="award-podium-card__icon">
               <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#${a.icon}"></use></svg>
             </div>
             <h4 data-i18n="${a.titleKey}">${t(a.titleKey)}</h4>
@@ -64,19 +86,10 @@ export function renderAwards() {
         `).join('')}
       </div>
 
-      <!-- Extra Benefits -->
-      <div class="awards-extra">
-        <div class="card">
-          <h4 class="text-center" style="font-size: var(--font-size-md);" data-i18n="awards.extraTitle">${t('awards.extraTitle')}</h4>
-          <ul class="awards-extra__list">
-            ${extras.map(e => `
-              <li>
-                <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-sparkles"></use></svg>
-                <span data-i18n="${e}">${t(e)}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
+      <!-- Extra Perks Strip -->
+      <div class="awards-perks-strip">
+        <div class="awards-perks-strip__badge" data-i18n="awards.extraStripTitle">${t('awards.extraStripTitle')}</div>
+        <div class="awards-perks-strip__text" data-i18n="awards.extraStripText">${t('awards.extraStripText')}</div>
       </div>
 
       <p class="text-center text-muted" style="margin-top: var(--space-lg); font-size: var(--font-size-xs);" data-i18n="awards.ruleNote">
