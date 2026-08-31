@@ -1,7 +1,7 @@
 import { t } from '../i18n.js';
 
 /**
- * Rules section — grouped into 4 clean, structured criteria cards.
+ * Rules section — 4 clean criteria cards with 2D vector icons.
  */
 export function renderRules() {
   const section = document.createElement('section');
@@ -12,22 +12,22 @@ export function renderRules() {
     {
       titleKey: 'rules.card1Title',
       items: ['rules.card1_1', 'rules.card1_2'],
-      icon: '👤',
+      icon: 'icon-user',
     },
     {
       titleKey: 'rules.card2Title',
       items: ['rules.card2_1', 'rules.card2_2', 'rules.card2_3'],
-      icon: '🌐',
+      icon: 'icon-globe',
     },
     {
       titleKey: 'rules.card3Title',
       items: ['rules.card3_1', 'rules.card3_2'],
-      icon: '🏷️',
+      icon: 'icon-tag',
     },
     {
       titleKey: 'rules.card4Title',
       items: ['rules.card4_1', 'rules.card4_2'],
-      icon: '🎬',
+      icon: 'icon-video',
     },
   ];
 
@@ -37,15 +37,18 @@ export function renderRules() {
         <h2 data-i18n="rules.heading">${t('rules.heading')}</h2>
       </div>
 
-      <p class="text-center text-muted mb-2xl" style="max-width: 600px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-md);" data-i18n="rules.subheading">
+      <p class="text-center text-muted" style="max-width: 600px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="rules.subheading">
         ${t('rules.subheading')}
       </p>
 
       <div class="rules-standards-grid">
         ${cards.map(card => `
           <div class="card rule-standard-card">
-            <h4 data-i18n="${card.titleKey}">${t(card.titleKey)}</h4>
-            <ul class="checklist" style="margin-top: var(--space-md);">
+            <div class="rule-standard-card__title">
+              <svg class="icon icon--md" aria-hidden="true"><use href="/icons.svg#${card.icon}"></use></svg>
+              <span data-i18n="${card.titleKey}">${t(card.titleKey)}</span>
+            </div>
+            <ul class="checklist">
               ${card.items.map(item => `
                 <li data-i18n="${item}">${t(item)}</li>
               `).join('')}
