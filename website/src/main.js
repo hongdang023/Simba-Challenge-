@@ -1,5 +1,8 @@
 /**
- * Main entry point — My Personal Website Challenge
+ * Main entry point — 3 Dedicated Pages Client-Side Router
+ * 1. Overview Page (#/ or empty)
+ * 2. Rubrics Page (#/rubrics)
+ * 3. FAQ Page (#/faq)
  */
 import './styles/index.css';
 import './styles/sections.css';
@@ -8,14 +11,10 @@ import './styles/responsive.css';
 
 import { CONFIG } from './config.js';
 import { t, getLang } from './i18n.js';
-import { renderNavbar } from './components/navbar.js';
-import { renderHero } from './components/hero.js';
-import { renderChallenge } from './components/challenge.js';
-import { renderHowToJoin } from './components/how-to-join.js';
-import { renderRules } from './components/rules.js';
-import { renderAwards } from './components/awards.js';
-import { renderRubrics } from './components/rubrics.js';
-import { renderFAQ } from './components/faq.js';
+import { renderNavbar, updateActiveNav } from './components/navbar.js';
+import { renderOverviewPage } from './components/overview-page.js';
+import { renderRubricsPage } from './components/rubrics.js';
+import { renderFAQPage } from './components/faq.js';
 
 function renderFooter() {
   const footer = document.createElement('footer');
@@ -34,27 +33,67 @@ function renderFooter() {
   return footer;
 }
 
-function init() {
+// Router to handle 3 dedicated pages
+function handleRoute() {
   const app = document.getElementById('app');
   if (!app) return;
 
+  const rawHash = window.location.hash || '#/';
+  // Normalize route
+  let route = 'overview';
+  if (rawHash.startsWith('#/rubrics')) {
+    route = 'rubrics';
+  } else if (rawHash.startsWith('#/faq')) {
+    route = 'faq';
+  } else {
+    route = 'overview';
+  }
+
+  // Clear current page content
+  app.innerHTML = '';
+
+  // Render dedicated page
+  if (route === 'rubrics') {
+    app.appendChild(renderRubricsPage());
+  } else if (route === 'faq') {
+    app.appendChild(renderFAQPage());
+  } else {
+    app.appendChild(renderOverviewPage());
+  }
+
+  // Render global footer
+  app.appendChild(renderFooter());
+
+  // Update active state on navbar
+  updateActiveNav(route);
+
+  // Smooth scroll to top on page change
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Handle in-page anchors if present (e.g., #challenge on overview page)
+  if (rawHash.includes('#challenge')) {
+    const el = document.getElementById('challenge');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  } else if (rawHash.includes('#how-to-join')) {
+    const el = document.getElementById('how-to-join');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function init() {
   document.documentElement.lang = getLang();
 
+  // Render static navbar
   renderNavbar();
 
-  // 1. Tổng quan
-  app.appendChild(renderHero());
-  app.appendChild(renderChallenge());
-  app.appendChild(renderHowToJoin());
-  app.appendChild(renderRules());
-  app.appendChild(renderAwards());
+  // Initial route
+  handleRoute();
 
-  // 2. Đánh giá (Assessment Rubrics)
-  app.appendChild(renderRubrics());
+  // Listen to hash changes
+  window.addEventListener('hashchange', handleRoute);
 
-  // 3. FAQ
-  app.appendChild(renderFAQ());
-  app.appendChild(renderFooter());
+  // Re-render current page on language change
+  window.addEventListener('langchange', handleRoute);
 }
 
 if (document.readyState === 'loading') {

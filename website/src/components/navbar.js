@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t, getLang, setLanguage } from '../i18n.js';
 
 /**
- * Navbar with 3 main sections: 1. Tổng quan, 2. Đánh giá (Rubrics), 3. FAQ.
+ * Navbar for 3 Dedicated Pages: 1. Tổng quan, 2. Tiêu chuẩn đánh giá, 3. Câu hỏi thường gặp.
  */
 export function renderNavbar() {
   const nav = document.createElement('nav');
@@ -10,23 +10,23 @@ export function renderNavbar() {
   nav.setAttribute('role', 'navigation');
   nav.setAttribute('aria-label', 'Main navigation');
 
-  const mainNavs = [
-    { id: 'overview', key: 'nav.overview', href: '#overview' },
-    { id: 'rubrics', key: 'nav.rubrics', href: '#rubrics' },
-    { id: 'faq', key: 'nav.faq', href: '#faq' },
+  const pages = [
+    { route: 'overview', key: 'nav.overview', href: '#/' },
+    { route: 'rubrics', key: 'nav.rubrics', href: '#/rubrics' },
+    { route: 'faq', key: 'nav.faq', href: '#/faq' },
   ];
 
   const currentLang = getLang();
 
   nav.innerHTML = `
     <div class="navbar__inner">
-      <a href="#overview" class="navbar__brand" aria-label="Sư Tử Con">
+      <a href="#/" class="navbar__brand" aria-label="Sư Tử Con">
         <img src="${CONFIG.logoSrc}" alt="Sư Tử Con" class="navbar__logo" height="36" />
       </a>
       
       <ul class="navbar__links">
-        ${mainNavs.map(s => `
-          <li><a href="${s.href}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a></li>
+        ${pages.map(p => `
+          <li><a href="${p.href}" class="navbar__link" data-route="${p.route}" data-i18n="${p.key}">${t(p.key)}</a></li>
         `).join('')}
       </ul>
 
@@ -44,8 +44,8 @@ export function renderNavbar() {
 
   const mobileMenu = document.createElement('div');
   mobileMenu.className = 'mobile-menu';
-  mobileMenu.innerHTML = mainNavs.map(s => `
-    <a href="${s.href}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a>
+  mobileMenu.innerHTML = pages.map(p => `
+    <a href="${p.href}" class="navbar__link" data-route="${p.route}" data-i18n="${p.key}">${t(p.key)}</a>
   `).join('');
 
   document.body.prepend(mobileMenu);
@@ -79,25 +79,14 @@ export function renderNavbar() {
       document.body.style.overflow = '';
     });
   });
+}
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          document.querySelectorAll('.navbar__link').forEach(link => {
-            link.classList.toggle('active', link.dataset.section === id);
-          });
-        }
-      });
-    },
-    { rootMargin: '-20% 0px -60% 0px' }
-  );
-
-  requestAnimationFrame(() => {
-    mainNavs.forEach(s => {
-      const el = document.getElementById(s.id);
-      if (el) observer.observe(el);
-    });
+/**
+ * Update active navbar state by route name
+ */
+export function updateActiveNav(activeRoute) {
+  document.querySelectorAll('.navbar__link').forEach(link => {
+    const isMatch = link.dataset.route === activeRoute;
+    link.classList.toggle('active', isMatch);
   });
 }

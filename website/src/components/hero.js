@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Hero section — with smooth scroll CTA buttons (Explore Challenge / How to join).
+ * Hero section — with smooth navigation to challenge and rubrics.
  */
 export function renderHero() {
   const section = document.createElement('section');
@@ -52,12 +52,12 @@ export function renderHero() {
         </div>
       </div>
 
-      <!-- Hero CTAs: Guide students to read the challenge first -->
+      <!-- Hero CTAs -->
       <div class="hero__ctas">
         <a href="#challenge" class="btn btn--primary" data-i18n="hero.ctaPrimary">
           ${t('hero.ctaPrimary')}
         </a>
-        <a href="#how-to-join" class="btn btn--outline" data-i18n="hero.ctaSecondary">
+        <a href="#/rubrics" class="btn btn--outline" data-i18n="hero.ctaSecondary">
           ${t('hero.ctaSecondary')}
         </a>
       </div>

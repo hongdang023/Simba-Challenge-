@@ -1,12 +1,12 @@
 import { t } from '../i18n.js';
 
 /**
- * FAQ accordion section with 4 category groups.
+ * Dedicated Page 3: FAQ (Câu hỏi thường gặp).
  */
-export function renderFAQ() {
-  const section = document.createElement('section');
-  section.id = 'faq';
-  section.className = 'section';
+export function renderFAQPage() {
+  const page = document.createElement('div');
+  page.id = 'page-faq';
+  page.className = 'page-container';
 
   const categories = [
     {
@@ -44,40 +44,47 @@ export function renderFAQ() {
     },
   ];
 
-  section.innerHTML = `
-    <div class="container">
-      <div class="section-header">
-        <h2 data-i18n="faq.heading">${t('faq.heading')}</h2>
-      </div>
-
-      <div class="faq-categories">
-        ${categories.map(cat => `
-          <div class="faq-category">
-            <h3 class="faq-category__title" data-i18n="${cat.titleKey}">${t(cat.titleKey)}</h3>
-            ${cat.items.map(item => `
-              <div class="faq-item">
-                <button class="faq-item__question" aria-expanded="false" type="button">
-                  <span data-i18n="${item.q}">${t(item.q)}</span>
-                  <span class="faq-item__chevron" aria-hidden="true">▼</span>
-                </button>
-                <div class="faq-item__answer" role="region">
-                  <div class="faq-item__answer-inner" data-i18n="${item.a}">${t(item.a)}</div>
-                </div>
-              </div>
-            `).join('')}
+  page.innerHTML = `
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div style="margin-bottom: var(--space-xs);">
+            <span class="badge badge--brand">FAQ</span>
           </div>
-        `).join('')}
+          <h2 data-i18n="faq.heading">${t('faq.heading')}</h2>
+          <p class="text-muted" style="max-width: 600px; margin: var(--space-xs) auto 0;">
+            Tổng hợp các thắc mắc thường gặp về thử thách, tên miền, video và cách nộp bài.
+          </p>
+        </div>
+
+        <div class="faq-categories">
+          ${categories.map(cat => `
+            <div class="faq-category">
+              <h3 class="faq-category__title" data-i18n="${cat.titleKey}">${t(cat.titleKey)}</h3>
+              ${cat.items.map(item => `
+                <div class="faq-item">
+                  <button class="faq-item__question" aria-expanded="false" type="button">
+                    <span data-i18n="${item.q}">${t(item.q)}</span>
+                    <svg class="icon icon--sm faq-item__chevron" aria-hidden="true"><use href="/icons.svg#icon-external"></use></svg>
+                  </button>
+                  <div class="faq-item__answer" role="region">
+                    <div class="faq-item__answer-inner" data-i18n="${item.a}">${t(item.a)}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          `).join('')}
+        </div>
       </div>
-    </div>
+    </section>
   `;
 
   // Accordion behaviour
-  section.querySelectorAll('.faq-item__question').forEach(btn => {
+  page.querySelectorAll('.faq-item__question').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
 
-      // Close all in same category
       item.closest('.faq-category').querySelectorAll('.faq-item').forEach(i => {
         i.classList.remove('open');
         i.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
@@ -88,15 +95,7 @@ export function renderFAQ() {
         btn.setAttribute('aria-expanded', 'true');
       }
     });
-
-    // Keyboard support
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        btn.click();
-      }
-    });
   });
 
-  return section;
+  return page;
 }
