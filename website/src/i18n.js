@@ -66,16 +66,21 @@ const translations = {
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
     'rules.assessmentNote': 'Xem trang Tiêu chuẩn đánh giá để tự tin đạt điểm xuất sắc con nhé!',
 
-    // Awards
+    // Awards (Exact match with user reference image)
     'awards.heading': 'Giải thưởng',
-    'awards.everyoneBadge': 'QUÀ TẶNG 100%',
-    'awards.everyoneTitle': 'Phần Thưởng Cho Tất Cả Học Sinh Hoàn Thành',
-    'awards.everyoneDesc': 'Chỉ cần hoàn thành đủ 3 yêu cầu, mỗi học sinh chắc chắn nhận được:',
-    'awards.everyoneItem1': '1 Domain cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
-    'awards.everyoneItem2': 'Chứng nhận hoàn thành My Personal Website Challenge từ Sư Tử Con.',
-    'awards.mentorTitle': 'Tham khảo domain của các Mentor:',
+    'awards.allTitle': 'Phần thưởng dành cho tất cả học sinh hoàn thành',
+    'awards.item1Title': 'Domain cá nhân 1 năm',
+    'awards.item1Desc': 'Domain cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
+    'awards.item2Title': 'Chứng nhận hoàn thành My Personal Website Challenge',
+    'awards.item2Desc': 'Chứng nhận hoàn thành chương trình từ Sư Tử Con.',
     
-    'awards.topSectionTitle': 'Top 3 — Vinh Danh Xuất Sắc',
+    'awards.topSectionTitle': 'TOP 3 — VINH DANH XUẤT SẮC',
+    'awards.topSubTitle': 'Mỗi học sinh lọt Top 3 sẽ nhận thêm:',
+    'awards.perk1Amount': '200.000 VNĐ',
+    'awards.perk1Desc': 'tiền thưởng',
+    'awards.perk2Title': 'Được chọn làm bài mẫu trên Simba',
+    'awards.perk3Title': 'Được featured trên website Sư Tử Con và truyền thông Nemo12',
+
     'awards.award1Tag': 'Trải Nghiệm Tốt Nhất',
     'awards.award1Title': 'Best Website Experience',
     'awards.award1Desc': 'Website tạo trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem mục tiêu.',
@@ -85,15 +90,10 @@ const translations = {
     'awards.award3Tag': 'Đúc Kết Sâu Sắc Nhất',
     'awards.award3Title': 'Best Reflection',
     'awards.award3Desc': 'Bài 4F Reflection thể hiện rõ nhất con đã học được gì, làm được gì và hướng đi tiếp theo.',
-    
-    'awards.extraStripTitle': 'ĐẶC QUYỀN TOP 3',
-    'awards.extraStripText': 'Thưởng thêm 200.000 VNĐ • Được chọn làm bài mẫu Simba • Vinh danh trên website Sư Tử Con & truyền thông Nemo12',
-    'awards.ruleNote': 'Mỗi học sinh nhận tối đa 1 danh hiệu Top 3 để khích lệ nhiều bạn cùng toả sáng.',
+    'awards.mentorTitle': 'THAM KHẢO DOMAIN CỦA CÁC MENTOR',
 
     // Rubrics
-    'rubrics.badge': 'Tiêu Chuẩn Đánh Giá',
-    'rubrics.heading': 'Tiêu Chuẩn Đánh Giá',
-    'rubrics.intro': 'Xem chi tiết các tiêu chí và cấp độ đánh giá cho từng phần thi để hoàn thiện bài làm xuất sắc nhất!',
+    'rubrics.heading': 'Tiêu chuẩn đánh giá',
 
     // FAQ
     'faq.heading': 'Câu hỏi thường gặp',
@@ -200,31 +200,32 @@ const translations = {
 
     // Awards
     'awards.heading': 'Awards & Prizes',
-    'awards.everyoneBadge': '100% GUARANTEED',
-    'awards.everyoneTitle': 'Rewards For All Participants',
-    'awards.everyoneDesc': 'Complete all 3 requirements to guarantee receiving:',
-    'awards.everyoneItem1': '1 Custom personal domain for 1 full year (just like our mentors).',
-    'awards.everyoneItem2': 'Certificate of Completion for My Personal Website Challenge from Sư Tử Con.',
-    'awards.mentorTitle': 'Explore Mentors\' domains:',
+    'awards.allTitle': 'Rewards For All Participants',
+    'awards.item1Title': '1-Year Personal Domain',
+    'awards.item1Desc': 'Your own custom domain for 1 year (just like our mentors).',
+    'awards.item2Title': 'Certificate of Completion for My Personal Website Challenge',
+    'awards.item2Desc': 'Official Certificate from Sư Tử Con.',
     
-    'awards.topSectionTitle': 'Top 3 — Featured Recognitions',
+    'awards.topSectionTitle': 'TOP 3 — FEATURED RECOGNITIONS',
+    'awards.topSubTitle': 'Each student reaching Top 3 will additionally receive:',
+    'awards.perk1Amount': '200,000 VND',
+    'awards.perk1Desc': 'cash prize',
+    'awards.perk2Title': 'Featured as a model project on Simba',
+    'awards.perk3Title': 'Featured on Sư Tử Con website & Nemo12 media',
+
     'awards.award1Tag': 'Best Experience',
     'awards.award1Title': 'Best Website Experience',
     'awards.award1Desc': 'For the website that creates the clearest value and smoothest experience for its audience.',
     'awards.award2Tag': 'Best Storytelling',
+    'awards.award2Title': 'Best Website Story',
     'awards.award2Desc': 'For the strongest combination of personal story, domain rationale and introduction video.',
     'awards.award3Tag': 'Best Reflection',
     'awards.award3Title': 'Best Reflection',
     'awards.award3Desc': 'For the 4F Reflection that most clearly shows what the student learned, did and will do next.',
-    
-    'awards.extraStripTitle': 'TOP 3 PERKS',
-    'awards.extraStripText': '200,000 VND cash prize • Featured as a Simba model submission • Featured on Sư Tử Con website & media',
-    'awards.ruleNote': 'Each student receives a maximum of one Top 3 title to celebrate multiple talents.',
+    'awards.mentorTitle': 'EXPLORE MENTORS\' DOMAINS',
 
     // Rubrics
-    'rubrics.badge': 'Assessment Rubrics',
     'rubrics.heading': 'Assessment Rubrics',
-    'rubrics.intro': 'Review detailed criteria and grading levels for each competition component to achieve top results!',
 
     // FAQ
     'faq.heading': 'Frequently Asked Questions',
@@ -253,6 +254,14 @@ const translations = {
     'faq.a3_3': 'No fancy editing needed! A clear screen and audio recording from your phone or laptop is perfect.',
     'faq.q3_4': 'Where do I submit the video?',
     'faq.a3_4': 'Upload your video to Google Drive or YouTube, then send the link in the AI Teen Zalo group.',
+
+    'faq.cat4': 'Submitting on Simba',
+    'faq.q4_1': 'Where do I submit the website and reflection?',
+    'faq.a4_1': 'Log in to Simba, and find the Website/Product and 4F Reflection sections to submit as usual.',
+    'faq.q4_2': 'Can I save my work and finish later?',
+    'faq.a4_2': 'Yes! Simba allows you to save drafts and return before 23:59 on 06/09/2026.',
+    'faq.q4_3': 'Is a high AI score the main goal of 4F Reflection?',
+    'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
     'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',
