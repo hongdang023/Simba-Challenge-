@@ -3,7 +3,10 @@ import { t, getLang } from '../i18n.js';
 
 /**
  * Dedicated Page 2: Tiêu chuẩn đánh giá (Assessment Rubrics).
- * Dynamically switches rubrics content based on active language (Pure VI / Pure EN).
+ * Ultra-clean layout:
+ * - No subtitle under page title
+ * - No card box headers
+ * - Clean 1-line interactive list items
  */
 export function renderRubricsPage() {
   const lang = getLang() === 'en' ? 'en' : 'vi';
@@ -16,15 +19,12 @@ export function renderRubricsPage() {
   page.innerHTML = `
     <section class="section rubrics-section">
       <div class="container">
-        <!-- Clean Centered Aligned Header -->
-        <div class="section-header">
+        <!-- 1. Header (Clean title only, no subtitle) -->
+        <div class="section-header" style="margin-bottom: var(--space-xl);">
           <h2 data-i18n="rubrics.heading">${t('rubrics.heading')}</h2>
-          <p class="text-muted" style="max-width: 650px; margin: var(--space-xs) auto 0; font-size: var(--font-size-base);" data-i18n="rubrics.intro">
-            ${t('rubrics.intro')}
-          </p>
         </div>
 
-        <!-- Tab Buttons -->
+        <!-- 2. Tab Switcher -->
         <div class="rubrics-tabs-container">
           <div class="rubrics-tabs" role="tablist">
             <button class="rubrics-tab active" data-tab="website" role="tab" aria-selected="true">
@@ -42,25 +42,20 @@ export function renderRubricsPage() {
           </div>
         </div>
 
-        <!-- Tab 1: Website / Product -->
+        <!-- Tab 1: Website / Product (Clean 1-line rows) -->
         <div class="rubrics-tab-content active" id="tab-website">
-          <div class="rubrics-header-card">
-            <h4>${data.website.title}</h4>
-            <p>${data.website.desc}</p>
-          </div>
-
           ${data.website.groups.map((grp, gIdx) => `
             <div class="rubric-group">
-              <div class="rubric-group__header">
-                <h4>${grp.name}</h4>
-                <p>${grp.desc}</p>
+              <div class="rubric-group__title-row">
+                <span class="rubric-group__badge">${gIdx + 1}</span>
+                <h4>${grp.name.replace(/^[0-9.]+\s*/, '')}</h4>
               </div>
               
               <div class="rubric-items-container">
                 ${grp.criteria.map((crit, cIdx) => `
                   <div class="rubric-item ${gIdx === 0 && cIdx === 0 ? 'open' : ''}">
                     <button class="rubric-item__header" type="button" aria-expanded="${gIdx === 0 && cIdx === 0 ? 'true' : 'false'}">
-                      <span>${crit.title}</span>
+                      <span class="rubric-item__title">${crit.title}</span>
                       <span class="rubric-toggle-icon">▼</span>
                     </button>
                     <div class="rubric-item__body">
@@ -80,21 +75,13 @@ export function renderRubricsPage() {
           `).join('')}
         </div>
 
-        <!-- Tab 2: 4F Reflection -->
+        <!-- Tab 2: 4F Reflection (Clean 1-line rows) -->
         <div class="rubrics-tab-content" id="tab-reflection">
-          <div class="rubrics-header-card">
-            <h4>${data.reflection.title}</h4>
-            <p>${data.reflection.desc}</p>
-          </div>
-
-          <div class="rubric-items-container">
+          <div class="rubric-items-container" style="margin-top: var(--space-lg);">
             ${data.reflection.criteria.map((crit, idx) => `
               <div class="rubric-item ${idx === 0 ? 'open' : ''}">
                 <button class="rubric-item__header" type="button" aria-expanded="${idx === 0 ? 'true' : 'false'}">
-                  <div>
-                    <span style="font-weight: 700;">${crit.title}</span>
-                    <span style="font-size: 0.8125rem; font-weight: 400; color: var(--color-text-muted); margin-left: 8px;">— ${crit.desc}</span>
-                  </div>
+                  <span class="rubric-item__title">${crit.title}</span>
                   <span class="rubric-toggle-icon">▼</span>
                 </button>
                 <div class="rubric-item__body">
@@ -112,21 +99,13 @@ export function renderRubricsPage() {
           </div>
         </div>
 
-        <!-- Tab 3: Video -->
+        <!-- Tab 3: Video (Clean 1-line rows) -->
         <div class="rubrics-tab-content" id="tab-video">
-          <div class="rubrics-header-card">
-            <h4>${data.video.title}</h4>
-            <p>${data.video.desc}</p>
-          </div>
-
-          <div class="rubric-items-container">
+          <div class="rubric-items-container" style="margin-top: var(--space-lg);">
             ${data.video.criteria.map((crit, idx) => `
               <div class="rubric-item ${idx === 0 ? 'open' : ''}">
                 <button class="rubric-item__header" type="button" aria-expanded="${idx === 0 ? 'true' : 'false'}">
-                  <div>
-                    <span style="font-weight: 700;">${crit.title}</span>
-                    <span style="font-size: 0.8125rem; font-weight: 400; color: var(--color-text-muted); margin-left: 8px;">— ${crit.desc}</span>
-                  </div>
+                  <span class="rubric-item__title">${crit.title}</span>
                   <span class="rubric-toggle-icon">▼</span>
                 </button>
                 <div class="rubric-item__body">

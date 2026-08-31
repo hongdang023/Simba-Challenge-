@@ -1,17 +1,16 @@
 /* ========================================================
-   ASSESSMENT RUBRICS COMPONENT STYLES
+   ASSESSMENT RUBRICS & FAQ COMPONENT STYLES (CLEAN 1-LINE LIST)
    ======================================================== */
 
 .rubrics-section {
-  background: #FFFDF9;
-  border-top: 1.5px solid var(--color-border);
-  border-bottom: 1.5px solid var(--color-border);
+  background: var(--color-sand-beige);
+  min-height: calc(100vh - 150px);
 }
 
 .rubrics-tabs-container {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
 .rubrics-tabs {
@@ -27,7 +26,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: var(--radius-full);
   border: none;
   background: transparent;
@@ -56,87 +55,89 @@
 .rubrics-tab-content {
   display: none;
   animation: fadeIn 200ms ease;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .rubrics-tab-content.active {
   display: block;
 }
 
-.rubrics-header-card {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto var(--space-2xl);
-  padding: var(--space-md) var(--space-lg);
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-}
-
-.rubrics-header-card h4 {
-  color: var(--color-midnight-blue);
-  margin-bottom: 4px;
-}
-
-.rubrics-header-card p {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  margin: 0;
-}
-
-/* Rubric Group (Website tab) */
+/* Group Header Row */
 .rubric-group {
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
-.rubric-group__header {
-  margin-bottom: var(--space-md);
+.rubric-group__title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-sm);
+  padding-left: 4px;
 }
 
-.rubric-group__header h4 {
+.rubric-group__badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-midnight-blue);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rubric-group__title-row h4 {
   color: var(--color-midnight-blue);
-  font-size: 1.25rem;
-  margin-bottom: 2px;
-}
-
-.rubric-group__header p {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  font-size: 1.15rem;
   margin: 0;
 }
 
+/* 1-Line List Items */
 .rubric-items-container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 8px;
 }
 
 .rubric-item {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
-  transition: border-color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .rubric-item:hover {
   border-color: var(--color-sunset-orange);
+  box-shadow: var(--shadow-subtle);
+}
+
+.rubric-item.open {
+  border-color: var(--color-sunset-orange);
+  box-shadow: 0 4px 12px rgba(219, 103, 24, 0.08);
 }
 
 .rubric-item__header {
   width: 100%;
-  padding: var(--space-md) var(--space-lg);
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: none;
   background: transparent;
   font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  font-weight: 700;
-  color: var(--color-midnight-blue);
   cursor: pointer;
   text-align: left;
   gap: var(--space-md);
+}
+
+.rubric-item__title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-midnight-blue);
 }
 
 .rubric-toggle-icon {
@@ -153,23 +154,19 @@
 
 .rubric-item__body {
   display: none;
-  padding: 0 var(--space-lg) var(--space-lg);
+  padding: 0 20px 18px;
 }
 
 .rubric-item.open .rubric-item__body {
   display: block;
 }
 
-/* 5 Levels Grid Matrix */
+/* 5 Levels Grid inside 1-line row */
 .rubric-levels-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-}
-
-/* 4 Levels Grid Matrix for Video Rubric */
-.rubric-levels-grid--4 {
-  grid-template-columns: repeat(4, 1fr);
+  margin-top: 4px;
 }
 
 .rubric-level-card {
@@ -185,7 +182,6 @@
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--color-midnight-blue);
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 6px;
   padding-bottom: 4px;
@@ -199,7 +195,6 @@
   margin: 0;
 }
 
-/* Highlight highest level card */
 .rubric-level-card:last-child {
   background: #FFF9EE;
   border-color: var(--color-savannah-gold);
@@ -209,13 +204,87 @@
   color: var(--color-sunset-orange);
 }
 
-/* Responsive Rubrics Grid */
+/* FAQ 1-Line Row Accordions */
+.faq-categories {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.faq-category__title {
+  font-size: 1.15rem;
+  color: var(--color-midnight-blue);
+  margin-bottom: var(--space-sm);
+  padding-left: 4px;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.faq-item:hover {
+  border-color: var(--color-sunset-orange);
+}
+
+.faq-item.open {
+  border-color: var(--color-sunset-orange);
+}
+
+.faq-item__question {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-midnight-blue);
+  cursor: pointer;
+  text-align: left;
+  gap: var(--space-md);
+}
+
+.faq-item__toggle-icon {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-item__toggle-icon {
+  transform: rotate(180deg);
+  color: var(--color-sunset-orange);
+}
+
+.faq-item__answer {
+  display: none;
+  padding: 0 20px 16px;
+}
+
+.faq-item.open .faq-item__answer {
+  display: block;
+}
+
+.faq-item__answer-inner {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 1023px) {
   .rubric-levels-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .rubric-levels-grid--4 {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -230,8 +299,7 @@
     justify-content: center;
   }
 
-  .rubric-levels-grid,
-  .rubric-levels-grid--4 {
+  .rubric-levels-grid {
     grid-template-columns: 1fr;
   }
 }

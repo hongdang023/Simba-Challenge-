@@ -2,7 +2,7 @@ import { t } from '../i18n.js';
 
 /**
  * Dedicated Page 3: FAQ (Câu hỏi thường gặp).
- * Clean header with no badge tag.
+ * Clean header with no subtitle, clean 1-line list items.
  */
 export function renderFAQPage() {
   const page = document.createElement('div');
@@ -48,12 +48,9 @@ export function renderFAQPage() {
   page.innerHTML = `
     <section class="section">
       <div class="container">
-        <!-- Clean Centered Aligned Header (No tag badge) -->
-        <div class="section-header">
+        <!-- Clean Header: Title only, no subtitle -->
+        <div class="section-header" style="margin-bottom: var(--space-xl);">
           <h2 data-i18n="faq.heading">${t('faq.heading')}</h2>
-          <p class="text-muted" style="max-width: 600px; margin: var(--space-xs) auto 0;">
-            Tổng hợp các thắc mắc thường gặp về thử thách, domain, video và cách nộp bài.
-          </p>
         </div>
 
         <div class="faq-categories">
@@ -64,7 +61,7 @@ export function renderFAQPage() {
                 <div class="faq-item">
                   <button class="faq-item__question" aria-expanded="false" type="button">
                     <span data-i18n="${item.q}">${t(item.q)}</span>
-                    <svg class="icon icon--sm faq-item__chevron" aria-hidden="true"><use href="/icons.svg#icon-external"></use></svg>
+                    <span class="faq-item__toggle-icon">▼</span>
                   </button>
                   <div class="faq-item__answer" role="region">
                     <div class="faq-item__answer-inner" data-i18n="${item.a}">${t(item.a)}</div>
