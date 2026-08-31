@@ -3,7 +3,7 @@ import { t } from '../i18n.js';
 
 /**
  * Dedicated Page 2: Tiêu chuẩn đánh giá (Assessment Rubrics).
- * Supports toggle accordion on all 3 Tabs (Website, Reflection, Video).
+ * All tabs have standardized 5 levels (0. NOVICE -> 4. EXCELLENT) with toggle accordion.
  */
 export function renderRubricsPage() {
   const page = document.createElement('div');
@@ -109,7 +109,7 @@ export function renderRubricsPage() {
           </div>
         </div>
 
-        <!-- Tab 3: Video (Official 4 Criteria with Level 1 to 4 Collapsible Accordion) -->
+        <!-- Tab 3: Video (Standardized 5 Levels: 0. NOVICE to 4. EXCELLENT) -->
         <div class="rubrics-tab-content" id="tab-video">
           <div class="rubrics-header-card">
             <h4>${RUBRICS_DATA.video.title}</h4>
@@ -127,7 +127,7 @@ export function renderRubricsPage() {
                   <span class="rubric-toggle-icon">▼</span>
                 </button>
                 <div class="rubric-item__body">
-                  <div class="rubric-levels-grid rubric-levels-grid--4">
+                  <div class="rubric-levels-grid">
                     ${crit.levels.map(lvl => `
                       <div class="rubric-level-card">
                         <div class="rubric-level-card__title">${lvl.lvl}</div>
