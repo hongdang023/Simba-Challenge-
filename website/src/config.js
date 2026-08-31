@@ -1,6 +1,6 @@
 /**
  * Centralized configuration for the My Personal Website Challenge site.
- * Update URLs, deadline, and content here — no need to touch page code.
+ * Update URLs, deadline, mentor links, and content here.
  */
 export const CONFIG = {
   title: 'My Personal Website Challenge',
@@ -11,4 +11,10 @@ export const CONFIG = {
   zaloGroupUrl: 'https://zalo.me/g/hyr5ti6kuvnyj4hgtvgj',
   logoSrc: '/assets/sutucon-logo-horizontal-light.svg',
   iconSrc: '/assets/sutucon-icon-orange.svg',
+  mentorDomains: [
+    { name: 'Mentor Đặng Hồng', domain: 'danghong.me', url: 'https://danghong.me' },
+    { name: 'Mentor Anh Đắc', domain: 'anhdac.com', url: 'https://anhdac.com' },
+    { name: 'Mentor Phan Việt', domain: 'phanviet.me', url: 'https://phanviet.me' },
+    { name: 'Mentor Thông Phan', domain: 'thongphan.com', url: 'https://thongphan.com' },
+  ],
 };

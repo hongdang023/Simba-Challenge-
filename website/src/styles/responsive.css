@@ -17,22 +17,13 @@
     grid-template-columns: 1fr;
   }
 
-  .steps {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: var(--space-xl);
-  }
-
-  .steps::before {
-    display: none;
-  }
-
   .submissions {
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 0 auto;
   }
 
-  .rules-grid {
+  .rules-standards-grid {
     grid-template-columns: 1fr;
   }
 
@@ -83,20 +74,15 @@
     max-width: 300px;
   }
 
-  .steps {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+  .mentor-domains__list {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .step-card {
-    display: flex;
-    text-align: left;
-    gap: var(--space-md);
-    align-items: flex-start;
-  }
-
-  .step-card .step-number {
-    margin: 0;
+  .mentor-chip {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 
   .footer__ctas {

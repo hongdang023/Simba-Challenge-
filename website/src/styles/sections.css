@@ -169,8 +169,8 @@
 
 /* ---------- Hero ---------- */
 .hero {
-  padding-top: calc(var(--nav-height) + var(--space-4xl));
-  padding-bottom: var(--space-4xl);
+  padding-top: calc(var(--nav-height) + var(--space-3xl));
+  padding-bottom: var(--space-3xl);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -201,11 +201,11 @@
 }
 
 .hero__label {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .hero__title {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   font-size: var(--font-size-4xl);
   background: linear-gradient(135deg, var(--color-midnight-blue) 0%, #2B4A5A 100%);
   -webkit-background-clip: text;
@@ -214,34 +214,97 @@
 }
 
 .hero__question {
-  max-width: 700px;
-  margin: 0 auto var(--space-xl);
+  max-width: 720px;
+  margin: 0 auto var(--space-md);
   font-size: var(--font-size-xl);
   font-style: italic;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
+  color: var(--color-sunset-orange);
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .hero__description {
-  max-width: 600px;
-  margin: 0 auto var(--space-xl);
+  max-width: 650px;
+  margin: 0 auto var(--space-lg);
   font-size: var(--font-size-md);
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .hero__deadline {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .hero__prize {
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto var(--space-2xl);
-  padding: var(--space-lg) var(--space-xl);
-  background: linear-gradient(135deg, #FFF8E8 0%, #FFFDF6 100%);
-  border: 1px solid var(--color-savannah-gold);
-  border-radius: var(--radius-lg);
-  font-weight: 600;
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, #FFFDF6 0%, #FFF5DD 100%);
+  border: 2px solid var(--color-savannah-gold);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px rgba(229, 173, 24, 0.15);
   color: var(--color-text-primary);
+}
+
+/* Mentor Domains Showcase */
+.mentor-domains {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border-warm);
+}
+
+.mentor-domains__title {
+  display: block;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.mentor-domains__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.mentor-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-warm);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.mentor-chip:hover {
+  border-color: var(--color-sunset-orange);
+  color: var(--color-sunset-orange);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.mentor-chip__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+.mentor-chip__domain {
+  font-weight: 700;
+  color: var(--color-sunset-orange);
+}
+
+.mentor-chip__name {
+  color: var(--color-text-muted);
 }
 
 .hero__ctas {
@@ -284,47 +347,7 @@
   margin-bottom: var(--space-2xl);
 }
 
-/* ---------- Steps ---------- */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-lg);
-  margin-bottom: var(--space-3xl);
-  position: relative;
-}
-
-.steps::before {
-  content: '';
-  position: absolute;
-  top: 18px;
-  left: calc(10% + 18px);
-  right: calc(10% + 18px);
-  height: 2px;
-  background: var(--color-border-warm);
-  z-index: 0;
-}
-
-.step-card {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.step-card .step-number {
-  margin: 0 auto var(--space-md);
-}
-
-.step-card h4 {
-  margin-bottom: var(--space-sm);
-  font-size: var(--font-size-sm);
-}
-
-.step-card p {
-  font-size: var(--font-size-sm);
-  line-height: 1.5;
-}
-
-/* ---------- Submissions ---------- */
+/* ---------- Submissions (3 Yêu cầu làm bài) ---------- */
 .submissions {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -334,6 +357,9 @@
 .submission-card {
   text-align: center;
   padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .submission-card__icon {
@@ -367,53 +393,34 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
   margin-bottom: var(--space-lg);
+  flex-grow: 1;
 }
 
-/* ---------- Rules ---------- */
-.rules-grid {
+/* ---------- Rules (Tiêu chuẩn bài làm 4 cards) ---------- */
+.rules-standards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-lg);
   margin-bottom: var(--space-2xl);
 }
 
-.rule-item {
-  display: flex;
-  gap: var(--space-md);
-  align-items: flex-start;
-  padding: var(--space-md) var(--space-lg);
+.rule-standard-card {
+  padding: var(--space-xl);
   background: var(--color-card);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  transition: border-color var(--transition-fast);
 }
 
-.rule-item:hover {
-  border-color: var(--color-cub-cream);
-}
-
-.rule-item__number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(219, 103, 24, 0.08);
+.rule-standard-card h4 {
   color: var(--color-sunset-orange);
-  font-weight: 700;
-  font-size: var(--font-size-xs);
-  flex-shrink: 0;
-}
-
-.rule-item p {
-  margin: 0;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-border);
 }
 
 /* ---------- Awards ---------- */
 .awards-everyone {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto var(--space-3xl);
   text-align: center;
 }
@@ -430,10 +437,11 @@
 .awards-everyone__list li {
   padding: var(--space-sm) 0;
   color: var(--color-text-secondary);
+  font-weight: 500;
 }
 
 .awards-everyone__list li::before {
-  content: '🎁 ';
+  content: '✨ ';
 }
 
 .awards-top {
