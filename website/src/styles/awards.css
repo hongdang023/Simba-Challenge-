@@ -1,5 +1,5 @@
 /* ========================================================
-   AWARDS SECTION STYLES (ULTRA CLEAN, NO GIANT WRAPPER BOXES)
+   AWARDS SECTION STYLES (ULTRA CLEAN, NO GIANT NESTED WRAPPERS)
    ======================================================== */
 
 .awards-clean-section {
@@ -21,7 +21,7 @@
   font-size: 1.25rem;
   font-weight: 800;
   color: var(--color-midnight-blue);
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 /* 1. Grid 2 Columns for All Participants */
@@ -102,34 +102,87 @@
   color: var(--color-sunset-orange);
 }
 
-/* 2. Top 3 Sub-section */
-.awards-top3-header {
+/* 2. Top 3 Major Perks Big Cards Grid */
+.top3-major-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.major-perk-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 18px;
+  text-align: center;
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-
-.top3-perks-pills {
-  display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8125rem;
-  font-weight: 700;
+  justify-content: center;
+  min-height: 155px;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.major-perk-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-sunset-orange);
+  box-shadow: 0 6px 16px rgba(219, 103, 24, 0.1);
+}
+
+.major-perk-card--cash {
+  border-color: #F5C544;
+  background: #FFFDF7;
+}
+
+.major-perk-card--cash .major-perk-card__icon-box {
+  color: #D97706;
+  background: #FEF3C7;
+}
+
+.major-perk-card--model .major-perk-card__icon-box {
+  color: var(--color-midnight-blue);
+  background: #E2E8F0;
+}
+
+.major-perk-card--media .major-perk-card__icon-box {
   color: var(--color-sunset-orange);
-  background: #FFF7ED;
-  border: 1px solid #FFEDD5;
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
+  background: #FFEDD5;
 }
 
-.perk-pill-dot {
-  opacity: 0.4;
+.major-perk-card__icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
-/* 3 Cards Grid for Top 3 */
+.major-perk-card__amount {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--color-sunset-orange);
+  line-height: 1.2;
+}
+
+.major-perk-card__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-midnight-blue);
+  margin-top: 2px;
+}
+
+.major-perk-card__headline {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--color-midnight-blue);
+  line-height: 1.4;
+}
+
+/* 3. Top 3 Title Recognitions Cards Grid */
 .awards-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -141,6 +194,7 @@
   text-align: center;
   align-items: center;
   padding: 26px 18px 18px;
+  background: #FFFFFF;
 }
 
 .award-clean-tag {
@@ -188,7 +242,7 @@
   color: #B45309;
 }
 
-/* 3. Mentor Domains Showcase */
+/* 4. Mentor Domains Showcase */
 .awards-clean-mentor {
   margin-top: var(--space-xl);
   padding: 16px 20px;
@@ -254,15 +308,10 @@
 
 /* Responsive */
 @media (max-width: 800px) {
-  .awards-grid-2 {
-    grid-template-columns: 1fr;
-  }
+  .awards-grid-2,
+  .top3-major-perks-grid,
   .awards-grid-3 {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .awards-top3-header {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 16px;
   }
 }

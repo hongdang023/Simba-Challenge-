@@ -1,6 +1,6 @@
 /**
  * Lightweight i18n system for VI / EN bilingual support.
- * Ultra-clean, concise copy, no emojis, no missing keys.
+ * Ultra-clean, concise copy, 2D vector style.
  */
 
 const translations = {
@@ -66,7 +66,7 @@ const translations = {
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
     'rules.assessmentNote': 'Xem trang Tiêu chuẩn đánh giá để tự tin đạt điểm xuất sắc con nhé!',
 
-    // Awards (Ultra-clean, concise)
+    // Awards
     'awards.heading': 'Giải thưởng',
     'awards.sec1Title': 'Dành cho tất cả học sinh tham gia',
     'awards.item1Title': 'Domain cá nhân 1 năm (10$–15$)',
@@ -75,13 +75,15 @@ const translations = {
     'awards.item2Desc': 'Chứng nhận chính thức từ Sư Tử Con.',
     
     'awards.sec2Title': 'Top 3 Vinh danh xuất sắc',
-    'awards.topPerk1': '+200.000 VNĐ tiền thưởng',
-    'awards.topPerk2': 'Bài mẫu chuẩn trên Simba',
-    'awards.topPerk3': 'Featured trên website & Nemo12',
+    'awards.topSubtitle': 'Mỗi học sinh lọt Top 3 sẽ nhận thêm 3 quyền lợi lớn:',
+    'awards.perk1Amount': '200.000 VNĐ',
+    'awards.perk1Title': 'Tiền thưởng',
+    'awards.perk2Title': 'Bài mẫu chuẩn trên Simba',
+    'awards.perk3Title': 'Featured trên website Sư Tử Con & Nemo12',
 
     'awards.award1Tag': 'Trải Nghiệm Tốt Nhất',
     'awards.award1Title': 'Best Website Experience',
-    'awards.award1Desc': 'Trải nghiệm mượt mà, hữu ích nhất cho người xem.',
+    'awards.award1Desc': 'Trải nghiệm mượt mà, hữu ích nhất cho người xem mục tiêu.',
     
     'awards.award2Tag': 'Câu Chuyện Hay Nhất',
     'awards.award2Title': 'Best Website Story',
@@ -89,7 +91,7 @@ const translations = {
     
     'awards.award3Tag': 'Đúc Kết Sâu Sắc Nhất',
     'awards.award3Title': 'Best Reflection',
-    'awards.award3Desc': 'Bài phản tư 4F sâu sắc và hành động thực tế nhất.',
+    'awards.award3Desc': 'Bài phản tư 4F sâu sắc và hành động tương lai rõ ràng nhất.',
     
     'awards.certBadge': 'Kèm Chứng nhận Top 3',
     'awards.mentorTitle': 'THAM KHẢO DOMAIN CỦA CÁC MENTOR',
@@ -209,9 +211,11 @@ const translations = {
     'awards.item2Desc': 'Official Certificate from Sư Tử Con.',
     
     'awards.sec2Title': 'Top 3 Outstanding Honors',
-    'awards.topPerk1': '+200,000 VND cash prize',
-    'awards.topPerk2': 'Simba model project',
-    'awards.topPerk3': 'Featured on website & media',
+    'awards.topSubtitle': 'Each student reaching Top 3 will receive 3 major rewards:',
+    'awards.perk1Amount': '200,000 VND',
+    'awards.perk1Title': 'Cash prize',
+    'awards.perk2Title': 'Featured model project on Simba',
+    'awards.perk3Title': 'Featured on website & Nemo12 media',
 
     'awards.award1Tag': 'Best Experience',
     'awards.award1Title': 'Best Website Experience',
@@ -268,7 +272,7 @@ const translations = {
     'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
-    'footer.message': 'Đây không chỉ là một cuộc thi làm website. Đây là cơ hội để con tạo ra một góc Internet thật sự thể hiện mình, rồi nhìn lại xem mình đã học được gì trong quá trình đó.',
+    'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',
     'footer.brand': '© 2026 Sư Tử Con · Nemo12',
   },
 };

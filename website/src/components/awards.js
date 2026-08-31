@@ -2,10 +2,12 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Awards section — Ultra-clean, modular, no massive nested boxes:
+ * Awards section — Big prominent 3 Top 3 Perk Cards with 2D stroke icons:
  * 1. Sub-section 1: Dành cho tất cả học sinh tham gia (2 separate clean cards)
- * 2. Sub-section 2: Top 3 Vinh danh xuất sắc (3 Title cards with 2D stroke medal + small perks bar)
- * 3. Sub-section 3: Tham khảo domain của các Mentor (Clean pill strip)
+ * 2. Sub-section 2: Top 3 Vinh danh xuất sắc
+ *    - 3 Big Prominent Perk Cards (200.000 VNĐ, Bài mẫu Simba, Featured Sư Tử Con)
+ *    - 3 Title Recognitions (Best Experience, Best Story, Best Reflection)
+ * 3. Sub-section 3: Tham khảo domain của các Mentor
  */
 export function renderAwards() {
   const section = document.createElement('section');
@@ -76,23 +78,44 @@ export function renderAwards() {
       </div>
 
       <!-- ==========================================
-           2. TOP 3 VINH DANH XUẤT SẮC (3 Title Cards)
+           2. TOP 3 VINH DANH XUẤT SẮC
            ========================================== -->
-      <div class="awards-clean-block" style="margin-top: 36px;">
-        <div class="awards-top3-header">
-          <h3 class="awards-clean-heading" data-i18n="awards.sec2Title">${t('awards.sec2Title')}</h3>
-          
-          <!-- Clean Perks Strip (No giant container box) -->
-          <div class="top3-perks-pills">
-            <span class="perk-pill" data-i18n="awards.topPerk1">${t('awards.topPerk1')}</span>
-            <span class="perk-pill-dot">•</span>
-            <span class="perk-pill" data-i18n="awards.topPerk2">${t('awards.topPerk2')}</span>
-            <span class="perk-pill-dot">•</span>
-            <span class="perk-pill" data-i18n="awards.topPerk3">${t('awards.topPerk3')}</span>
+      <div class="awards-clean-block" style="margin-top: 40px;">
+        <h3 class="awards-clean-heading" data-i18n="awards.sec2Title">${t('awards.sec2Title')}</h3>
+        <p class="text-muted" style="font-size: var(--font-size-sm); margin: -6px 0 16px 0;" data-i18n="awards.topSubtitle">
+          ${t('awards.topSubtitle')}
+        </p>
+
+        <!-- 3 Big Major Perk Cards (2D Icons) -->
+        <div class="top3-major-perks-grid">
+          <!-- Perk 1: Tiền mặt -->
+          <div class="major-perk-card major-perk-card--cash">
+            <div class="major-perk-card__icon-box">
+              <svg class="icon icon--lg"><use href="/icons.svg#icon-gift"></use></svg>
+            </div>
+            <div class="major-perk-card__amount" data-i18n="awards.perk1Amount">${t('awards.perk1Amount')}</div>
+            <div class="major-perk-card__title" data-i18n="awards.perk1Title">${t('awards.perk1Title')}</div>
+          </div>
+
+          <!-- Perk 2: Bài mẫu Simba -->
+          <div class="major-perk-card major-perk-card--model">
+            <div class="major-perk-card__icon-box">
+              <svg class="icon icon--lg"><use href="/icons.svg#icon-box"></use></svg>
+            </div>
+            <div class="major-perk-card__headline" data-i18n="awards.perk2Title">${t('awards.perk2Title')}</div>
+          </div>
+
+          <!-- Perk 3: Featured Media -->
+          <div class="major-perk-card major-perk-card--media">
+            <div class="major-perk-card__icon-box">
+              <svg class="icon icon--lg"><use href="/icons.svg#icon-sparkles"></use></svg>
+            </div>
+            <div class="major-perk-card__headline" data-i18n="awards.perk3Title">${t('awards.perk3Title')}</div>
           </div>
         </div>
 
-        <div class="awards-grid-3">
+        <!-- 3 Title Recognitions Cards -->
+        <div class="awards-grid-3" style="margin-top: 20px;">
           ${topAwards.map(a => `
             <div class="award-clean-card award-clean-card--top3">
               <span class="award-clean-tag" data-i18n="${a.tagKey}">${t(a.tagKey)}</span>
@@ -114,7 +137,7 @@ export function renderAwards() {
       </div>
 
       <!-- ==========================================
-           3. MENTOR DOMAINS SHOWCASE (Clean strip)
+           3. MENTOR DOMAINS SHOWCASE
            ========================================== -->
       <div class="awards-clean-mentor">
         <span class="awards-mentor-label" data-i18n="awards.mentorTitle">${t('awards.mentorTitle')}</span>
