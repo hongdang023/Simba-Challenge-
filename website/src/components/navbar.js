@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t, getLang, setLanguage } from '../i18n.js';
 
 /**
- * Navbar component with sticky nav, anchor links, language toggle, and mobile menu.
+ * Navbar component with concise 1-line nav links, clean active state, and responsive drawer.
  */
 export function renderNavbar() {
   const nav = document.createElement('nav');
@@ -23,14 +23,16 @@ export function renderNavbar() {
 
   nav.innerHTML = `
     <div class="navbar__inner">
-      <a href="#overview" aria-label="Sư Tử Con - Back to top">
-        <img src="${CONFIG.logoSrc}" alt="Sư Tử Con" class="navbar__logo" width="160" height="40" />
+      <a href="#overview" class="navbar__brand" aria-label="Sư Tử Con">
+        <img src="${CONFIG.logoSrc}" alt="Sư Tử Con" class="navbar__logo" height="36" />
       </a>
+      
       <ul class="navbar__links">
         ${sections.map(s => `
           <li><a href="#${s.id}" class="navbar__link" data-section="${s.id}" data-i18n="${s.key}">${t(s.key)}</a></li>
         `).join('')}
       </ul>
+
       <div class="navbar__actions">
         <div class="lang-toggle" role="group" aria-label="Language">
           <button class="lang-toggle__btn ${currentLang === 'vi' ? 'active' : ''}" data-lang="vi" aria-label="Tiếng Việt">VI</button>
@@ -43,7 +45,6 @@ export function renderNavbar() {
     </div>
   `;
 
-  // Mobile menu
   const mobileMenu = document.createElement('div');
   mobileMenu.className = 'mobile-menu';
   mobileMenu.innerHTML = sections.map(s => `
@@ -52,8 +53,6 @@ export function renderNavbar() {
 
   document.body.prepend(mobileMenu);
   document.body.prepend(nav);
-
-  // --- Event Listeners ---
 
   // Scroll shadow
   window.addEventListener('scroll', () => {
@@ -78,7 +77,6 @@ export function renderNavbar() {
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close mobile menu on link click
   mobileMenu.querySelectorAll('.navbar__link').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
@@ -88,7 +86,6 @@ export function renderNavbar() {
     });
   });
 
-  // Active section highlighting via IntersectionObserver
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -103,7 +100,6 @@ export function renderNavbar() {
     { rootMargin: '-20% 0px -60% 0px' }
   );
 
-  // Observe sections after they're rendered
   requestAnimationFrame(() => {
     sections.forEach(s => {
       const el = document.getElementById(s.id);

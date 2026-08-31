@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Hero section with clean 2D layout, AI Teen badge, and SVG icons.
+ * Hero section — cleaned description, no redundant paragraphs, spacious layout.
  */
 export function renderHero() {
   const section = document.createElement('section');
@@ -23,8 +23,6 @@ export function renderHero() {
       <h1 class="hero__title" data-i18n="hero.title">${t('hero.title')}</h1>
       
       <p class="hero__question" data-i18n="hero.question">"${t('hero.question')}"</p>
-      
-      <p class="hero__description" data-i18n="hero.description">${t('hero.description')}</p>
       
       <div class="hero__deadline-badge">
         <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-clock"></use></svg>

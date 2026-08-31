@@ -2,6 +2,17 @@
    Responsive Breakpoints
    ============================================ */
 
+/* ---------- Switch to Mobile Menu earlier (≤ 900px) to prevent any wrap ---------- */
+@media (max-width: 900px) {
+  .navbar__links {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+}
+
 /* ---------- Tablet: 768px – 1023px ---------- */
 @media (max-width: 1023px) {
   :root {
@@ -36,14 +47,6 @@
   .awards-extra__list {
     grid-template-columns: 1fr;
   }
-
-  .navbar__links {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
 }
 
 /* ---------- Mobile: < 768px ---------- */
@@ -60,7 +63,7 @@
   }
 
   .hero {
-    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-top: calc(var(--nav-height) + var(--space-xl));
     padding-bottom: var(--space-2xl);
   }
 

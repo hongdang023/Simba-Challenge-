@@ -4,28 +4,26 @@
 
 const translations = {
   vi: {
-    // Navbar
+    // Navbar (Ngắn gọn 1 dòng tuyệt đối không wrap)
     'nav.overview': 'Tổng quan',
     'nav.challenge': 'Thử thách',
-    'nav.howToJoin': '3 Yêu cầu làm bài',
-    'nav.rules': 'Tiêu chuẩn bài làm',
-    'nav.awards': 'Quà tặng & Giải thưởng',
-    'nav.faq': 'Câu hỏi',
+    'nav.howToJoin': 'Cách tham gia',
+    'nav.rules': 'Quy định',
+    'nav.awards': 'Giải thưởng',
+    'nav.faq': 'FAQ',
 
-    // Hero
+    // Hero (Đã bỏ dòng description thừa theo ảnh 1)
     'hero.badge': 'AI Teen Challenge',
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'Nếu có một góc trên Internet để giới thiệu thế giới của mình, em muốn cho người đó xem gì?',
-    'hero.description': 'Tạo một website cá nhân bằng Google Antigravity, tự tin giới thiệu bản thân và nhận ngay Tên Miền (Domain) chính chủ 1 năm!',
     'hero.deadline': 'Hạn nộp: 23:59, 06/09/2026',
-    'hero.daysLeft': 'Còn {days} ngày',
     'hero.prizeTitle': '100% Hoàn thành = Nhận ngay 1 Tên Miền (Domain) riêng trong 1 năm',
-    'hero.prizeDesc': 'Sở hữu website chính chủ mang tên con như các Mentor:',
     'hero.ctaPrimary': 'Làm Website trên Simba',
     'hero.ctaSecondary': 'Làm 4F Reflection',
     'hero.mentorTitle': 'Tham khảo website & domain của các Mentor:',
 
-    // Challenge
+    // Challenge (Đã thêm dòng Website cá nhân theo ảnh 2)
+    'challenge.badge': 'Website Cá Nhân',
     'challenge.heading': 'Em sẽ tạo sản phẩm gì?',
     'challenge.intro': 'Website của em sẽ giúp một người xem cụ thể hiểu về:',
     'challenge.point1': 'Em là ai.',
@@ -40,7 +38,7 @@ const translations = {
     'challenge.cta': 'Làm Website ngay trên Simba',
 
     // How to Join (3 Yêu cầu làm bài)
-    'howToJoin.heading': '3 Yêu cầu làm bài',
+    'howToJoin.heading': 'Cách tham gia',
     'howToJoin.subheading': 'Các bước làm bài trên Simba thì con đã quá quen thuộc rồi! Điểm mới mẻ duy nhất là chiếc video ngắn 60–90s để con tự tin giới thiệu sản phẩm của mình thôi!',
     'howToJoin.sub1Title': '1. Website / Product',
     'howToJoin.sub1Where': 'Nộp trên Simba (như mọi tuần)',
@@ -55,8 +53,8 @@ const translations = {
     'howToJoin.ctaReflection': 'Làm 4F Reflection trên Simba',
     'howToJoin.videoNote': 'Vào Nhóm Zalo AI Teen Gửi Video',
 
-    // Rules (Tiêu chuẩn bài làm rút gọn)
-    'rules.heading': 'Tiêu chuẩn bài làm',
+    // Rules
+    'rules.heading': 'Quy định bài làm',
     'rules.subheading': 'Chỉ 4 tiêu chuẩn đơn giản, trong tầm tay con làm được tuốt!',
     'rules.card1Title': '1. Bài làm & Thời hạn',
     'rules.card1_1': 'Dành riêng cho học sinh AI Teen (mỗi con làm 1 bài cá nhân).',
@@ -74,7 +72,7 @@ const translations = {
     'rules.assessmentNote': 'Rubric đánh giá chi tiết cho Website và 4F Reflection đều có sẵn trực tiếp trên Simba như mọi tuần con nhé!',
 
     // Awards
-    'awards.heading': 'Quà tặng & Giải thưởng',
+    'awards.heading': 'Giải thưởng',
     'awards.everyoneTitle': 'Phần Thưởng Cho Tất Cả Học Sinh Tham Gia',
     'awards.everyoneDesc': 'Mỗi học sinh hoàn thành đủ 3 yêu cầu trên chắc chắn nhận được:',
     'awards.everyoneItem1': '1 Tên miền (Domain) cá nhân riêng chính chủ dùng trong 1 năm.',
@@ -139,25 +137,23 @@ const translations = {
     // Navbar
     'nav.overview': 'Overview',
     'nav.challenge': 'Challenge',
-    'nav.howToJoin': '3 Submission Tasks',
-    'nav.rules': 'Submission Standards',
-    'nav.awards': 'Gifts & Awards',
+    'nav.howToJoin': 'How to Join',
+    'nav.rules': 'Rules',
+    'nav.awards': 'Awards',
     'nav.faq': 'FAQ',
 
     // Hero
     'hero.badge': 'AI Teen Challenge',
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'If you had a corner on the Internet to introduce your world, what would you show?',
-    'hero.description': 'Create your personal website with Google Antigravity, showcase yourself, and win a 1-year custom domain!',
     'hero.deadline': 'Deadline: 23:59, 06/09/2026',
-    'hero.daysLeft': '{days} days left',
     'hero.prizeTitle': '100% Completion = 1 Custom Domain for 1 Full Year',
-    'hero.prizeDesc': 'Own a personalized website just like our Mentors:',
     'hero.ctaPrimary': 'Submit Website on Simba',
     'hero.ctaSecondary': 'Do 4F Reflection',
     'hero.mentorTitle': 'Explore Mentors\' websites & domains:',
 
     // Challenge
+    'challenge.badge': 'Personal Website',
     'challenge.heading': 'What will you create?',
     'challenge.intro': 'Your website should help a specific viewer understand:',
     'challenge.point1': 'Who you are.',
@@ -171,8 +167,8 @@ const translations = {
     'challenge.note': 'Your website does not need to look like the examples. What matters is that you understand your viewer, explain your choices and provide suitable evidence.',
     'challenge.cta': 'Submit Website on Simba',
 
-    // How to Join (3 Submission Tasks)
-    'howToJoin.heading': '3 Simple Submission Tasks',
+    // How to Join
+    'howToJoin.heading': 'How to Join',
     'howToJoin.subheading': 'You already know how to submit work on Simba! The only new exciting thing is a 60–90s short video to show off your website!',
     'howToJoin.sub1Title': '1. Website / Product',
     'howToJoin.sub1Where': 'Submit on Simba (as usual)',
@@ -187,8 +183,8 @@ const translations = {
     'howToJoin.ctaReflection': 'Do 4F Reflection on Simba',
     'howToJoin.videoNote': 'Join Zalo Group & Send Video',
 
-    // Rules (Simplified Standards)
-    'rules.heading': 'Submission Standards',
+    // Rules
+    'rules.heading': 'Submission Rules',
     'rules.subheading': '4 simple criteria — well within your capability!',
     'rules.card1Title': '1. Project & Deadline',
     'rules.card1_1': 'Exclusive for AI Teen students (individual submission).',
@@ -206,7 +202,7 @@ const translations = {
     'rules.assessmentNote': 'Detailed assessment rubrics for Website and 4F Reflection are available directly on Simba as usual!',
 
     // Awards
-    'awards.heading': 'Gifts & Awards',
+    'awards.heading': 'Awards & Prizes',
     'awards.everyoneTitle': 'Rewards For All Participants',
     'awards.everyoneDesc': 'Every student who completes all 3 tasks will receive:',
     'awards.everyoneItem1': '1 Custom personal domain for 1 full year.',
@@ -263,7 +259,7 @@ const translations = {
     'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
-    'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',
+    'footer.message': 'Đây không chỉ là một cuộc thi làm website. Đây là cơ hội để con tạo ra một góc Internet thật sự thể hiện mình, rồi nhìn lại xem mình đã học được gì trong quá trình đó.',
     'footer.brand': '© 2026 Sư Tử Con · Nemo12',
   },
 };

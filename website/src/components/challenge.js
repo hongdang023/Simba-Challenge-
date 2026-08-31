@@ -2,7 +2,7 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Challenge section — 2D vector icons.
+ * Challenge section — with "Website Cá Nhân" badge above heading.
  */
 export function renderChallenge() {
   const section = document.createElement('section');
@@ -19,9 +19,13 @@ export function renderChallenge() {
   section.innerHTML = `
     <div class="container">
       <div class="section-header">
+        <div style="margin-bottom: var(--space-xs);">
+          <span class="badge badge--brand" data-i18n="challenge.badge">${t('challenge.badge')}</span>
+        </div>
         <h2 data-i18n="challenge.heading">${t('challenge.heading')}</h2>
       </div>
-      <p class="text-center text-muted mb-2xl" style="max-width: 650px; margin: 0 auto var(--space-2xl);" data-i18n="challenge.intro">
+      
+      <p class="text-center text-muted" style="max-width: 650px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="challenge.intro">
         ${t('challenge.intro')}
       </p>
 
@@ -32,7 +36,7 @@ export function renderChallenge() {
               <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#${p.icon}"></use></svg>
             </div>
             <div>
-              <p style="margin: 0; font-weight: 500; color: var(--color-midnight-blue);" data-i18n="${p.key}">${t(p.key)}</p>
+              <p style="margin: 0; font-weight: 600; color: var(--color-midnight-blue);" data-i18n="${p.key}">${t(p.key)}</p>
             </div>
           </div>
         `).join('')}
