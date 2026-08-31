@@ -2,7 +2,8 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Hero section — with smooth navigation to challenge and rubrics.
+ * Hero section — clean, only 1 CTA button ("Khám phá thử thách").
+ * No mentor domain box in hero (moved to Awards section).
  */
 export function renderHero() {
   const section = document.createElement('section');
@@ -30,35 +31,10 @@ export function renderHero() {
         ${daysLeft > 0 ? `<span>· Còn ${daysLeft} ngày</span>` : ''}
       </div>
 
-      <!-- 2D Clean Reward Showcase -->
-      <div class="hero__reward-card">
-        <div class="hero__reward-header">
-          <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-gift"></use></svg>
-          <span data-i18n="hero.prizeTitle">${t('hero.prizeTitle')}</span>
-        </div>
-        
-        <div class="mentor-domains">
-          <span class="mentor-domains__title" data-i18n="hero.mentorTitle">${t('hero.mentorTitle')}</span>
-          <div class="mentor-domains__list">
-            ${CONFIG.mentorDomains.map(m => `
-              <a href="${m.url}" target="_blank" rel="noopener" class="mentor-chip" title="Xem website của ${m.name}">
-                <span class="mentor-chip__dot"></span>
-                <span class="mentor-chip__domain">${m.domain}</span>
-                <span class="mentor-chip__name">${m.name}</span>
-                <svg class="icon icon--sm" style="opacity: 0.5;" aria-hidden="true"><use href="/icons.svg#icon-external"></use></svg>
-              </a>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero CTAs -->
+      <!-- Hero CTA: Only 1 primary button -->
       <div class="hero__ctas">
         <a href="#challenge" class="btn btn--primary" data-i18n="hero.ctaPrimary">
           ${t('hero.ctaPrimary')}
-        </a>
-        <a href="#/rubrics" class="btn btn--outline" data-i18n="hero.ctaSecondary">
-          ${t('hero.ctaSecondary')}
         </a>
       </div>
     </div>

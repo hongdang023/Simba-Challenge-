@@ -1,11 +1,11 @@
 /**
  * Lightweight i18n system for VI / EN bilingual support.
- * Rule: NO mixed bracket Vietnamese/English. Pure Vietnamese or pure English.
+ * Rule: Keep technical terms in English (Domain, etc.). Do not translate 'domain' to 'tên miền'.
  */
 
 const translations = {
   vi: {
-    // Navbar (3 trang riêng biệt - không mở ngoặc)
+    // Navbar
     'nav.overview': 'Tổng quan',
     'nav.rubrics': 'Tiêu chuẩn đánh giá',
     'nav.faq': 'Câu hỏi thường gặp',
@@ -15,10 +15,7 @@ const translations = {
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'Nếu có một góc trên Internet để giới thiệu thế giới của mình, em muốn cho người đó xem gì?',
     'hero.deadline': 'Hạn nộp: 23:59, 06/09/2026',
-    'hero.prizeTitle': '100% Hoàn thành = Nhận ngay 1 Tên Miền riêng trong 1 năm',
     'hero.ctaPrimary': 'Khám phá thử thách',
-    'hero.ctaSecondary': 'Xem tiêu chuẩn đánh giá',
-    'hero.mentorTitle': 'Tham khảo website & tên miền của các Mentor:',
 
     // Challenge
     'challenge.badge': 'Website Cá Nhân',
@@ -61,9 +58,9 @@ const translations = {
     'rules.card2_1': 'Dùng Google Antigravity & deploy lên Cloudflare Pages.',
     'rules.card2_2': 'Có tối thiểu 3 phần nội dung + 3 hình ảnh thật.',
     'rules.card2_3': 'Cho 1 người xem trải nghiệm & có ít nhất 1 cải tiến sau góp ý.',
-    'rules.card3Title': '3. Tên miền',
-    'rules.card3_1': 'Chuẩn bị 1 tên miền chính + 1 tên miền dự phòng.',
-    'rules.card3_2': 'Kiểm tra trước trên Cloudflare và giải thích lý do con chọn tên miền đó.',
+    'rules.card3Title': '3. Domain',
+    'rules.card3_1': 'Chuẩn bị 1 domain chính + 1 domain dự phòng.',
+    'rules.card3_2': 'Kiểm tra trước trên Cloudflare và giải thích lý do con chọn domain đó.',
     'rules.card4Title': '4. Video & Reflection',
     'rules.card4_1': 'Video 60–90s có mặt thật, giọng thật và quay màn hình website.',
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
@@ -74,8 +71,9 @@ const translations = {
     'awards.everyoneBadge': 'QUÀ TẶNG 100%',
     'awards.everyoneTitle': 'Phần Thưởng Cho Tất Cả Học Sinh Hoàn Thành',
     'awards.everyoneDesc': 'Chỉ cần hoàn thành đủ 3 yêu cầu, mỗi học sinh chắc chắn nhận được:',
-    'awards.everyoneItem1': '1 Tên miền cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
+    'awards.everyoneItem1': '1 Domain cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
     'awards.everyoneItem2': 'Chứng nhận hoàn thành My Personal Website Challenge từ Sư Tử Con.',
+    'awards.mentorTitle': 'Tham khảo domain của các Mentor:',
     
     'awards.topSectionTitle': 'Top 3 — Vinh Danh Xuất Sắc',
     'awards.award1Tag': 'Trải Nghiệm Tốt Nhất',
@@ -83,7 +81,7 @@ const translations = {
     'awards.award1Desc': 'Website tạo trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem mục tiêu.',
     'awards.award2Tag': 'Câu Chuyện Hay Nhất',
     'awards.award2Title': 'Best Website Story',
-    'awards.award2Desc': 'Sự kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn tên miền và video giới thiệu.',
+    'awards.award2Desc': 'Sự kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn domain và video giới thiệu.',
     'awards.award3Tag': 'Đúc Kết Sâu Sắc Nhất',
     'awards.award3Title': 'Best Reflection',
     'awards.award3Desc': 'Bài 4F Reflection thể hiện rõ nhất con đã học được gì, làm được gì và hướng đi tiếp theo.',
@@ -107,13 +105,13 @@ const translations = {
     'faq.q1_3': 'Thế nào là một website cá nhân?',
     'faq.a1_3': 'Là trang web giới thiệu về em — sở thích, đam mê, trường lớp, bạn bè hoặc bất kỳ sản phẩm/dự án nào em tự hào.',
 
-    'faq.cat2': 'Về tên miền',
-    'faq.q2_1': 'Kiểm tra tên miền ở đâu?',
-    'faq.a2_1': 'Em vào Cloudflare để tra cứu xem tên miền mong muốn còn trống không, sau đó chụp lại ảnh màn hình bằng chứng.',
-    'faq.q2_2': 'Nếu tên miền em chọn đã có người mua rồi thì sao?',
-    'faq.a2_2': 'Đó là lý do em cần chuẩn bị thêm 1 tên miền dự phòng. Em hãy kiểm tra cả 2 trước khi nộp nhé.',
-    'faq.q2_3': 'Tên miền được tặng có giống của các thầy cô không?',
-    'faq.a2_3': 'Đúng rồi! Tên miền riêng có đuôi .com, .me, .dev... chính chủ mang tên em, hoạt động hoàn toàn như website của các Mentor.',
+    'faq.cat2': 'Về domain',
+    'faq.q2_1': 'Kiểm tra domain ở đâu?',
+    'faq.a2_1': 'Em vào Cloudflare để tra cứu xem domain mong muốn còn trống không, sau đó chụp lại ảnh màn hình bằng chứng.',
+    'faq.q2_2': 'Nếu domain em chọn đã có người mua rồi thì sao?',
+    'faq.a2_2': 'Đó là lý do em cần chuẩn bị thêm 1 domain dự phòng. Em hãy kiểm tra cả 2 trước khi nộp nhé.',
+    'faq.q2_3': 'Domain được tặng có giống của các thầy cô không?',
+    'faq.a2_3': 'Đúng rồi! Domain riêng có đuôi .com, .me, .dev... chính chủ mang tên em, hoạt động hoàn toàn như website của các Mentor.',
 
     'faq.cat3': 'Về video',
     'faq.q3_1': 'Video dài bao lâu?',
@@ -149,10 +147,7 @@ const translations = {
     'hero.title': 'My Personal Website Challenge',
     'hero.question': 'If you had a corner on the Internet to introduce your world, what would you show?',
     'hero.deadline': 'Deadline: 23:59, 06/09/2026',
-    'hero.prizeTitle': '100% Completion = 1 Custom Domain for 1 Full Year',
     'hero.ctaPrimary': 'Explore Challenge',
-    'hero.ctaSecondary': 'View Assessment Rubrics',
-    'hero.mentorTitle': 'Explore Mentors\' websites & domains:',
 
     // Challenge
     'challenge.badge': 'Personal Website',
@@ -210,6 +205,7 @@ const translations = {
     'awards.everyoneDesc': 'Complete all 3 requirements to guarantee receiving:',
     'awards.everyoneItem1': '1 Custom personal domain for 1 full year (just like our mentors).',
     'awards.everyoneItem2': 'Certificate of Completion for My Personal Website Challenge from Sư Tử Con.',
+    'awards.mentorTitle': 'Explore Mentors\' domains:',
     
     'awards.topSectionTitle': 'Top 3 — Featured Recognitions',
     'awards.award1Tag': 'Best Experience',
@@ -257,14 +253,6 @@ const translations = {
     'faq.a3_3': 'No fancy editing needed! A clear screen and audio recording from your phone or laptop is perfect.',
     'faq.q3_4': 'Where do I submit the video?',
     'faq.a3_4': 'Upload your video to Google Drive or YouTube, then send the link in the AI Teen Zalo group.',
-
-    'faq.cat4': 'Submitting on Simba',
-    'faq.q4_1': 'Where do I submit the website and reflection?',
-    'faq.a4_1': 'Log in to Simba, and find the Website/Product and 4F Reflection sections to submit as usual.',
-    'faq.q4_2': 'Can I save my work and finish later?',
-    'faq.a4_2': 'Yes! Simba allows you to save drafts and return before 23:59 on 06/09/2026.',
-    'faq.q4_3': 'Is a high AI score the main goal of 4F Reflection?',
-    'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
     'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',

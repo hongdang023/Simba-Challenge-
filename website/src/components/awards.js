@@ -1,7 +1,8 @@
+import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Awards section — Option 1: 2-Tier Split Banner & Podium with Top 3 Badges.
+ * Awards section — includes Mentor Domain showcase at the bottom of the section.
  */
 export function renderAwards() {
   const section = document.createElement('section');
@@ -90,6 +91,23 @@ export function renderAwards() {
       <div class="awards-perks-strip">
         <div class="awards-perks-strip__badge" data-i18n="awards.extraStripTitle">${t('awards.extraStripTitle')}</div>
         <div class="awards-perks-strip__text" data-i18n="awards.extraStripText">${t('awards.extraStripText')}</div>
+      </div>
+
+      <!-- Mentor Domains Showcase (Placed right below Awards) -->
+      <div class="awards-mentor-showcase">
+        <div class="mentor-domains">
+          <span class="mentor-domains__title" data-i18n="awards.mentorTitle">${t('awards.mentorTitle')}</span>
+          <div class="mentor-domains__list">
+            ${CONFIG.mentorDomains.map(m => `
+              <a href="${m.url}" target="_blank" rel="noopener" class="mentor-chip" title="Xem website của ${m.name}">
+                <span class="mentor-chip__dot"></span>
+                <span class="mentor-chip__domain">${m.domain}</span>
+                <span class="mentor-chip__name">${m.name}</span>
+                <svg class="icon icon--sm" style="opacity: 0.5;" aria-hidden="true"><use href="/icons.svg#icon-external"></use></svg>
+              </a>
+            `).join('')}
+          </div>
+        </div>
       </div>
 
       <p class="text-center text-muted" style="margin-top: var(--space-lg); font-size: var(--font-size-xs);" data-i18n="awards.ruleNote">

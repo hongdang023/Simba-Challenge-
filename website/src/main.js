@@ -6,6 +6,7 @@
  */
 import './styles/index.css';
 import './styles/sections.css';
+import './styles/awards.css';
 import './styles/rubrics.css';
 import './styles/responsive.css';
 
