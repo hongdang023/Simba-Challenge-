@@ -182,7 +182,7 @@
   line-height: 1.4;
 }
 
-/* 3. Top 3 Title Recognitions Cards Grid */
+/* 3. Top 3 Title Recognitions Cards Grid (Clean padding) */
 .awards-grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -190,24 +190,10 @@
 }
 
 .award-clean-card--top3 {
-  position: relative;
   text-align: center;
   align-items: center;
-  padding: 26px 18px 18px;
+  padding: 22px 18px 18px;
   background: #FFFFFF;
-}
-
-.award-clean-tag {
-  position: absolute;
-  top: -10px;
-  background: var(--color-sunset-orange);
-  color: #FFFFFF;
-  font-size: 0.6875rem;
-  font-weight: 800;
-  padding: 2px 10px;
-  border-radius: var(--radius-full);
-  letter-spacing: 0.3px;
-  white-space: nowrap;
 }
 
 .award-clean-card--top3 .icon-circle {
@@ -242,7 +228,7 @@
   color: #B45309;
 }
 
-/* 4. Mentor Domains Showcase — Flat Horizontal Strip (No giant container card) */
+/* 4. Mentor Domains Showcase */
 .awards-mentor-flat-row {
   margin-top: var(--space-2xl);
   text-align: center;

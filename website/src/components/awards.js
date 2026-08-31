@@ -3,11 +3,7 @@ import { t } from '../i18n.js';
 
 /**
  * Awards section:
- * 1. Sub-section 1: Dành cho tất cả học sinh tham gia (2 separate clean cards)
- * 2. Sub-section 2: Top 3 Vinh danh xuất sắc
- *    - 3 Big Prominent Perk Cards (200.000 VNĐ, Bài mẫu Simba, Featured Sư Tử Con)
- *    - 3 Title Recognitions (Best Experience, Best Story, Best Reflection)
- * 3. Sub-section 3: Tham khảo domain của các Mentor (Phẳng, không có card to bọc ngoài, 4 domain nằm trên 1 hàng ngang)
+ * - Removed top orange tags on the 3 Title Recognitions cards for a cleaner look.
  */
 export function renderAwards() {
   const section = document.createElement('section');
@@ -16,19 +12,16 @@ export function renderAwards() {
 
   const topAwards = [
     { 
-      tagKey: 'awards.award1Tag',
       titleKey: 'awards.award1Title', 
       descKey: 'awards.award1Desc', 
       icon: 'icon-globe' 
     },
     { 
-      tagKey: 'awards.award2Tag',
       titleKey: 'awards.award2Title', 
       descKey: 'awards.award2Desc', 
       icon: 'icon-heart' 
     },
     { 
-      tagKey: 'awards.award3Tag',
       titleKey: 'awards.award3Title', 
       descKey: 'awards.award3Desc', 
       icon: 'icon-reflection' 
@@ -114,12 +107,10 @@ export function renderAwards() {
           </div>
         </div>
 
-        <!-- 3 Title Recognitions Cards -->
+        <!-- 3 Title Recognitions Cards (No top orange tags) -->
         <div class="awards-grid-3" style="margin-top: 20px;">
           ${topAwards.map(a => `
             <div class="award-clean-card award-clean-card--top3">
-              <span class="award-clean-tag" data-i18n="${a.tagKey}">${t(a.tagKey)}</span>
-              
               <div class="icon-circle icon-circle--orange">
                 <svg class="icon icon--md"><use href="/icons.svg#${a.icon}"></use></svg>
               </div>
@@ -137,7 +128,7 @@ export function renderAwards() {
       </div>
 
       <!-- ==========================================
-           3. MENTOR DOMAINS SHOWCASE (Không có card to bọc ngoài, 4 domain ngang hàng)
+           3. MENTOR DOMAINS SHOWCASE
            ========================================== -->
       <div class="awards-mentor-flat-row">
         <span class="awards-mentor-label" data-i18n="awards.mentorTitle">${t('awards.mentorTitle')}</span>
