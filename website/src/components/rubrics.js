@@ -1,11 +1,14 @@
 import { RUBRICS_DATA } from '../rubrics-data.js';
-import { t } from '../i18n.js';
+import { t, getLang } from '../i18n.js';
 
 /**
  * Dedicated Page 2: Tiêu chuẩn đánh giá (Assessment Rubrics).
- * All tabs have standardized 5 levels (0. NOVICE -> 4. EXCELLENT) with toggle accordion.
+ * Dynamically switches rubrics content based on active language (Pure VI / Pure EN).
  */
 export function renderRubricsPage() {
+  const lang = getLang() === 'en' ? 'en' : 'vi';
+  const data = RUBRICS_DATA[lang] || RUBRICS_DATA.vi;
+
   const page = document.createElement('div');
   page.id = 'page-rubrics';
   page.className = 'page-container';
@@ -34,7 +37,7 @@ export function renderRubricsPage() {
             </button>
             <button class="rubrics-tab" data-tab="video" role="tab" aria-selected="false">
               <svg class="icon icon--sm"><use href="/icons.svg#icon-video"></use></svg>
-              <span>3. Video Giới Thiệu</span>
+              <span>3. Video</span>
             </button>
           </div>
         </div>
@@ -42,11 +45,11 @@ export function renderRubricsPage() {
         <!-- Tab 1: Website / Product -->
         <div class="rubrics-tab-content active" id="tab-website">
           <div class="rubrics-header-card">
-            <h4>${RUBRICS_DATA.website.title}</h4>
-            <p>${RUBRICS_DATA.website.desc}</p>
+            <h4>${data.website.title}</h4>
+            <p>${data.website.desc}</p>
           </div>
 
-          ${RUBRICS_DATA.website.groups.map((grp, gIdx) => `
+          ${data.website.groups.map((grp, gIdx) => `
             <div class="rubric-group">
               <div class="rubric-group__header">
                 <h4>${grp.name}</h4>
@@ -77,15 +80,15 @@ export function renderRubricsPage() {
           `).join('')}
         </div>
 
-        <!-- Tab 2: 4F Reflection (Collapsible Accordion) -->
+        <!-- Tab 2: 4F Reflection -->
         <div class="rubrics-tab-content" id="tab-reflection">
           <div class="rubrics-header-card">
-            <h4>${RUBRICS_DATA.reflection.title}</h4>
-            <p>${RUBRICS_DATA.reflection.desc}</p>
+            <h4>${data.reflection.title}</h4>
+            <p>${data.reflection.desc}</p>
           </div>
 
           <div class="rubric-items-container">
-            ${RUBRICS_DATA.reflection.criteria.map((crit, idx) => `
+            ${data.reflection.criteria.map((crit, idx) => `
               <div class="rubric-item ${idx === 0 ? 'open' : ''}">
                 <button class="rubric-item__header" type="button" aria-expanded="${idx === 0 ? 'true' : 'false'}">
                   <div>
@@ -109,15 +112,15 @@ export function renderRubricsPage() {
           </div>
         </div>
 
-        <!-- Tab 3: Video (Standardized 5 Levels: 0. NOVICE to 4. EXCELLENT) -->
+        <!-- Tab 3: Video -->
         <div class="rubrics-tab-content" id="tab-video">
           <div class="rubrics-header-card">
-            <h4>${RUBRICS_DATA.video.title}</h4>
-            <p>${RUBRICS_DATA.video.desc}</p>
+            <h4>${data.video.title}</h4>
+            <p>${data.video.desc}</p>
           </div>
 
           <div class="rubric-items-container">
-            ${RUBRICS_DATA.video.criteria.map((crit, idx) => `
+            ${data.video.criteria.map((crit, idx) => `
               <div class="rubric-item ${idx === 0 ? 'open' : ''}">
                 <button class="rubric-item__header" type="button" aria-expanded="${idx === 0 ? 'true' : 'false'}">
                   <div>
