@@ -1,343 +1,217 @@
 /* ========================================================
-   AWARDS SECTION STYLES (MATCHING USER'S VISUAL REFERENCE)
+   AWARDS SECTION STYLES (ULTRA CLEAN, NO GIANT WRAPPER BOXES)
    ======================================================== */
 
-.awards-section-v2 {
-  background: #FFFFFF;
+.awards-clean-section {
+  background: #FFFDF9;
   padding: var(--space-2xl) 0;
+  border-bottom: 1.5px solid var(--color-border);
 }
 
-.awards-container-v2 {
-  max-width: 880px;
+.awards-clean-container {
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.awards-header-v2 {
-  text-align: center;
-  margin-bottom: var(--space-xl);
+.awards-clean-block {
+  margin-bottom: var(--space-lg);
 }
 
-.awards-header-v2 h2 {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--color-midnight-blue);
-  margin-bottom: 8px;
-}
-
-.awards-header-line {
-  width: 48px;
-  height: 3.5px;
-  background: var(--color-sunset-orange);
-  border-radius: var(--radius-full);
-  margin: 0 auto;
-}
-
-/* Sub-sections */
-.awards-subsection {
-  margin-bottom: var(--space-md);
-}
-
-.awards-subsection__title-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
-  padding-left: 2px;
-}
-
-.subsection-icon {
+.awards-clean-heading {
   font-size: 1.25rem;
-}
-
-.awards-subsection__title-row h3 {
-  font-size: 1.35rem;
   font-weight: 800;
   color: var(--color-midnight-blue);
-  margin: 0;
+  margin-bottom: 14px;
 }
 
-/* 1. All-Rewards Card (Top box with gold outline) */
-.all-rewards-card {
-  background: #FFFFFF;
-  border: 1.8px solid #F5C544;
-  border-radius: var(--radius-lg);
-  padding: 24px 28px;
+/* 1. Grid 2 Columns for All Participants */
+.awards-grid-2 {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  box-shadow: 0 4px 16px rgba(245, 197, 68, 0.08);
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
-.all-rewards-card__left {
+.award-clean-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  transition: all var(--transition-fast);
   display: flex;
-  align-items: center;
-  gap: 14px;
-  border-right: 1.5px solid var(--color-border-subtle);
-  padding-right: 16px;
+  flex-direction: column;
 }
 
-.all-rewards-card__icon-wrap {
-  position: relative;
-  color: var(--color-sunset-orange);
-  flex-shrink: 0;
+.award-clean-card:hover {
+  border-color: var(--color-sunset-orange);
+  box-shadow: 0 4px 14px rgba(219, 103, 24, 0.08);
 }
 
-.sparkle-star {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  font-size: 0.875rem;
-  color: #E5AD18;
+.award-clean-card--gold {
+  border-color: #F5C544;
+  background: #FFFFFF;
 }
 
-.all-rewards-card__left h4 {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--color-midnight-blue);
-  line-height: 1.35;
-  margin: 0;
+.award-clean-card--green {
+  border-color: #A7F3D0;
+  background: #FFFFFF;
 }
 
-.all-rewards-card__item {
+.award-clean-card__header {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
 }
 
-.round-check-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #E8F8F0;
-  color: #10B981;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.all-rewards-card__item h5 {
-  font-size: 0.9375rem;
+.award-clean-card__header h4 {
+  font-size: 1rem;
   font-weight: 800;
   color: var(--color-midnight-blue);
   margin-bottom: 4px;
 }
 
-.all-rewards-card__item p {
+.award-clean-card__header p {
   font-size: 0.8125rem;
   color: var(--color-text-secondary);
   line-height: 1.45;
   margin: 0;
 }
 
-/* 2. Big Glowing Banner: TOP 3 — VINH DANH XUẤT SẮC */
-.top3-glow-banner {
-  background: linear-gradient(180deg, #FFF6E5 0%, #FFFDF7 100%);
-  border: 1.8px solid #F6C852;
-  border-radius: var(--radius-xl);
-  padding: 32px 28px 28px;
-  margin-bottom: 24px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 6px 24px rgba(245, 197, 68, 0.12);
-}
-
-.top3-glow-header {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.top3-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-
-.laurel-branch {
-  font-size: 1.75rem;
-  color: #E5AD18;
-}
-
-.top3-title-row h4 {
-  font-size: 1.55rem;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  color: var(--color-midnight-blue);
-  margin: 0;
-}
-
-.top3-star-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 8px 0;
-}
-
-.divider-line {
-  width: 40px;
-  height: 1.5px;
-  background: #E5AD18;
-  opacity: 0.6;
-}
-
-.star-icon {
-  color: #E5AD18;
-  font-size: 0.875rem;
-}
-
-.top3-subtitle {
-  font-size: 0.9375rem;
-  color: var(--color-midnight-blue);
-  font-weight: 500;
-  margin: 0;
-}
-
-/* 3 Perks Cards */
-.top3-perks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.perk-card {
-  background: #FFFFFF;
+/* 2D Vector Icon Circles */
+.icon-circle {
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-md);
-  padding: 22px 16px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  min-height: 160px;
-}
-
-.perk-card__icon-box {
-  font-size: 2.25rem;
-  margin-bottom: 10px;
-}
-
-.perk-card__amount {
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: var(--color-sunset-orange);
-  line-height: 1.2;
-}
-
-.perk-card__label {
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--color-midnight-blue);
-  margin-top: 2px;
-}
-
-.perk-card__title {
-  font-size: 0.9375rem;
-  font-weight: 800;
-  color: var(--color-sunset-orange);
-  line-height: 1.45;
-}
-
-/* 3. Top 3 Title Recognitions (3 Cards at bottom) */
-.top3-titles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.title-award-card {
-  position: relative;
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 30px 18px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: var(--shadow-subtle);
-}
-
-.title-award-card__tag {
-  position: absolute;
-  top: -11px;
-  background: var(--color-sunset-orange);
-  color: #FFFFFF;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 3px 14px;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-}
-
-.title-award-card__medal {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #FFF7EB;
-  border: 1.5px solid #F5C544;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle--gold {
+  background: #FEF3C7;
+  color: #D97706;
+}
+
+.icon-circle--green {
+  background: #D1FAE5;
+  color: #059669;
+}
+
+.icon-circle--orange {
+  background: #FFEDD5;
   color: var(--color-sunset-orange);
+}
+
+/* 2. Top 3 Sub-section */
+.awards-top3-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 14px;
 }
 
-.title-award-card h4 {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--color-midnight-blue);
-  margin-bottom: 8px;
+.top3-perks-pills {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-sunset-orange);
+  background: #FFF7ED;
+  border: 1px solid #FFEDD5;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
 }
 
-.title-award-card p {
-  font-size: 0.8125rem;
+.perk-pill-dot {
+  opacity: 0.4;
+}
+
+/* 3 Cards Grid for Top 3 */
+.awards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.award-clean-card--top3 {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  padding: 26px 18px 18px;
+}
+
+.award-clean-tag {
+  position: absolute;
+  top: -10px;
+  background: var(--color-sunset-orange);
+  color: #FFFFFF;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.award-clean-card--top3 .icon-circle {
+  margin-bottom: 12px;
+}
+
+.award-clean-card--top3 h4 {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: var(--color-midnight-blue);
+  margin-bottom: 6px;
+}
+
+.award-clean-card--top3 p {
+  font-size: 0.78125rem;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.45;
   margin: 0 0 12px 0;
   flex-grow: 1;
 }
 
-.cert-pill {
+.cert-micro-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: #FFF9EE;
-  border: 1px solid #F5C544;
-  padding: 4px 10px;
+  gap: 5px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 3px 8px;
   border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 800;
-  color: #B8860B;
+  color: #B45309;
 }
 
-/* 4. Mentor Domains Showcase Box */
-.awards-mentor-box {
+/* 3. Mentor Domains Showcase */
+.awards-clean-mentor {
+  margin-top: var(--space-xl);
+  padding: 16px 20px;
   background: #FFFFFF;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 18px 24px;
+  border-radius: var(--radius-md);
   text-align: center;
 }
 
-.awards-mentor-title {
+.awards-mentor-label {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--color-text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.awards-mentor-list {
+.mentor-pills-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
 }
 
@@ -347,9 +221,9 @@
   gap: 6px;
   background: var(--color-card-warm);
   border: 1px solid var(--color-border);
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
+  font-size: 0.8125rem;
   color: var(--color-midnight-blue);
   text-decoration: none;
   transition: all var(--transition-fast);
@@ -379,21 +253,16 @@
 }
 
 /* Responsive */
-@media (max-width: 860px) {
-  .all-rewards-card {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .all-rewards-card__left {
-    border-right: none;
-    border-bottom: 1.5px solid var(--color-border-subtle);
-    padding-bottom: 14px;
-  }
-  .top3-perks-grid {
+@media (max-width: 800px) {
+  .awards-grid-2 {
     grid-template-columns: 1fr;
   }
-  .top3-titles-grid {
+  .awards-grid-3 {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
+  }
+  .awards-top3-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

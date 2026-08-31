@@ -2,14 +2,15 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Awards section — Structured into 2 distinct sub-sections:
- * Section 1: "Dành cho tất cả học sinh tham gia"
- * Section 2: "Top 3 Vinh danh xuất sắc" (with certificate tag on cards)
+ * Awards section — Ultra-clean, modular, no massive nested boxes:
+ * 1. Sub-section 1: Dành cho tất cả học sinh tham gia (2 separate clean cards)
+ * 2. Sub-section 2: Top 3 Vinh danh xuất sắc (3 Title cards with 2D stroke medal + small perks bar)
+ * 3. Sub-section 3: Tham khảo domain của các Mentor (Clean pill strip)
  */
 export function renderAwards() {
   const section = document.createElement('section');
   section.id = 'awards';
-  section.className = 'section awards-section-v2';
+  section.className = 'section awards-clean-section';
 
   const topAwards = [
     { 
@@ -33,117 +34,77 @@ export function renderAwards() {
   ];
 
   section.innerHTML = `
-    <div class="container awards-container-v2">
+    <div class="container awards-clean-container">
       <!-- Main Title -->
-      <div class="awards-header-v2">
+      <div class="section-header" style="margin-bottom: var(--space-xl);">
         <h2 data-i18n="awards.heading">${t('awards.heading')}</h2>
-        <div class="awards-header-line"></div>
       </div>
 
       <!-- ==========================================
-           MỤC 1: DÀNH CHO TẤT CẢ HỌC SINH THAM GIA
+           1. DÀNH CHO TẤT CẢ HỌC SINH THAM GIA (2 Cards)
            ========================================== -->
-      <div class="awards-subsection">
-        <div class="awards-subsection__title-row">
-          <span class="subsection-icon">🎁</span>
-          <h3 data-i18n="awards.sec1Title">${t('awards.sec1Title')}</h3>
-        </div>
+      <div class="awards-clean-block">
+        <h3 class="awards-clean-heading" data-i18n="awards.sec1Title">${t('awards.sec1Title')}</h3>
 
-        <div class="all-rewards-card">
-          <div class="all-rewards-card__left">
-            <div class="all-rewards-card__icon-wrap">
-              <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-gift"></use></svg>
-              <span class="sparkle-star">✦</span>
+        <div class="awards-grid-2">
+          <!-- Card 1: Domain 1 năm -->
+          <div class="award-clean-card award-clean-card--gold">
+            <div class="award-clean-card__header">
+              <div class="icon-circle icon-circle--gold">
+                <svg class="icon icon--md"><use href="/icons.svg#icon-gift"></use></svg>
+              </div>
+              <div>
+                <h4 data-i18n="awards.item1Title">${t('awards.item1Title')}</h4>
+                <p data-i18n="awards.item1Desc">${t('awards.item1Desc')}</p>
+              </div>
             </div>
-            <h4 data-i18n="awards.allTitle">${t('awards.allTitle')}</h4>
           </div>
+
+          <!-- Card 2: Chứng nhận hoàn thành -->
+          <div class="award-clean-card award-clean-card--green">
+            <div class="award-clean-card__header">
+              <div class="icon-circle icon-circle--green">
+                <svg class="icon icon--md"><use href="/icons.svg#icon-check"></use></svg>
+              </div>
+              <div>
+                <h4 data-i18n="awards.item2Title">${t('awards.item2Title')}</h4>
+                <p data-i18n="awards.item2Desc">${t('awards.item2Desc')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           2. TOP 3 VINH DANH XUẤT SẮC (3 Title Cards)
+           ========================================== -->
+      <div class="awards-clean-block" style="margin-top: 36px;">
+        <div class="awards-top3-header">
+          <h3 class="awards-clean-heading" data-i18n="awards.sec2Title">${t('awards.sec2Title')}</h3>
           
-          <div class="all-rewards-card__item">
-            <div class="round-check-icon">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-check"></use></svg>
-            </div>
-            <div>
-              <h5 data-i18n="awards.item1Title">${t('awards.item1Title')}</h5>
-              <p data-i18n="awards.item1Desc">${t('awards.item1Desc')}</p>
-            </div>
-          </div>
-
-          <div class="all-rewards-card__item">
-            <div class="round-check-icon">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-check"></use></svg>
-            </div>
-            <div>
-              <h5 data-i18n="awards.item2Title">${t('awards.item2Title')}</h5>
-              <p data-i18n="awards.item2Desc">${t('awards.item2Desc')}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ==========================================
-           MỤC 2: TOP 3 VINH DANH XUẤT SẮC
-           ========================================== -->
-      <div class="awards-subsection" style="margin-top: 36px;">
-        <div class="awards-subsection__title-row">
-          <span class="subsection-icon">🏆</span>
-          <h3 data-i18n="awards.sec2Title">${t('awards.sec2Title')}</h3>
-        </div>
-
-        <!-- Big Glow Golden Banner with 3 Perks -->
-        <div class="top3-glow-banner">
-          <div class="top3-glow-header">
-            <div class="top3-title-row">
-              <span class="laurel-branch left">🌿</span>
-              <h4 data-i18n="awards.topSectionTitle">${t('awards.topSectionTitle')}</h4>
-              <span class="laurel-branch right">🌿</span>
-            </div>
-            <div class="top3-star-divider">
-              <span class="divider-line"></span>
-              <span class="star-icon">★</span>
-              <span class="divider-line"></span>
-            </div>
-            <p class="top3-subtitle" data-i18n="awards.topSubTitle">${t('awards.topSubTitle')}</p>
-          </div>
-
-          <!-- 3 Perks Cards -->
-          <div class="top3-perks-grid">
-            <div class="perk-card">
-              <div class="perk-card__icon-box">
-                <span class="perk-emoji-2d">💵</span>
-              </div>
-              <div class="perk-card__amount" data-i18n="awards.perk1Amount">${t('awards.perk1Amount')}</div>
-              <div class="perk-card__label" data-i18n="awards.perk1Desc">${t('awards.perk1Desc')}</div>
-            </div>
-
-            <div class="perk-card">
-              <div class="perk-card__icon-box">
-                <span class="perk-emoji-2d">💻</span>
-              </div>
-              <div class="perk-card__title" data-i18n="awards.perk2Title">${t('awards.perk2Title')}</div>
-            </div>
-
-            <div class="perk-card">
-              <div class="perk-card__icon-box">
-                <span class="perk-emoji-2d">📢</span>
-              </div>
-              <div class="perk-card__title" data-i18n="awards.perk3Title">${t('awards.perk3Title')}</div>
-            </div>
+          <!-- Clean Perks Strip (No giant container box) -->
+          <div class="top3-perks-pills">
+            <span class="perk-pill" data-i18n="awards.topPerk1">${t('awards.topPerk1')}</span>
+            <span class="perk-pill-dot">•</span>
+            <span class="perk-pill" data-i18n="awards.topPerk2">${t('awards.topPerk2')}</span>
+            <span class="perk-pill-dot">•</span>
+            <span class="perk-pill" data-i18n="awards.topPerk3">${t('awards.topPerk3')}</span>
           </div>
         </div>
 
-        <!-- 3 Title Podium Cards with Certificate Tag -->
-        <div class="top3-titles-grid">
+        <div class="awards-grid-3">
           ${topAwards.map(a => `
-            <div class="title-award-card">
-              <div class="title-award-card__tag" data-i18n="${a.tagKey}">${t(a.tagKey)}</div>
-              <div class="title-award-card__medal">
-                <div class="medal-circle">
-                  <svg class="icon icon--md" aria-hidden="true"><use href="/icons.svg#${a.icon}"></use></svg>
-                </div>
+            <div class="award-clean-card award-clean-card--top3">
+              <span class="award-clean-tag" data-i18n="${a.tagKey}">${t(a.tagKey)}</span>
+              
+              <div class="icon-circle icon-circle--orange">
+                <svg class="icon icon--md"><use href="/icons.svg#${a.icon}"></use></svg>
               </div>
+
               <h4 data-i18n="${a.titleKey}">${t(a.titleKey)}</h4>
               <p data-i18n="${a.descKey}">${t(a.descKey)}</p>
-              <div class="cert-pill">
+
+              <div class="cert-micro-badge">
                 <svg class="icon icon--xs" style="stroke: #B8860B;"><use href="/icons.svg#icon-sparkles"></use></svg>
                 <span data-i18n="awards.certBadge">${t('awards.certBadge')}</span>
               </div>
@@ -152,10 +113,12 @@ export function renderAwards() {
         </div>
       </div>
 
-      <!-- 3. MENTOR DOMAINS SHOWCASE -->
-      <div class="awards-mentor-box" style="margin-top: 36px;">
-        <span class="awards-mentor-title" data-i18n="awards.mentorTitle">${t('awards.mentorTitle')}</span>
-        <div class="awards-mentor-list">
+      <!-- ==========================================
+           3. MENTOR DOMAINS SHOWCASE (Clean strip)
+           ========================================== -->
+      <div class="awards-clean-mentor">
+        <span class="awards-mentor-label" data-i18n="awards.mentorTitle">${t('awards.mentorTitle')}</span>
+        <div class="mentor-pills-row">
           ${CONFIG.mentorDomains.map(m => `
             <a href="${m.url}" target="_blank" rel="noopener" class="mentor-pill" title="Xem website của ${m.name}">
               <span class="mentor-pill__dot"></span>

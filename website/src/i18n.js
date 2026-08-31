@@ -1,6 +1,6 @@
 /**
  * Lightweight i18n system for VI / EN bilingual support.
- * Rule: Keep technical terms in English (Domain, etc.). Do not translate 'domain' to 'tên miền'.
+ * Ultra-clean, concise copy, no emojis, no missing keys.
  */
 
 const translations = {
@@ -66,36 +66,30 @@ const translations = {
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
     'rules.assessmentNote': 'Xem trang Tiêu chuẩn đánh giá để tự tin đạt điểm xuất sắc con nhé!',
 
-    // Awards (Divided into 2 clear subsections: Section 1 & Section 2)
+    // Awards (Ultra-clean, concise)
     'awards.heading': 'Giải thưởng',
-    
-    // Sub-section 1: Dành cho tất cả học sinh tham gia
     'awards.sec1Title': 'Dành cho tất cả học sinh tham gia',
-    'awards.allTitle': 'Phần thưởng dành cho tất cả học sinh hoàn thành',
-    'awards.item1Title': 'Domain cá nhân 1 năm (trị giá 10$–15$)',
-    'awards.item1Desc': 'Domain cá nhân riêng chính chủ trong 1 năm (như các Mentor).',
-    'awards.item2Title': 'Chứng nhận hoàn thành My Personal Website Challenge',
-    'awards.item2Desc': 'Chứng nhận hoàn thành chương trình từ Sư Tử Con.',
+    'awards.item1Title': 'Domain cá nhân 1 năm (10$–15$)',
+    'awards.item1Desc': 'Domain riêng chính chủ trong 1 năm (như các Mentor).',
+    'awards.item2Title': 'Chứng nhận hoàn thành Challenge',
+    'awards.item2Desc': 'Chứng nhận chính thức từ Sư Tử Con.',
     
-    // Sub-section 2: Top 3 Vinh danh xuất sắc
     'awards.sec2Title': 'Top 3 Vinh danh xuất sắc',
-    'awards.topSubTitle': 'Mỗi học sinh lọt Top 3 sẽ nhận thêm:',
-    'awards.perk1Amount': '200.000 VNĐ',
-    'awards.perk1Desc': 'tiền thưởng',
-    'awards.perk2Title': 'Được chọn làm bài mẫu trên Simba',
-    'awards.perk3Title': 'Được featured trên website Sư Tử Con và truyền thông Nemo12',
+    'awards.topPerk1': '+200.000 VNĐ tiền thưởng',
+    'awards.topPerk2': 'Bài mẫu chuẩn trên Simba',
+    'awards.topPerk3': 'Featured trên website & Nemo12',
 
     'awards.award1Tag': 'Trải Nghiệm Tốt Nhất',
     'awards.award1Title': 'Best Website Experience',
-    'awards.award1Desc': 'Website tạo trải nghiệm xem mượt mà, hữu ích và phù hợp nhất cho người xem mục tiêu. Nhận thêm Chứng nhận danh dự Top 3.',
+    'awards.award1Desc': 'Trải nghiệm mượt mà, hữu ích nhất cho người xem.',
     
     'awards.award2Tag': 'Câu Chuyện Hay Nhất',
     'awards.award2Title': 'Best Website Story',
-    'awards.award2Desc': 'Sự kết hợp ấn tượng nhất giữa câu chuyện cá nhân, lý do chọn domain và video giới thiệu. Nhận thêm Chứng nhận danh dự Top 3.',
+    'awards.award2Desc': 'Câu chuyện cá nhân và lý do chọn domain ấn tượng nhất.',
     
     'awards.award3Tag': 'Đúc Kết Sâu Sắc Nhất',
     'awards.award3Title': 'Best Reflection',
-    'awards.award3Desc': 'Bài 4F Reflection thể hiện rõ nhất con đã học được gì, làm được gì và hướng đi tiếp theo. Nhận thêm Chứng nhận danh dự Top 3.',
+    'awards.award3Desc': 'Bài phản tư 4F sâu sắc và hành động thực tế nhất.',
     
     'awards.certBadge': 'Kèm Chứng nhận Top 3',
     'awards.mentorTitle': 'THAM KHẢO DOMAIN CỦA CÁC MENTOR',
@@ -208,31 +202,28 @@ const translations = {
 
     // Awards
     'awards.heading': 'Awards & Prizes',
-    'awards.sec1Title': 'For All Participating Students',
-    'awards.allTitle': 'Rewards For All Participants Who Complete',
-    'awards.item1Title': '1-Year Custom Domain (valued $10–$15)',
-    'awards.item1Desc': 'Your own custom domain for 1 year (just like our mentors).',
-    'awards.item2Title': 'Certificate of Completion for My Personal Website Challenge',
+    'awards.sec1Title': 'For All Participants',
+    'awards.item1Title': '1-Year Custom Domain ($10–$15)',
+    'awards.item1Desc': 'Your own custom domain for 1 year (just like mentors).',
+    'awards.item2Title': 'Completion Certificate',
     'awards.item2Desc': 'Official Certificate from Sư Tử Con.',
     
     'awards.sec2Title': 'Top 3 Outstanding Honors',
-    'awards.topSubTitle': 'Each student reaching Top 3 will additionally receive:',
-    'awards.perk1Amount': '200,000 VND',
-    'awards.perk1Desc': 'cash prize',
-    'awards.perk2Title': 'Featured as a model project on Simba',
-    'awards.perk3Title': 'Featured on Sư Tử Con website & Nemo12 media',
+    'awards.topPerk1': '+200,000 VND cash prize',
+    'awards.topPerk2': 'Simba model project',
+    'awards.topPerk3': 'Featured on website & media',
 
     'awards.award1Tag': 'Best Experience',
     'awards.award1Title': 'Best Website Experience',
-    'awards.award1Desc': 'For the website that creates the clearest value and smoothest experience. Includes Official Top 3 Certificate.',
+    'awards.award1Desc': 'Smoothest, most helpful viewer experience.',
     
     'awards.award2Tag': 'Best Storytelling',
     'awards.award2Title': 'Best Website Story',
-    'awards.award2Desc': 'For the strongest combination of personal story, domain rationale and video. Includes Official Top 3 Certificate.',
+    'awards.award2Desc': 'Most engaging personal story and domain rationale.',
     
     'awards.award3Tag': 'Best Reflection',
     'awards.award3Title': 'Best Reflection',
-    'awards.award3Desc': 'For the 4F Reflection that most clearly shows learnings and future steps. Includes Official Top 3 Certificate.',
+    'awards.award3Desc': 'Deepest reflection with actionable next steps.',
     
     'awards.certBadge': 'Includes Top 3 Certificate',
     'awards.mentorTitle': 'EXPLORE MENTORS\' DOMAINS',
@@ -277,7 +268,7 @@ const translations = {
     'faq.a4_3': 'No. What matters most is understanding your learning journey. The AI score is just a helpful reference.',
 
     // Footer
-    'footer.message': 'This is not just a website-building competition. It is your chance to create a real corner of the Internet that truly represents you, and to reflect on what you learned along the way.',
+    'footer.message': 'Đây không chỉ là một cuộc thi làm website. Đây là cơ hội để con tạo ra một góc Internet thật sự thể hiện mình, rồi nhìn lại xem mình đã học được gì trong quá trình đó.',
     'footer.brand': '© 2026 Sư Tử Con · Nemo12',
   },
 };
