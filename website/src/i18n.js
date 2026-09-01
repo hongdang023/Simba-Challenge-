@@ -139,8 +139,8 @@ const translations = {
     // Awards
     'awards.heading': 'Giải thưởng',
     'awards.sec1Title': 'Dành cho tất cả học sinh tham gia',
-    'awards.item1Title': 'Domain cá nhân 1 năm (trị giá $10.46 = 270.000 VNĐ)',
-    'awards.item1Desc': 'Domain cá nhân đuôi .com như anhdac.com, thongphan.com (như các mentor).',
+    'awards.item1Title': 'Domain .com chính chủ 1 năm',
+    'awards.item1Desc': 'Được tài trợ $10.46 (270.000 VNĐ) mua tên miền .com như anhdac.com, thongphan.com.',
     'awards.item2Title': 'Chứng nhận hoàn thành Challenge',
     'awards.item2Desc': 'Chứng nhận chính thức từ Sư Tử Con.',
     
@@ -345,8 +345,8 @@ const translations = {
     // Awards
     'awards.heading': 'Awards & Prizes',
     'awards.sec1Title': 'For All Participants',
-    'awards.item1Title': '1-Year Custom Domain (Value $10.46 = 270,000 VND)',
-    'awards.item1Desc': 'Personal .com domain like anhdac.com, thongphan.com (just like mentors).',
+    'awards.item1Title': '1-Year Personal .com Domain',
+    'awards.item1Desc': 'Sponsored $10.46 (270,000 VND) for a custom .com domain like anhdac.com, thongphan.com.',
     'awards.item2Title': 'Completion Certificate',
     'awards.item2Desc': 'Official Certificate from Sư Tử Con.',
     
