@@ -24,13 +24,12 @@ export function renderChallenge() {
       </p>
 
       <div class="submissions">
-        <!-- 1. Website / Product -->
+        <!-- 1. Website cá nhân -->
         <div class="card submission-card">
           <div class="submission-card__icon-wrapper">
             <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-box"></use></svg>
           </div>
           <h4 data-i18n="howToJoin.sub1Title">${t('howToJoin.sub1Title')}</h4>
-          <p class="submission-card__where" style="color: var(--color-sunset-orange)" data-i18n="howToJoin.sub1Where">${t('howToJoin.sub1Where')}</p>
           <p class="submission-card__what" data-i18n="howToJoin.sub1What">${t('howToJoin.sub1What')}</p>
           <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="howToJoin.ctaWebsite">${t('howToJoin.ctaWebsite')}</a>
         </div>
@@ -41,20 +40,18 @@ export function renderChallenge() {
             <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-reflection"></use></svg>
           </div>
           <h4 data-i18n="howToJoin.sub2Title">${t('howToJoin.sub2Title')}</h4>
-          <p class="submission-card__where" style="color: var(--color-lion-orange)" data-i18n="howToJoin.sub2Where">${t('howToJoin.sub2Where')}</p>
           <p class="submission-card__what" data-i18n="howToJoin.sub2What">${t('howToJoin.sub2What')}</p>
-          <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--secondary btn--small" data-i18n="howToJoin.ctaReflection">${t('howToJoin.ctaReflection')}</a>
+          <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="howToJoin.ctaReflection">${t('howToJoin.ctaReflection')}</a>
         </div>
 
-        <!-- 3. Introduction Video -->
+        <!-- 3. Video Giới Thiệu -->
         <div class="card submission-card">
           <div class="submission-card__icon-wrapper">
             <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-video"></use></svg>
           </div>
           <h4 data-i18n="howToJoin.sub3Title">${t('howToJoin.sub3Title')}</h4>
-          <p class="submission-card__where" style="color: var(--color-midnight-blue)" data-i18n="howToJoin.sub3Where">${t('howToJoin.sub3Where')}</p>
           <p class="submission-card__what" data-i18n="howToJoin.sub3What">${t('howToJoin.sub3What')}</p>
-          <a href="${CONFIG.zaloGroupUrl}" target="_blank" rel="noopener" class="btn btn--outline btn--small" data-i18n="howToJoin.videoNote">${t('howToJoin.videoNote')}</a>
+          <a href="${CONFIG.zaloGroupUrl}" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="howToJoin.videoNote">${t('howToJoin.videoNote')}</a>
         </div>
       </div>
     </div>

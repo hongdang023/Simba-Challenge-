@@ -38,7 +38,7 @@ const translations = {
     // How to Join
     'howToJoin.heading': 'Cách tham gia',
     'howToJoin.subheading': 'Các bước làm bài trên Simba thì con đã quá quen thuộc rồi! Điểm mới mẻ duy nhất là chiếc video ngắn 60–90s để con tự tin giới thiệu sản phẩm của mình thôi!',
-    'howToJoin.sub1Title': '1. Website / Product',
+    'howToJoin.sub1Title': '1. Website cá nhân',
     'howToJoin.sub1Where': 'Nộp trên Simba (như mọi tuần)',
     'howToJoin.sub1What': 'Nộp link website, câu trả lời product thinking và bằng chứng kết quả.',
     'howToJoin.sub2Title': '2. 4F Reflection',
@@ -48,8 +48,8 @@ const translations = {
     'howToJoin.sub3Where': 'Gửi vào nhóm Zalo AI Teen',
     'howToJoin.sub3What': 'Video 60–90s có mặt thật, giọng thật và màn hình website của con. Upload lên Google Drive/YouTube rồi gửi link vào Zalo.',
     'howToJoin.ctaWebsite': 'Nộp trên Simba',
-    'howToJoin.ctaReflection': 'Làm Reflection',
-    'howToJoin.videoNote': 'Gửi Video qua Zalo',
+    'howToJoin.ctaReflection': 'Nộp trên Simba',
+    'howToJoin.videoNote': 'Nộp trên Group Zalo AI Teen',
 
     // Rules
     'rules.heading': 'Quy định bài làm',
@@ -177,7 +177,7 @@ const translations = {
     // How to Join
     'howToJoin.heading': 'How to Join',
     'howToJoin.subheading': 'You already know how to submit work on Simba! The only new exciting thing is a 60–90s short video to show off your website!',
-    'howToJoin.sub1Title': '1. Website / Product',
+    'howToJoin.sub1Title': '1. Personal Website',
     'howToJoin.sub1Where': 'Submit on Simba (as usual)',
     'howToJoin.sub1What': 'Submit website link, product thinking answers and evidence.',
     'howToJoin.sub2Title': '2. 4F Reflection',
@@ -187,8 +187,8 @@ const translations = {
     'howToJoin.sub3Where': 'Send to AI Teen Zalo Group',
     'howToJoin.sub3What': '60–90s video showing your face, real voice and website screen. Upload to Google Drive/YouTube and send link in Zalo.',
     'howToJoin.ctaWebsite': 'Submit on Simba',
-    'howToJoin.ctaReflection': 'Do Reflection',
-    'howToJoin.videoNote': 'Send via Zalo',
+    'howToJoin.ctaReflection': 'Submit on Simba',
+    'howToJoin.videoNote': 'Submit to AI Teen Zalo Group',
 
     // Rules
     'rules.heading': 'Submission Rules',
