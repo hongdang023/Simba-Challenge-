@@ -2,7 +2,7 @@ import { t, getLang } from "../i18n.js";
 import { TIMELINE_DATA } from "../timeline-data.js";
 
 /**
- * Timeline component — Lịch trình cuộc thi chi tiết (2 cột: Thời gian | Học sinh cần làm) & Lưu ý quan trọng
+ * Timeline component — Lịch trình cuộc thi (3 cột: Thời gian | Hoạt động chính | Học sinh cần làm) & Lưu ý quan trọng
  */
 export function renderTimeline() {
   const section = document.createElement("section");
@@ -21,26 +21,30 @@ export function renderTimeline() {
         ${t("timeline.subheading")}
       </p>
 
-      <!-- Desktop & Tablet Table View -->
+      <!-- 3-Column Table View -->
       <div class="timeline-table-wrapper">
         <table class="timeline-table">
           <thead>
             <tr>
-              <th style="width: 28%;" data-i18n="timeline.thTime">${t("timeline.thTime")}</th>
-              <th style="width: 72%;" data-i18n="timeline.thStudentAction">${t("timeline.thStudentAction")}</th>
+              <th style="width: 22%;" data-i18n="timeline.thTime">${t("timeline.thTime")}</th>
+              <th style="width: 28%;" data-i18n="timeline.thActivity">${t("timeline.thActivity")}</th>
+              <th style="width: 50%;" data-i18n="timeline.thStudentAction">${t("timeline.thStudentAction")}</th>
             </tr>
           </thead>
           <tbody>
             ${TIMELINE_DATA.map(row => {
               const data = row[currentLang] || row.vi;
-              const rowClass = row.isDeadline ? "timeline-row--deadline" : row.isHighlight ? "timeline-row--highlight" : "";
+              const rowClass = row.isDeadline ? "timeline-row--deadline" : "";
               return `
                 <tr class="${rowClass}">
                   <td class="timeline-cell-time">
                     <strong>${data.time}</strong>
                   </td>
                   <td class="timeline-cell-activity">
-                    <span>${data.activity}</span>
+                    <span class="timeline-activity-text">${data.activity}</span>
+                  </td>
+                  <td class="timeline-cell-action">
+                    <span class="timeline-action-text">${data.action}</span>
                   </td>
                 </tr>
               `;

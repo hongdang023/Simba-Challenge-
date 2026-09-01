@@ -1,69 +1,80 @@
 export const TIMELINE_DATA = [
   {
-    isHighlight: false,
+    isDeadline: false,
     vi: {
       time: "31/8/2026",
-      activity: "Đọc đề bài, rubric và hướng dẫn chi tiết. Bắt đầu làm Website và 4F Reflection."
+      activity: "Bắt đầu làm bài",
+      action: "Đọc đề bài, rubric và hướng dẫn chi tiết. Bắt đầu làm Website và 4F Reflection."
     },
     en: {
       time: "31/8/2026",
-      activity: "Read challenge description, rubrics, and detailed instructions. Start working on Website and 4F Reflection."
+      activity: "Project Kickoff",
+      action: "Read challenge description, rubrics, and detailed instructions. Start working on Website and 4F Reflection."
     }
   },
   {
-    isHighlight: true,
+    isDeadline: false,
     vi: {
       time: "03/9/2026 – trước 23:59",
-      activity: "Checkpoint 1: Nộp Website Version 1 + 4F Reflection Version 1 trên hệ thống Simba, và báo lại cho mentor qua Zalo cá nhân để được nhận feedback nâng cấp."
+      activity: "Checkpoint 1: Website V1 & 4F Reflection V1",
+      action: "Nộp Website Version 1 + 4F Reflection Version 1 trên hệ thống Simba, và báo lại cho mentor qua Zalo cá nhân để được nhận feedback nâng cấp."
     },
     en: {
       time: "03/9/2026 – before 23:59",
-      activity: "Checkpoint 1: Submit Website Version 1 + 4F Reflection Version 1 on Simba, and notify mentor via direct Zalo to receive improvement feedback."
+      activity: "Checkpoint 1: Website V1 & 4F Reflection V1",
+      action: "Submit Website Version 1 + 4F Reflection Version 1 on Simba, and notify mentor via direct Zalo to receive improvement feedback."
     }
   },
   {
-    isHighlight: true,
+    isDeadline: false,
     vi: {
       time: "04/9/2026 – trước 23:59",
-      activity: "Checkpoint 2: Nộp Website Version 2 + 4F Reflection Version 2 trên hệ thống Simba, và báo lại cho mentor qua Zalo cá nhân để được nhận feedback nâng cấp. Sau khi được mentor duyệt, học sinh có thể tiến hành mua domain trên Cloudflare."
+      activity: "Checkpoint 2: Website V2 & Mua Domain",
+      action: "Nộp Website Version 2 + 4F Reflection Version 2 trên hệ thống Simba, và báo lại cho mentor qua Zalo cá nhân để được nhận feedback nâng cấp. Sau khi được mentor duyệt, học sinh có thể tiến hành mua domain trên Cloudflare."
     },
     en: {
       time: "04/9/2026 – before 23:59",
-      activity: "Checkpoint 2: Submit Website Version 2 + 4F Reflection Version 2 on Simba, and notify mentor via direct Zalo to receive improvement feedback. Once approved by mentor, students can proceed to purchase domain on Cloudflare."
+      activity: "Checkpoint 2: Website V2 & Domain Purchase",
+      action: "Submit Website Version 2 + 4F Reflection Version 2 on Simba, and notify mentor via direct Zalo to receive improvement feedback. Once approved by mentor, students can proceed to purchase domain on Cloudflare."
     }
   },
   {
-    isHighlight: true,
+    isDeadline: false,
     vi: {
       time: "05/9/2026 – trước 23:59",
-      activity: "Checkpoint 3: Đăng video giới thiệu dài 60–90 giây lên Google Drive của cuộc thi để được nhận feedback. Video đặt tên theo cú pháp [Tên học sinh]_[Tên domain]"
+      activity: "Checkpoint 3: Video giới thiệu (Bản nháp)",
+      action: "Đăng video giới thiệu dài 60–90 giây lên Google Drive của cuộc thi để được nhận feedback. Video đặt tên theo cú pháp [Tên học sinh]_[Tên domain]"
     },
     en: {
       time: "05/9/2026 – before 23:59",
-      activity: "Checkpoint 3: Upload a 60–90s introduction video to the competition Google Drive to receive feedback. File naming format: [Student Name]_[Domain Name]"
+      activity: "Checkpoint 3: Introduction Video (Draft)",
+      action: "Upload a 60–90s introduction video to the competition Google Drive to receive feedback. File naming format: [Student Name]_[Domain Name]"
     }
   },
   {
-    isHighlight: true,
     isDeadline: true,
     vi: {
       time: "06/9/2026 – trước 23:59",
-      activity: "Hạn nộp bản cuối: Hoàn thiện và cập nhật Website bản cuối + 4F Reflection bản cuối trên Simba; cập nhật video bản cuối trên Google Drive."
+      activity: "Hạn chốt nộp bài cuối cùng",
+      action: "Hoàn thiện và cập nhật Website bản cuối + 4F Reflection bản cuối trên Simba; cập nhật video bản cuối trên Google Drive."
     },
     en: {
       time: "06/9/2026 – before 23:59",
-      activity: "Final Deadline: Finalize and update final Website + final 4F Reflection on Simba; update final video on Google Drive."
+      activity: "Final Submission Deadline",
+      action: "Finalize and update final Website + final 4F Reflection on Simba; update final video on Google Drive."
     }
   },
   {
-    isHighlight: true,
+    isDeadline: false,
     vi: {
       time: "08/9/2026",
-      activity: "Công bố Top 3, thưởng 200.000 VNĐ và hoàn tiền domain cho học sinh/gia đình."
+      activity: "Công bố Top 3 & Hoàn tiền domain",
+      action: "Công bố Top 3, thưởng 200.000 VNĐ và hoàn tiền domain cho học sinh/gia đình."
     },
     en: {
       time: "08/9/2026",
-      activity: "Announce Top 3, award 200,000 VND cash prize and reimburse domain cost to students/families."
+      activity: "Top 3 Announcement & Reimbursement",
+      action: "Announce Top 3, award 200,000 VND cash prize and reimburse domain cost to students/families."
     }
   }
 ];

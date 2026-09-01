@@ -788,41 +788,38 @@
   display: block;
 }
 
-.timeline-cell-activity span {
-  font-weight: 600;
+.timeline-activity-text {
+  font-weight: 700;
   color: var(--color-midnight-blue);
+  font-size: var(--font-size-sm);
+  display: block;
 }
 
-.timeline-row--highlight .timeline-cell-time strong {
-  color: var(--color-sunset-orange);
-}
-
-.timeline-row--highlight .timeline-cell-activity span {
-  color: var(--color-sunset-orange);
+.timeline-action-text {
+  font-weight: 500;
+  color: var(--color-midnight-blue);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  display: block;
 }
 
 .timeline-row--deadline {
-  background: #FFF5EC !important;
+  background: #FFF7EE !important;
+  border-left: 3px solid var(--color-sunset-orange);
 }
 
 .timeline-row--deadline .timeline-cell-time strong {
-  color: #D9381E;
-}
-
-.timeline-row--deadline .timeline-cell-activity span {
-  color: #D9381E;
-  font-weight: 700;
-}
-
-.timeline-channel-tag {
-  display: inline-block;
-  padding: 4px 10px;
-  background: rgba(219, 103, 24, 0.08);
   color: var(--color-sunset-orange);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  white-space: nowrap;
+}
+
+.timeline-row--deadline .timeline-activity-text {
+  color: var(--color-sunset-orange);
+  font-weight: 800;
+}
+
+.timeline-row--deadline .timeline-action-text {
+  color: var(--color-sunset-orange);
+  font-weight: 600;
 }
 
 /* Timeline Notes Box */
