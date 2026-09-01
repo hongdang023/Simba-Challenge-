@@ -92,6 +92,18 @@ const translations = {
     'rules.card4_2': 'Hoàn thành bài viết 4F Reflection trên hệ thống Simba.',
     'rules.assessmentNote': 'Xem trang Tiêu chuẩn đánh giá để tự tin đạt điểm xuất sắc con nhé!',
 
+    // Timeline
+    'timeline.heading': 'Lịch trình cuộc thi',
+    'timeline.subheading': 'Các mốc thời gian quan trọng từ khi nhận đề, gửi bản nháp, nhận feedback đến khi chốt bài chính thức:',
+    'timeline.thTime': 'Thời gian',
+    'timeline.thActivity': 'Hoạt động',
+    'timeline.thChannel': 'Kênh nộp',
+    'timeline.thPurpose': 'Mục đích và quy định',
+    'timeline.noteTitle': 'Lưu ý quan trọng',
+    'timeline.note1': 'Checkpoint 1 và Checkpoint 2 là các mốc nhận feedback trong quá trình làm bài. Mentor duyệt Checkpoint 2 chỉ có nghĩa là học sinh được phép mua domain, không phải kết quả chấm chính thức.',
+    'timeline.note2': 'Checkpoint 3 là mốc nộp video để mentor kiểm tra. Học sinh vẫn được chỉnh sửa Website, 4F Reflection và Video trước hạn chốt bài cuối.',
+    'timeline.note3': 'Bản cuối cùng của đầy đủ Website, 4F Reflection và Video được nộp đúng hạn ngày 06/09/2026 sẽ tự động là phiên bản duy nhất được dùng để chấm chính thức.',
+
     // Awards
     'awards.heading': 'Giải thưởng',
     'awards.sec1Title': 'Dành cho tất cả học sinh tham gia',
@@ -253,6 +265,18 @@ const translations = {
     'rules.card4_1': '60–90s video with your real face, voice and screen recording.',
     'rules.card4_2': 'Complete 4F Reflection on the Simba platform.',
     'rules.assessmentNote': 'Check the Assessment Rubrics page to aim for excellence!',
+
+    // Timeline
+    'timeline.heading': 'Competition Timeline',
+    'timeline.subheading': 'Important milestones from project kickoff, draft checkpoints, feedback rounds to final submission:',
+    'timeline.thTime': 'Time',
+    'timeline.thActivity': 'Activity',
+    'timeline.thChannel': 'Channel',
+    'timeline.thPurpose': 'Purpose & Guidelines',
+    'timeline.noteTitle': 'Important Notes',
+    'timeline.note1': 'Checkpoint 1 and Checkpoint 2 are feedback milestones during the project. Mentor approval at Checkpoint 2 only means the student is eligible to purchase the domain, not the final evaluation.',
+    'timeline.note2': 'Checkpoint 3 is for mentor review of the draft video. Students can still refine their Website, 4F Reflection, and Video before the final deadline.',
+    'timeline.note3': 'The final versions of Website, 4F Reflection, and Video submitted on time by 06/09/2026 will automatically be the only official versions evaluated.',
 
     // Awards
     'awards.heading': 'Awards & Prizes',

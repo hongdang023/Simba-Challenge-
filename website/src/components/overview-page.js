@@ -1,12 +1,13 @@
 import { renderHero } from './hero.js';
 import { renderAwards } from './awards.js';
 import { renderChallenge } from './challenge.js';
-import { renderSuggestions } from './suggestions.js';
 import { renderRules } from './rules.js';
+import { renderTimeline } from './timeline.js';
+import { renderSuggestions } from './suggestions.js';
 
 /**
  * Dedicated Page 1: Tổng quan (Overview page).
- * Flow: Hero -> Giải thưởng -> Thử thách ("Em sẽ tạo sản phẩm gì?") -> Quy định bài làm -> Gợi ý website & video.
+ * Flow: Hero -> Giải thưởng -> Thử thách ("Em sẽ tạo sản phẩm gì?") -> Quy định bài làm -> Lịch trình cuộc thi -> Gợi ý website & video.
  */
 export function renderOverviewPage() {
   const page = document.createElement('div');
@@ -25,7 +26,10 @@ export function renderOverviewPage() {
   // 4. Quy định bài làm
   page.appendChild(renderRules());
 
-  // 5. Gợi ý website & video
+  // 5. Lịch trình cuộc thi (Timeline & Checkpoints)
+  page.appendChild(renderTimeline());
+
+  // 6. Gợi ý website & video
   page.appendChild(renderSuggestions());
 
   return page;
