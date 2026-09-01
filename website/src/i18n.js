@@ -24,10 +24,9 @@ const translations = {
 
     // Suggestions Page Header & Tabs
     'suggestionsPage.heading': 'Gợi ý làm bài',
-    'suggestionsPage.subheading': 'Khung sườn và hướng dẫn chi tiết giúp con hoàn thiện xuất sắc Website, Video giới thiệu và bài viết 4F Reflection.',
-    'suggestionsPage.tabWebsite': '1. Gợi ý Website',
-    'suggestionsPage.tabVideo': '2. Gợi ý cho Video',
-    'suggestionsPage.tabReflection': '3. Gợi ý 4F Reflection',
+    'suggestionsPage.tabWebsite': '1. Website',
+    'suggestionsPage.tabVideo': '2. Video',
+    'suggestionsPage.tabReflection': '3. 4F Reflection',
 
     // Suggestions - 1. Website
     'suggestions.heading': 'Gợi ý Website',
@@ -230,11 +229,10 @@ const translations = {
     'challenge.heading': 'What will you create?',
 
     // Suggestions Page Header & Tabs
-    'suggestionsPage.heading': 'Project Suggestions & Guides',
-    'suggestionsPage.subheading': 'Helpful frameworks and suggestions to help you excel in your Website, Video, and 4F Reflection.',
-    'suggestionsPage.tabWebsite': '1. Website Suggestions',
-    'suggestionsPage.tabVideo': '2. Video Structure',
-    'suggestionsPage.tabReflection': '3. 4F Reflection Guide',
+    'suggestionsPage.heading': 'Suggestions',
+    'suggestionsPage.tabWebsite': '1. Website',
+    'suggestionsPage.tabVideo': '2. Video',
+    'suggestionsPage.tabReflection': '3. 4F Reflection',
 
     // Suggestions - 1. Website
     'suggestions.heading': 'Website Ideas & Suggestions',

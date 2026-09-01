@@ -2,15 +2,16 @@ import { t } from "../i18n.js";
 
 /**
  * Dedicated Page: Gợi ý làm bài (Suggestions Page)
- * Features 3 Tabbed Sections:
- * 1. Gợi ý Website
- * 2. Gợi ý cho Video
- * 3. Gợi ý viết 4F Reflection
+ * Features 3 Clean Tabbed Views:
+ * 1. Website
+ * 2. Video
+ * 3. 4F Reflection
+ * Standardized with Rubrics and FAQ design (no outer wrapper card).
  */
 export function renderSuggestionsPage() {
   const page = document.createElement("div");
   page.id = "page-suggestions";
-  page.className = "page-container rubrics-section";
+  page.className = "page-container";
 
   const points = [
     { key: "challenge.point1", icon: "icon-user" },
@@ -74,45 +75,36 @@ export function renderSuggestionsPage() {
   ];
 
   page.innerHTML = `
-    <div class="container" style="padding-top: var(--space-2xl); padding-bottom: var(--space-3xl);">
-      <!-- Header -->
-      <div class="section-header" style="margin-bottom: var(--space-lg);">
-        <h1 style="font-size: 2.25rem; color: var(--color-midnight-blue); margin-bottom: 8px;" data-i18n="suggestionsPage.heading">
-          ${t("suggestionsPage.heading")}
-        </h1>
-        <p class="text-muted" style="max-width: 680px; margin: 0 auto; font-size: var(--font-size-base);" data-i18n="suggestionsPage.subheading">
-          ${t("suggestionsPage.subheading")}
-        </p>
-      </div>
-
-      <!-- Navigation Tabs -->
-      <div class="rubrics-tabs-container">
-        <div class="rubrics-tabs" role="tablist">
-          <button class="rubrics-tab active" data-tab="tab-website" role="tab" aria-selected="true">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-globe"></use></svg>
-            <span data-i18n="suggestionsPage.tabWebsite">${t("suggestionsPage.tabWebsite")}</span>
-          </button>
-          <button class="rubrics-tab" data-tab="tab-video" role="tab" aria-selected="false">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-video"></use></svg>
-            <span data-i18n="suggestionsPage.tabVideo">${t("suggestionsPage.tabVideo")}</span>
-          </button>
-          <button class="rubrics-tab" data-tab="tab-reflection" role="tab" aria-selected="false">
-            <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-reflection"></use></svg>
-            <span data-i18n="suggestionsPage.tabReflection">${t("suggestionsPage.tabReflection")}</span>
-          </button>
+    <section class="section rubrics-section">
+      <div class="container">
+        <!-- 1. Header (Clean standard title) -->
+        <div class="section-header" style="margin-bottom: var(--space-xl);">
+          <h2 data-i18n="suggestionsPage.heading">${t("suggestionsPage.heading")}</h2>
         </div>
-      </div>
 
-      <!-- ==========================================
-           TAB 1: GỢI Ý WEBSITE
-           ========================================== -->
-      <div id="tab-website" class="rubrics-tab-content active" role="tabpanel">
-        <div class="card" style="padding: var(--space-xl); margin-bottom: var(--space-xl); background: #FFFFFF;">
-          <div class="section-header" style="margin-bottom: var(--space-lg); text-align: left;">
-            <h3 style="color: var(--color-midnight-blue); margin: 0;" data-i18n="suggestions.heading">${t("suggestions.heading")}</h3>
+        <!-- 2. Tab Switcher (No "Gợi ý" in pills) -->
+        <div class="rubrics-tabs-container">
+          <div class="rubrics-tabs" role="tablist">
+            <button class="rubrics-tab active" data-tab="tab-website" role="tab" aria-selected="true">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-box"></use></svg>
+              <span data-i18n="suggestionsPage.tabWebsite">${t("suggestionsPage.tabWebsite")}</span>
+            </button>
+            <button class="rubrics-tab" data-tab="tab-video" role="tab" aria-selected="false">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-video"></use></svg>
+              <span data-i18n="suggestionsPage.tabVideo">${t("suggestionsPage.tabVideo")}</span>
+            </button>
+            <button class="rubrics-tab" data-tab="tab-reflection" role="tab" aria-selected="false">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-reflection"></use></svg>
+              <span data-i18n="suggestionsPage.tabReflection">${t("suggestionsPage.tabReflection")}</span>
+            </button>
           </div>
-          
-          <p class="text-muted" style="margin-bottom: var(--space-xl); font-size: var(--font-size-base);" data-i18n="challenge.intro">
+        </div>
+
+        <!-- ==========================================
+             TAB 1: 1. WEBSITE
+             ========================================== -->
+        <div id="tab-website" class="rubrics-tab-content active" role="tabpanel">
+          <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="challenge.intro">
             ${t("challenge.intro")}
           </p>
 
@@ -130,30 +122,24 @@ export function renderSuggestionsPage() {
           </div>
 
           <div class="challenge__examples" style="margin-bottom: var(--space-xl);">
-            <div class="card" style="background: var(--color-sand-beige);">
+            <div class="card" style="background: #FFFFFF;">
               <h4 data-i18n="challenge.example1Title">${t("challenge.example1Title")}</h4>
               <p style="margin: 0; font-size: var(--font-size-sm);" data-i18n="challenge.example1">${t("challenge.example1")}</p>
             </div>
-            <div class="card" style="background: var(--color-sand-beige);">
+            <div class="card" style="background: #FFFFFF;">
               <h4 data-i18n="challenge.example2Title">${t("challenge.example2Title")}</h4>
               <p style="margin: 0; font-size: var(--font-size-sm);" data-i18n="challenge.example2">${t("challenge.example2")}</p>
             </div>
           </div>
 
-          <div class="blockquote" style="margin: 0;" data-i18n="challenge.note">${t("challenge.note")}</div>
+          <div class="blockquote" style="max-width: 800px; margin: 0 auto;" data-i18n="challenge.note">${t("challenge.note")}</div>
         </div>
-      </div>
 
-      <!-- ==========================================
-           TAB 2: GỢI Ý CHO VIDEO
-           ========================================== -->
-      <div id="tab-video" class="rubrics-tab-content" role="tabpanel">
-        <div class="card" style="padding: var(--space-xl); margin-bottom: var(--space-xl); background: #FFFFFF;">
-          <div class="section-header" style="margin-bottom: var(--space-md); text-align: left;">
-            <h3 style="color: var(--color-midnight-blue); margin: 0;" data-i18n="videoSuggestions.heading">${t("videoSuggestions.heading")}</h3>
-          </div>
-          
-          <p class="text-muted" style="margin-bottom: var(--space-xl); font-size: var(--font-size-base);" data-i18n="videoSuggestions.subheading">
+        <!-- ==========================================
+             TAB 2: 2. VIDEO
+             ========================================== -->
+        <div id="tab-video" class="rubrics-tab-content" role="tabpanel">
+          <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="videoSuggestions.subheading">
             ${t("videoSuggestions.subheading")}
           </p>
 
@@ -166,26 +152,20 @@ export function renderSuggestionsPage() {
             `).join("")}
           </div>
 
-          <div class="blockquote" style="margin: 0;" data-i18n="videoSuggestions.note">${t("videoSuggestions.note")}</div>
+          <div class="blockquote" style="max-width: 800px; margin: 0 auto;" data-i18n="videoSuggestions.note">${t("videoSuggestions.note")}</div>
         </div>
-      </div>
 
-      <!-- ==========================================
-           TAB 3: GỢI Ý 4F REFLECTION
-           ========================================== -->
-      <div id="tab-reflection" class="rubrics-tab-content" role="tabpanel">
-        <div class="card" style="padding: var(--space-xl); margin-bottom: var(--space-xl); background: #FFFFFF;">
-          <div class="section-header" style="margin-bottom: var(--space-md); text-align: left;">
-            <h3 style="color: var(--color-midnight-blue); margin: 0;" data-i18n="reflectionSuggestions.heading">${t("reflectionSuggestions.heading")}</h3>
-          </div>
-          
-          <p class="text-muted" style="margin-bottom: var(--space-xl); font-size: var(--font-size-base);" data-i18n="reflectionSuggestions.subheading">
+        <!-- ==========================================
+             TAB 3: 3. 4F REFLECTION
+             ========================================== -->
+        <div id="tab-reflection" class="rubrics-tab-content" role="tabpanel">
+          <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="reflectionSuggestions.subheading">
             ${t("reflectionSuggestions.subheading")}
           </p>
 
           <div class="reflection-grid" style="margin-bottom: var(--space-xl);">
             ${reflectionCards.map(card => `
-              <div class="card reflection-card reflection-card--${card.colorClass}">
+              <div class="card reflection-card reflection-card--${card.colorClass}" style="background: #FFFFFF;">
                 <div class="reflection-card__header">
                   <div class="reflection-card__icon">
                     <svg class="icon icon--md"><use href="/icons.svg#${card.icon}"></use></svg>
@@ -201,10 +181,10 @@ export function renderSuggestionsPage() {
             `).join("")}
           </div>
 
-          <div class="blockquote" style="margin: 0;" data-i18n="reflectionSuggestions.note">${t("reflectionSuggestions.note")}</div>
+          <div class="blockquote" style="max-width: 800px; margin: 0 auto;" data-i18n="reflectionSuggestions.note">${t("reflectionSuggestions.note")}</div>
         </div>
       </div>
-    </div>
+    </section>
   `;
 
   // Attach tab switching events
