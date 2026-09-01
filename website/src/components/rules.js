@@ -16,7 +16,7 @@ export function renderRules() {
     },
     {
       titleKey: 'rules.card2Title',
-      items: ['rules.card2_1', 'rules.card2_2', 'rules.card2_3'],
+      items: ['rules.card2_1', 'rules.card2_2', 'rules.card2_3', 'rules.card2_4'],
       icon: 'icon-globe',
     },
     {
