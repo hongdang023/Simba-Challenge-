@@ -65,6 +65,8 @@ export function renderTimeline() {
           <li data-i18n="timeline.note1">${t("timeline.note1")}</li>
           <li data-i18n="timeline.note2">${t("timeline.note2")}</li>
           <li data-i18n="timeline.note3">${t("timeline.note3")}</li>
+          <li data-i18n="timeline.note4">${t("timeline.note4")}</li>
+          <li data-i18n="timeline.note5">${t("timeline.note5")}</li>
         </ul>
       </div>
     </div>
