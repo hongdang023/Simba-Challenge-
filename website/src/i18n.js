@@ -20,6 +20,9 @@ const translations = {
     // Challenge
     'challenge.badge': 'Website Cá Nhân',
     'challenge.heading': 'Em sẽ tạo sản phẩm gì?',
+
+    // Suggestions
+    'suggestions.heading': 'Gợi ý website',
     'challenge.intro': 'Tạo Website cá nhân giúp một người xem cụ thể hiểu về:',
     'challenge.point1': 'Em là ai.',
     'challenge.point2': 'Em thích hoặc quan tâm điều gì.',
@@ -156,6 +159,9 @@ const translations = {
     // Challenge
     'challenge.badge': 'Personal Website',
     'challenge.heading': 'What will you create?',
+
+    // Suggestions
+    'suggestions.heading': 'Website Ideas',
     'challenge.intro': 'Create a Personal Website helping a specific viewer understand:',
     'challenge.point1': 'Who you are.',
     'challenge.point2': 'What you like or care about.',
