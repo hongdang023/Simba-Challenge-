@@ -795,12 +795,18 @@
   display: block;
 }
 
-.timeline-action-text {
-  font-weight: 500;
-  color: var(--color-midnight-blue);
+.timeline-action-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timeline-action-list li {
   font-size: var(--font-size-sm);
-  line-height: 1.6;
-  display: block;
+  color: var(--color-midnight-blue);
+  line-height: 1.55;
 }
 
 .timeline-row--deadline {
@@ -817,7 +823,7 @@
   font-weight: 800;
 }
 
-.timeline-row--deadline .timeline-action-text {
+.timeline-row--deadline .timeline-action-list li {
   color: var(--color-sunset-orange);
   font-weight: 600;
 }

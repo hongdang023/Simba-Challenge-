@@ -4,12 +4,18 @@ export const TIMELINE_DATA = [
     vi: {
       time: "31/8/2026",
       activity: "Bắt đầu làm bài",
-      action: "Đọc đề bài, rubric và hướng dẫn chi tiết. Bắt đầu làm Website và 4F Reflection."
+      items: [
+        "Đọc đề bài, rubric và hướng dẫn chi tiết.",
+        "Bắt đầu làm Website và 4F Reflection."
+      ]
     },
     en: {
       time: "31/8/2026",
       activity: "Project Kickoff",
-      action: "Read challenge description, rubrics, and detailed instructions. Start working on Website and 4F Reflection."
+      items: [
+        "Read challenge description, rubrics, and detailed instructions.",
+        "Start working on Website and 4F Reflection."
+      ]
     }
   },
   {
@@ -17,12 +23,18 @@ export const TIMELINE_DATA = [
     vi: {
       time: "03/9/2026 – trước 23:59",
       activity: "Checkpoint 1: Website V1 & 4F Reflection V1",
-      action: "Nộp Website Version 1 + 4F Reflection Version 1 trên hệ thống Simba, và báo lại cho mentor qua Zalo cá nhân để được nhận feedback nâng cấp."
+      items: [
+        "Nộp Website Version 1 + 4F Reflection Version 1 trên hệ thống Simba.",
+        "Báo lại cho mentor qua Zalo cá nhân để nhận feedback nâng cấp."
+      ]
     },
     en: {
       time: "03/9/2026 – before 23:59",
       activity: "Checkpoint 1: Website V1 & 4F Reflection V1",
-      action: "Submit Website Version 1 + 4F Reflection Version 1 on Simba, and notify mentor via direct Zalo to receive improvement feedback."
+      items: [
+        "Submit Website Version 1 + 4F Reflection Version 1 on Simba.",
+        "Notify mentor via direct Zalo to receive improvement feedback."
+      ]
     }
   },
   {
@@ -30,12 +42,20 @@ export const TIMELINE_DATA = [
     vi: {
       time: "04/9/2026 – trước 23:59",
       activity: "Checkpoint 2: Website V2 & Mua Domain",
-      action: "Nộp Website Version 2 + 4F Reflection Version 2 trên hệ thống Simba, và báo lại cho mentor qua Zalo cá nhân để được nhận feedback nâng cấp. Sau khi được mentor duyệt, học sinh có thể tiến hành mua domain trên Cloudflare."
+      items: [
+        "Nộp Website Version 2 + 4F Reflection Version 2 trên hệ thống Simba.",
+        "Báo lại cho mentor qua Zalo cá nhân để nhận feedback nâng cấp.",
+        "Sau khi được mentor duyệt, học sinh tiến hành mua domain trên Cloudflare."
+      ]
     },
     en: {
       time: "04/9/2026 – before 23:59",
       activity: "Checkpoint 2: Website V2 & Domain Purchase",
-      action: "Submit Website Version 2 + 4F Reflection Version 2 on Simba, and notify mentor via direct Zalo to receive improvement feedback. Once approved by mentor, students can proceed to purchase domain on Cloudflare."
+      items: [
+        "Submit Website Version 2 + 4F Reflection Version 2 on Simba.",
+        "Notify mentor via direct Zalo to receive improvement feedback.",
+        "Once approved by mentor, proceed to purchase domain on Cloudflare."
+      ]
     }
   },
   {
@@ -43,12 +63,18 @@ export const TIMELINE_DATA = [
     vi: {
       time: "05/9/2026 – trước 23:59",
       activity: "Checkpoint 3: Video giới thiệu (Bản nháp)",
-      action: "Đăng video giới thiệu dài 60–90 giây lên Google Drive của cuộc thi để được nhận feedback. Video đặt tên theo cú pháp [Tên học sinh]_[Tên domain]"
+      items: [
+        "Đăng video giới thiệu (dài 60–90 giây) lên Google Drive của cuộc thi để nhận feedback.",
+        "Đặt tên video theo cú pháp: [Tên học sinh]_[Tên domain]"
+      ]
     },
     en: {
       time: "05/9/2026 – before 23:59",
       activity: "Checkpoint 3: Introduction Video (Draft)",
-      action: "Upload a 60–90s introduction video to the competition Google Drive to receive feedback. File naming format: [Student Name]_[Domain Name]"
+      items: [
+        "Upload a 60–90s introduction video to the competition Google Drive to receive feedback.",
+        "File naming format: [Student Name]_[Domain Name]"
+      ]
     }
   },
   {
@@ -56,12 +82,18 @@ export const TIMELINE_DATA = [
     vi: {
       time: "06/9/2026 – trước 23:59",
       activity: "Hạn chốt nộp bài cuối cùng",
-      action: "Hoàn thiện và cập nhật Website bản cuối + 4F Reflection bản cuối trên Simba; cập nhật video bản cuối trên Google Drive."
+      items: [
+        "Hoàn thiện và cập nhật Website bản cuối + 4F Reflection bản cuối trên Simba.",
+        "Cập nhật video bản cuối trên Google Drive."
+      ]
     },
     en: {
       time: "06/9/2026 – before 23:59",
       activity: "Final Submission Deadline",
-      action: "Finalize and update final Website + final 4F Reflection on Simba; update final video on Google Drive."
+      items: [
+        "Finalize and update final Website + final 4F Reflection on Simba.",
+        "Update final video on Google Drive."
+      ]
     }
   },
   {
@@ -69,12 +101,18 @@ export const TIMELINE_DATA = [
     vi: {
       time: "08/9/2026",
       activity: "Công bố Top 3 & Hoàn tiền domain",
-      action: "Công bố Top 3, thưởng 200.000 VNĐ và hoàn tiền domain cho học sinh/gia đình."
+      items: [
+        "Công bố danh sách Top 3 xuất sắc.",
+        "Thưởng 200.000 VNĐ và hoàn tiền domain cho học sinh/gia đình."
+      ]
     },
     en: {
       time: "08/9/2026",
       activity: "Top 3 Announcement & Reimbursement",
-      action: "Announce Top 3, award 200,000 VND cash prize and reimburse domain cost to students/families."
+      items: [
+        "Announce Top 3 outstanding projects.",
+        "Award 200,000 VND cash prize and reimburse domain cost to students/families."
+      ]
     }
   }
 ];

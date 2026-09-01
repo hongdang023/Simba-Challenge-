@@ -44,7 +44,9 @@ export function renderTimeline() {
                     <span class="timeline-activity-text">${data.activity}</span>
                   </td>
                   <td class="timeline-cell-action">
-                    <span class="timeline-action-text">${data.action}</span>
+                    <ul class="timeline-action-list">
+                      ${data.items.map(item => `<li>${item}</li>`).join("")}
+                    </ul>
                   </td>
                 </tr>
               `;
