@@ -16,8 +16,20 @@ export function renderSuggestions() {
     { key: "challenge.point4", icon: "icon-link" },
   ];
 
+  const videoSteps = [
+    { titleKey: 'videoSuggestions.step1Title', quoteKey: 'videoSuggestions.step1Quote' },
+    { titleKey: 'videoSuggestions.step2Title', quoteKey: 'videoSuggestions.step2Quote' },
+    { titleKey: 'videoSuggestions.step3Title', quoteKey: 'videoSuggestions.step3Quote' },
+    { titleKey: 'videoSuggestions.step4Title', quoteKey: 'videoSuggestions.step4Quote' },
+    { titleKey: 'videoSuggestions.step5Title', quoteKey: 'videoSuggestions.step5Quote' },
+    { titleKey: 'videoSuggestions.step6Title', quoteKey: 'videoSuggestions.step6Quote' },
+    { titleKey: 'videoSuggestions.step7Title', quoteKey: 'videoSuggestions.step7Quote' },
+    { titleKey: 'videoSuggestions.step8Title', quoteKey: 'videoSuggestions.step8Quote' },
+  ];
+
   section.innerHTML = `
     <div class="container">
+      <!-- 1. GỢI Ý WEBSITE -->
       <div class="section-header" style="margin-bottom: var(--space-xl);">
         <h2 data-i18n="suggestions.heading">${t("suggestions.heading")}</h2>
       </div>
@@ -51,6 +63,28 @@ export function renderSuggestions() {
       </div>
 
       <div class="blockquote" data-i18n="challenge.note">${t("challenge.note")}</div>
+
+      <!-- 2. GỢI Ý CHO VIDEO -->
+      <div style="margin-top: var(--space-3xl); padding-top: var(--space-2xl); border-top: 1.5px dashed var(--color-border);">
+        <div class="section-header" style="margin-bottom: var(--space-xl);">
+          <h2 data-i18n="videoSuggestions.heading">${t("videoSuggestions.heading")}</h2>
+        </div>
+        
+        <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="videoSuggestions.subheading">
+          ${t("videoSuggestions.subheading")}
+        </p>
+
+        <div class="video-steps-grid">
+          ${videoSteps.map(s => `
+            <div class="video-step-card">
+              <h4 class="video-step-card__title" data-i18n="${s.titleKey}">${t(s.titleKey)}</h4>
+              <p class="video-step-card__quote" data-i18n="${s.quoteKey}">${t(s.quoteKey)}</p>
+            </div>
+          `).join("")}
+        </div>
+
+        <div class="blockquote" data-i18n="videoSuggestions.note">${t("videoSuggestions.note")}</div>
+      </div>
     </div>
   `;
 
