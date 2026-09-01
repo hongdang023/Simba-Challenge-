@@ -2,11 +2,10 @@ import { t } from "../i18n.js";
 
 /**
  * Dedicated Page: Gợi ý làm bài (Suggestions Page)
- * Features 3 Clean Tabbed Views:
+ * Features 3 Clean Tabbed Views in consistent order:
  * 1. Website
- * 2. Video
- * 3. 4F Reflection
- * Standardized with Rubrics and FAQ design (no outer wrapper card).
+ * 2. 4F Reflection
+ * 3. Video
  */
 export function renderSuggestionsPage() {
   const page = document.createElement("div");
@@ -18,17 +17,6 @@ export function renderSuggestionsPage() {
     { key: "challenge.point2", icon: "icon-heart" },
     { key: "challenge.point3", icon: "icon-star" },
     { key: "challenge.point4", icon: "icon-link" },
-  ];
-
-  const videoSteps = [
-    { titleKey: "videoSuggestions.step1Title", quoteKey: "videoSuggestions.step1Quote" },
-    { titleKey: "videoSuggestions.step2Title", quoteKey: "videoSuggestions.step2Quote" },
-    { titleKey: "videoSuggestions.step3Title", quoteKey: "videoSuggestions.step3Quote" },
-    { titleKey: "videoSuggestions.step4Title", quoteKey: "videoSuggestions.step4Quote" },
-    { titleKey: "videoSuggestions.step5Title", quoteKey: "videoSuggestions.step5Quote" },
-    { titleKey: "videoSuggestions.step6Title", quoteKey: "videoSuggestions.step6Quote" },
-    { titleKey: "videoSuggestions.step7Title", quoteKey: "videoSuggestions.step7Quote" },
-    { titleKey: "videoSuggestions.step8Title", quoteKey: "videoSuggestions.step8Quote" },
   ];
 
   const reflectionCards = [
@@ -74,28 +62,39 @@ export function renderSuggestionsPage() {
     }
   ];
 
+  const videoSteps = [
+    { titleKey: "videoSuggestions.step1Title", quoteKey: "videoSuggestions.step1Quote" },
+    { titleKey: "videoSuggestions.step2Title", quoteKey: "videoSuggestions.step2Quote" },
+    { titleKey: "videoSuggestions.step3Title", quoteKey: "videoSuggestions.step3Quote" },
+    { titleKey: "videoSuggestions.step4Title", quoteKey: "videoSuggestions.step4Quote" },
+    { titleKey: "videoSuggestions.step5Title", quoteKey: "videoSuggestions.step5Quote" },
+    { titleKey: "videoSuggestions.step6Title", quoteKey: "videoSuggestions.step6Quote" },
+    { titleKey: "videoSuggestions.step7Title", quoteKey: "videoSuggestions.step7Quote" },
+    { titleKey: "videoSuggestions.step8Title", quoteKey: "videoSuggestions.step8Quote" },
+  ];
+
   page.innerHTML = `
     <section class="section rubrics-section">
       <div class="container">
-        <!-- 1. Header (Clean standard title) -->
+        <!-- 1. Header -->
         <div class="section-header" style="margin-bottom: var(--space-xl);">
           <h2 data-i18n="suggestionsPage.heading">${t("suggestionsPage.heading")}</h2>
         </div>
 
-        <!-- 2. Tab Switcher (No "Gợi ý" in pills) -->
+        <!-- 2. Tab Switcher (Consistent order: 1. Website, 2. 4F Reflection, 3. Video) -->
         <div class="rubrics-tabs-container">
           <div class="rubrics-tabs" role="tablist">
             <button class="rubrics-tab active" data-tab="tab-website" role="tab" aria-selected="true">
               <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-box"></use></svg>
               <span data-i18n="suggestionsPage.tabWebsite">${t("suggestionsPage.tabWebsite")}</span>
             </button>
-            <button class="rubrics-tab" data-tab="tab-video" role="tab" aria-selected="false">
-              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-video"></use></svg>
-              <span data-i18n="suggestionsPage.tabVideo">${t("suggestionsPage.tabVideo")}</span>
-            </button>
             <button class="rubrics-tab" data-tab="tab-reflection" role="tab" aria-selected="false">
               <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-reflection"></use></svg>
               <span data-i18n="suggestionsPage.tabReflection">${t("suggestionsPage.tabReflection")}</span>
+            </button>
+            <button class="rubrics-tab" data-tab="tab-video" role="tab" aria-selected="false">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="/icons.svg#icon-video"></use></svg>
+              <span data-i18n="suggestionsPage.tabVideo">${t("suggestionsPage.tabVideo")}</span>
             </button>
           </div>
         </div>
@@ -136,27 +135,7 @@ export function renderSuggestionsPage() {
         </div>
 
         <!-- ==========================================
-             TAB 2: 2. VIDEO
-             ========================================== -->
-        <div id="tab-video" class="rubrics-tab-content" role="tabpanel">
-          <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="videoSuggestions.subheading">
-            ${t("videoSuggestions.subheading")}
-          </p>
-
-          <div class="video-steps-grid" style="margin-bottom: var(--space-xl);">
-            ${videoSteps.map(s => `
-              <div class="video-step-card">
-                <h4 class="video-step-card__title" data-i18n="${s.titleKey}">${t(s.titleKey)}</h4>
-                <p class="video-step-card__quote" data-i18n="${s.quoteKey}">${t(s.quoteKey)}</p>
-              </div>
-            `).join("")}
-          </div>
-
-          <div class="blockquote" style="max-width: 800px; margin: 0 auto;" data-i18n="videoSuggestions.note">${t("videoSuggestions.note")}</div>
-        </div>
-
-        <!-- ==========================================
-             TAB 3: 3. 4F REFLECTION
+             TAB 2: 2. 4F REFLECTION
              ========================================== -->
         <div id="tab-reflection" class="rubrics-tab-content" role="tabpanel">
           <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="reflectionSuggestions.subheading">
@@ -182,6 +161,26 @@ export function renderSuggestionsPage() {
           </div>
 
           <div class="blockquote" style="max-width: 800px; margin: 0 auto;" data-i18n="reflectionSuggestions.note">${t("reflectionSuggestions.note")}</div>
+        </div>
+
+        <!-- ==========================================
+             TAB 3: 3. VIDEO
+             ========================================== -->
+        <div id="tab-video" class="rubrics-tab-content" role="tabpanel">
+          <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="videoSuggestions.subheading">
+            ${t("videoSuggestions.subheading")}
+          </p>
+
+          <div class="video-steps-grid" style="margin-bottom: var(--space-xl);">
+            ${videoSteps.map(s => `
+              <div class="video-step-card">
+                <h4 class="video-step-card__title" data-i18n="${s.titleKey}">${t(s.titleKey)}</h4>
+                <p class="video-step-card__quote" data-i18n="${s.quoteKey}">${t(s.quoteKey)}</p>
+              </div>
+            `).join("")}
+          </div>
+
+          <div class="blockquote" style="max-width: 800px; margin: 0 auto;" data-i18n="videoSuggestions.note">${t("videoSuggestions.note")}</div>
         </div>
       </div>
     </section>

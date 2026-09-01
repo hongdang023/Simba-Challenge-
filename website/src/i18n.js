@@ -25,8 +25,8 @@ const translations = {
     // Suggestions Page Header & Tabs
     'suggestionsPage.heading': 'Gợi ý làm bài',
     'suggestionsPage.tabWebsite': '1. Website',
-    'suggestionsPage.tabVideo': '2. Video',
-    'suggestionsPage.tabReflection': '3. 4F Reflection',
+    'suggestionsPage.tabReflection': '2. 4F Reflection',
+    'suggestionsPage.tabVideo': '3. Video',
 
     // Suggestions - 1. Website
     'suggestions.heading': 'Gợi ý Website',
@@ -231,8 +231,8 @@ const translations = {
     // Suggestions Page Header & Tabs
     'suggestionsPage.heading': 'Suggestions',
     'suggestionsPage.tabWebsite': '1. Website',
-    'suggestionsPage.tabVideo': '2. Video',
-    'suggestionsPage.tabReflection': '3. 4F Reflection',
+    'suggestionsPage.tabReflection': '2. 4F Reflection',
+    'suggestionsPage.tabVideo': '3. Video',
 
     // Suggestions - 1. Website
     'suggestions.heading': 'Website Ideas & Suggestions',

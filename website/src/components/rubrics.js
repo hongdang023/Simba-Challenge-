@@ -29,7 +29,7 @@ export function renderRubricsPage() {
           <div class="rubrics-tabs" role="tablist">
             <button class="rubrics-tab active" data-tab="website" role="tab" aria-selected="true">
               <svg class="icon icon--sm"><use href="/icons.svg#icon-box"></use></svg>
-              <span>1. Website / Product</span>
+              <span>1. Website</span>
             </button>
             <button class="rubrics-tab" data-tab="reflection" role="tab" aria-selected="false">
               <svg class="icon icon--sm"><use href="/icons.svg#icon-reflection"></use></svg>
