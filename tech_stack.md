@@ -45,7 +45,7 @@ This document defines the technology stack for the competition information websi
 
 - **Cloudflare Pages** — static site deployment
 - Deploy command: `npx wrangler pages deploy dist/`
-- Initial domain: `*.pages.dev` (custom domain to be configured later)
+- Custom domain: `challenge.sutucon.com` (Cloudflare Pages `simba-challenge.pages.dev`)
 - Build output directory: `dist/`
 
 ## Version Control

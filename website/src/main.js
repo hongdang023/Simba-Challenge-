@@ -17,23 +17,6 @@ import { renderOverviewPage } from './components/overview-page.js';
 import { renderRubricsPage } from './components/rubrics.js';
 import { renderFAQPage } from './components/faq.js';
 
-function renderFooter() {
-  const footer = document.createElement('footer');
-  footer.className = 'footer';
-
-  footer.innerHTML = `
-    <div class="container">
-      <p class="footer__message" data-i18n="footer.message">${t('footer.message')}</p>
-      <div class="footer__ctas">
-        <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="challenge.cta">${t('challenge.cta')}</a>
-      </div>
-      <p class="footer__brand" data-i18n="footer.brand">${t('footer.brand')}</p>
-    </div>
-  `;
-
-  return footer;
-}
-
 // Router to handle 3 dedicated pages
 function handleRoute() {
   const app = document.getElementById('app');
@@ -61,9 +44,6 @@ function handleRoute() {
   } else {
     app.appendChild(renderOverviewPage());
   }
-
-  // Render global footer
-  app.appendChild(renderFooter());
 
   // Update active state on navbar
   updateActiveNav(route);

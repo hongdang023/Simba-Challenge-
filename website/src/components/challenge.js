@@ -2,19 +2,13 @@ import { CONFIG } from '../config.js';
 import { t } from '../i18n.js';
 
 /**
- * Challenge section — with "Website Cá Nhân" badge above heading.
+ * Challenge section — "Website Cá Nhân" badge, "Em sẽ tạo sản phẩm gì?" heading,
+ * and the 3 submission cards (Website, Reflection, Video).
  */
 export function renderChallenge() {
   const section = document.createElement('section');
   section.id = 'challenge';
   section.className = 'section';
-
-  const points = [
-    { key: 'challenge.point1', icon: 'icon-user' },
-    { key: 'challenge.point2', icon: 'icon-heart' },
-    { key: 'challenge.point3', icon: 'icon-trophy' },
-    { key: 'challenge.point4', icon: 'icon-link' },
-  ];
 
   section.innerHTML = `
     <div class="container">
@@ -25,38 +19,43 @@ export function renderChallenge() {
         <h2 data-i18n="challenge.heading">${t('challenge.heading')}</h2>
       </div>
       
-      <p class="text-center text-muted" style="max-width: 650px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="challenge.intro">
-        ${t('challenge.intro')}
+      <p class="text-center text-muted" style="max-width: 680px; margin: 0 auto var(--space-2xl); font-size: var(--font-size-base);" data-i18n="howToJoin.subheading">
+        ${t('howToJoin.subheading')}
       </p>
 
-      <div class="challenge__points">
-        ${points.map(p => `
-          <div class="challenge__point">
-            <div class="challenge__point-icon">
-              <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#${p.icon}"></use></svg>
-            </div>
-            <div>
-              <p style="margin: 0; font-weight: 600; color: var(--color-midnight-blue);" data-i18n="${p.key}">${t(p.key)}</p>
-            </div>
+      <div class="submissions">
+        <!-- 1. Website / Product -->
+        <div class="card submission-card">
+          <div class="submission-card__icon-wrapper">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-box"></use></svg>
           </div>
-        `).join('')}
-      </div>
-
-      <div class="challenge__examples">
-        <div class="card">
-          <h4 data-i18n="challenge.example1Title">${t('challenge.example1Title')}</h4>
-          <p style="margin: 0; font-size: var(--font-size-sm);" data-i18n="challenge.example1">${t('challenge.example1')}</p>
+          <h4 data-i18n="howToJoin.sub1Title">${t('howToJoin.sub1Title')}</h4>
+          <p class="submission-card__where" style="color: var(--color-sunset-orange)" data-i18n="howToJoin.sub1Where">${t('howToJoin.sub1Where')}</p>
+          <p class="submission-card__what" data-i18n="howToJoin.sub1What">${t('howToJoin.sub1What')}</p>
+          <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="howToJoin.ctaWebsite">${t('howToJoin.ctaWebsite')}</a>
         </div>
-        <div class="card">
-          <h4 data-i18n="challenge.example2Title">${t('challenge.example2Title')}</h4>
-          <p style="margin: 0; font-size: var(--font-size-sm);" data-i18n="challenge.example2">${t('challenge.example2')}</p>
+
+        <!-- 2. 4F Reflection -->
+        <div class="card submission-card">
+          <div class="submission-card__icon-wrapper">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-reflection"></use></svg>
+          </div>
+          <h4 data-i18n="howToJoin.sub2Title">${t('howToJoin.sub2Title')}</h4>
+          <p class="submission-card__where" style="color: var(--color-lion-orange)" data-i18n="howToJoin.sub2Where">${t('howToJoin.sub2Where')}</p>
+          <p class="submission-card__what" data-i18n="howToJoin.sub2What">${t('howToJoin.sub2What')}</p>
+          <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--secondary btn--small" data-i18n="howToJoin.ctaReflection">${t('howToJoin.ctaReflection')}</a>
         </div>
-      </div>
 
-      <div class="blockquote" data-i18n="challenge.note">${t('challenge.note')}</div>
-
-      <div class="text-center" style="margin-top: var(--space-xl);">
-        <a href="${CONFIG.simbaUrl}" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="challenge.cta">${t('challenge.cta')}</a>
+        <!-- 3. Introduction Video -->
+        <div class="card submission-card">
+          <div class="submission-card__icon-wrapper">
+            <svg class="icon icon--lg" aria-hidden="true"><use href="/icons.svg#icon-video"></use></svg>
+          </div>
+          <h4 data-i18n="howToJoin.sub3Title">${t('howToJoin.sub3Title')}</h4>
+          <p class="submission-card__where" style="color: var(--color-midnight-blue)" data-i18n="howToJoin.sub3Where">${t('howToJoin.sub3Where')}</p>
+          <p class="submission-card__what" data-i18n="howToJoin.sub3What">${t('howToJoin.sub3What')}</p>
+          <a href="${CONFIG.zaloGroupUrl}" target="_blank" rel="noopener" class="btn btn--outline btn--small" data-i18n="howToJoin.videoNote">${t('howToJoin.videoNote')}</a>
+        </div>
       </div>
     </div>
   `;

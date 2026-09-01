@@ -70,7 +70,7 @@ const translations = {
     'awards.heading': 'Giải thưởng',
     'awards.sec1Title': 'Dành cho tất cả học sinh tham gia',
     'awards.item1Title': 'Domain cá nhân 1 năm (10$–15$)',
-    'awards.item1Desc': 'Domain riêng chính chủ trong 1 năm (như các Mentor).',
+    'awards.item1Desc': 'Domain cá nhân đuôi .com như anhdac.com, thongphan.com (như các mentor).',
     'awards.item2Title': 'Chứng nhận hoàn thành Challenge',
     'awards.item2Desc': 'Chứng nhận chính thức từ Sư Tử Con.',
     
@@ -206,7 +206,7 @@ const translations = {
     'awards.heading': 'Awards & Prizes',
     'awards.sec1Title': 'For All Participants',
     'awards.item1Title': '1-Year Custom Domain ($10–$15)',
-    'awards.item1Desc': 'Your own custom domain for 1 year (just like mentors).',
+    'awards.item1Desc': 'Personal .com domain like anhdac.com, thongphan.com (just like mentors).',
     'awards.item2Title': 'Completion Certificate',
     'awards.item2Desc': 'Official Certificate from Sư Tử Con.',
     

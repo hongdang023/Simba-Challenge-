@@ -12,9 +12,7 @@ export const CONFIG = {
   logoSrc: '/assets/sutucon-logo-horizontal-light.svg',
   iconSrc: '/assets/sutucon-icon-orange.svg',
   mentorDomains: [
-    { name: 'Mentor Đặng Hồng', domain: 'danghong.me', url: 'https://danghong.me' },
     { name: 'Mentor Anh Đắc', domain: 'anhdac.com', url: 'https://anhdac.com' },
-    { name: 'Mentor Phan Việt', domain: 'phanviet.me', url: 'https://phanviet.me' },
     { name: 'Mentor Thông Phan', domain: 'thongphan.com', url: 'https://thongphan.com' },
   ],
 };
