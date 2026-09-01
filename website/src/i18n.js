@@ -100,9 +100,9 @@ const translations = {
     'timeline.thChannel': 'Kênh nộp',
     'timeline.thPurpose': 'Mục đích và quy định',
     'timeline.noteTitle': 'Lưu ý quan trọng',
-    'timeline.note1': 'Checkpoint 1 và Checkpoint 2 là các mốc nhận feedback trong quá trình làm bài. Mentor duyệt Checkpoint 2 chỉ có nghĩa là học sinh được phép mua domain, không phải kết quả chấm chính thức.',
-    'timeline.note2': 'Checkpoint 3 là mốc nộp video để mentor kiểm tra. Học sinh vẫn được chỉnh sửa Website, 4F Reflection và Video trước hạn chốt bài cuối.',
-    'timeline.note3': 'Bản cuối cùng của đầy đủ Website, 4F Reflection và Video được nộp đúng hạn ngày 06/09/2026 sẽ tự động là phiên bản duy nhất được dùng để chấm chính thức.',
+    'timeline.note1': 'Checkpoint 1 và Checkpoint 2 là các mốc nhận feedback trong quá trình làm bài. Mentor duyệt Checkpoint 2 chỉ có nghĩa là học sinh đủ điều kiện mua domain, không phải kết quả chấm chính thức.',
+    'timeline.note2': 'Checkpoint 3 là mốc nộp video để mentor góp ý nâng cấp. Học sinh vẫn được chỉnh sửa Website, 4F Reflection và Video trước hạn chốt bài cuối.',
+    'timeline.note3': 'Bản cuối cùng gồm đầy đủ Website, 4F Reflection và Video được nộp đúng hạn ngày 06/09/2026 sẽ là phiên bản duy nhất được dùng để chấm và lựa chọn ra Top 3.',
 
     // Awards
     'awards.heading': 'Giải thưởng',
@@ -275,8 +275,8 @@ const translations = {
     'timeline.thPurpose': 'Purpose & Guidelines',
     'timeline.noteTitle': 'Important Notes',
     'timeline.note1': 'Checkpoint 1 and Checkpoint 2 are feedback milestones during the project. Mentor approval at Checkpoint 2 only means the student is eligible to purchase the domain, not the final evaluation.',
-    'timeline.note2': 'Checkpoint 3 is for mentor review of the draft video. Students can still refine their Website, 4F Reflection, and Video before the final deadline.',
-    'timeline.note3': 'The final versions of Website, 4F Reflection, and Video submitted on time by 06/09/2026 will automatically be the only official versions evaluated.',
+    'timeline.note2': 'Checkpoint 3 is for mentors to provide feedback and upgrade suggestions for the draft video. Students can still refine their Website, 4F Reflection, and Video before the final deadline.',
+    'timeline.note3': 'The final version consisting of Website, 4F Reflection, and Video submitted on time by 06/09/2026 will be the only version used for evaluation and selecting the Top 3.',
 
     // Awards
     'awards.heading': 'Awards & Prizes',
