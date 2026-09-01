@@ -13,7 +13,6 @@ export function renderFAQPage() {
     {
       titleKey: 'faq.cat1',
       items: [
-        { q: 'faq.q1_1', a: 'faq.a1_1' },
         { q: 'faq.q1_2', a: 'faq.a1_2' },
         { q: 'faq.q1_3', a: 'faq.a1_3' },
       ],
