@@ -6,7 +6,7 @@ import { renderRules } from './rules.js';
 
 /**
  * Dedicated Page 1: Tổng quan (Overview page).
- * Flow: Hero -> Giải thưởng -> Thử thách ("Em sẽ tạo sản phẩm gì?") -> Gợi ý website -> Tiêu chuẩn bài làm.
+ * Flow: Hero -> Giải thưởng -> Thử thách ("Em sẽ tạo sản phẩm gì?") -> Quy định bài làm -> Gợi ý website & video.
  */
 export function renderOverviewPage() {
   const page = document.createElement('div');
@@ -22,11 +22,11 @@ export function renderOverviewPage() {
   // 3. Thử thách ("Em sẽ tạo sản phẩm gì?")
   page.appendChild(renderChallenge());
 
-  // 4. Gợi ý website
-  page.appendChild(renderSuggestions());
-
-  // 5. Tiêu chuẩn bài làm
+  // 4. Quy định bài làm
   page.appendChild(renderRules());
+
+  // 5. Gợi ý website & video
+  page.appendChild(renderSuggestions());
 
   return page;
 }
