@@ -7,6 +7,7 @@ const translations = {
   vi: {
     // Navbar
     'nav.overview': 'Tổng quan',
+    'nav.suggestions': 'Gợi ý làm bài',
     'nav.rubrics': 'Tiêu chuẩn đánh giá',
     'nav.faq': 'Câu hỏi thường gặp',
 
@@ -21,8 +22,15 @@ const translations = {
     'challenge.badge': 'Website Cá Nhân',
     'challenge.heading': 'Em sẽ tạo sản phẩm gì?',
 
-    // Suggestions
-    'suggestions.heading': 'Gợi ý website',
+    // Suggestions Page Header & Tabs
+    'suggestionsPage.heading': 'Gợi ý làm bài',
+    'suggestionsPage.subheading': 'Khung sườn và hướng dẫn chi tiết giúp con hoàn thiện xuất sắc Website, Video giới thiệu và bài viết 4F Reflection.',
+    'suggestionsPage.tabWebsite': '1. Gợi ý Website',
+    'suggestionsPage.tabVideo': '2. Gợi ý cho Video',
+    'suggestionsPage.tabReflection': '3. Gợi ý 4F Reflection',
+
+    // Suggestions - 1. Website
+    'suggestions.heading': 'Gợi ý Website',
     'challenge.intro': 'Tạo Website cá nhân giúp một người xem cụ thể hiểu về:',
     'challenge.point1': 'Em là ai.',
     'challenge.point2': 'Em thích hoặc quan tâm điều gì.',
@@ -35,8 +43,8 @@ const translations = {
     'challenge.note': 'Website không cần giống bài mẫu. Điều quan trọng là con hiểu người xem, giải thích được lựa chọn của mình và có bằng chứng phù hợp.',
     'challenge.cta': 'Làm Website trên Simba',
 
-    // Video Suggestions
-    'videoSuggestions.heading': 'Gợi ý cho video',
+    // Suggestions - 2. Video
+    'videoSuggestions.heading': 'Gợi ý cho Video',
     'videoSuggestions.subheading': 'Con có thể tham khảo cấu trúc gợi ý dưới đây khi quay video giới thiệu:',
     'videoSuggestions.step1Title': '1. Giới thiệu',
     'videoSuggestions.step1Quote': '“Xin chào, mình là…”',
@@ -55,6 +63,31 @@ const translations = {
     'videoSuggestions.step8Title': '8. Lời kết',
     'videoSuggestions.step8Quote': '“Mời mọi người ghé thăm website của mình…”',
     'videoSuggestions.note': 'Con không cần phải nói từng câu rập khuôn từng chữ theo mẫu. Cấu trúc này là khung sườn gợi ý giúp con tự tin nói lưu loát, không phải là kịch bản bắt buộc phải học thuộc lòng.',
+
+    // Suggestions - 3. 4F Reflection
+    'reflectionSuggestions.heading': 'Gợi ý viết 4F Reflection',
+    'reflectionSuggestions.subheading': 'Khung câu hỏi gợi ý giúp con hoàn thành 4 phần Facts - Feelings - Findings - Future:',
+    'reflectionSuggestions.factsTitle': 'Facts (Sự thật & Quá trình)',
+    'reflectionSuggestions.facts1': 'Con đã làm những phần nào của website?',
+    'reflectionSuggestions.facts2': 'Con đã gặp vấn đề hoặc sự kiện đáng nhớ nào?',
+    'reflectionSuggestions.facts3': 'Con đã nhận được feedback gì từ người xem?',
+    
+    'reflectionSuggestions.feelingsTitle': 'Feelings (Cảm xúc)',
+    'reflectionSuggestions.feelings1': 'Con cảm thấy thế nào khi bắt đầu và hoàn thành website?',
+    'reflectionSuggestions.feelings2': 'Phần nào khiến con vui, khó hoặc bất ngờ nhất?',
+    'reflectionSuggestions.feelings3': 'Cảm xúc của con thay đổi thế nào sau khi nhận feedback?',
+
+    'reflectionSuggestions.findingsTitle': 'Findings (Bài học rút ra)',
+    'reflectionSuggestions.findings1': 'Con đã học được gì về cách xây website?',
+    'reflectionSuggestions.findings2': 'Con hiểu thêm gì về người xem và nhu cầu của họ?',
+    'reflectionSuggestions.findings3': 'Điều gì trong website đã thay đổi sau quá trình thử nghiệm?',
+
+    'reflectionSuggestions.futureTitle': 'Future (Tương lai & Ứng dụng)',
+    'reflectionSuggestions.future1': 'Nếu có thêm thời gian, con muốn cải thiện điều gì?',
+    'reflectionSuggestions.future2': 'Con sẽ làm gì để website hữu ích hơn với người xem?',
+    'reflectionSuggestions.future3': 'Con muốn áp dụng bài học này vào sản phẩm nào tiếp theo?',
+
+    'reflectionSuggestions.note': 'Hãy viết bằng lời của mình. Không cần viết thật “hay” hay cố đạt điểm AI cao; điều quan trọng là con hiểu mình đã học được gì và sẽ làm gì tiếp theo.',
 
     // How to Join
     'howToJoin.heading': 'Cách tham gia',
@@ -181,6 +214,7 @@ const translations = {
   en: {
     // Navbar
     'nav.overview': 'Overview',
+    'nav.suggestions': 'Suggestions',
     'nav.rubrics': 'Assessment Rubrics',
     'nav.faq': 'FAQ',
 
@@ -195,8 +229,15 @@ const translations = {
     'challenge.badge': 'Personal Website',
     'challenge.heading': 'What will you create?',
 
-    // Suggestions
-    'suggestions.heading': 'Website Ideas',
+    // Suggestions Page Header & Tabs
+    'suggestionsPage.heading': 'Project Suggestions & Guides',
+    'suggestionsPage.subheading': 'Helpful frameworks and suggestions to help you excel in your Website, Video, and 4F Reflection.',
+    'suggestionsPage.tabWebsite': '1. Website Suggestions',
+    'suggestionsPage.tabVideo': '2. Video Structure',
+    'suggestionsPage.tabReflection': '3. 4F Reflection Guide',
+
+    // Suggestions - 1. Website
+    'suggestions.heading': 'Website Ideas & Suggestions',
     'challenge.intro': 'Create a Personal Website helping a specific viewer understand:',
     'challenge.point1': 'Who you are.',
     'challenge.point2': 'What you like or care about.',
@@ -209,7 +250,7 @@ const translations = {
     'challenge.note': 'Your website does not need to look like the examples. What matters is that you understand your viewer, explain your choices and provide suitable evidence.',
     'challenge.cta': 'Submit on Simba',
 
-    // Video Suggestions
+    // Suggestions - 2. Video
     'videoSuggestions.heading': 'Suggested Video Structure',
     'videoSuggestions.subheading': 'Students may follow this suggested structure when recording the video:',
     'videoSuggestions.step1Title': '1. Introduction',
@@ -229,6 +270,31 @@ const translations = {
     'videoSuggestions.step8Title': '8. Closing',
     'videoSuggestions.step8Quote': '“I invite everyone to visit my website…”',
     'videoSuggestions.note': 'Students do not need to say every sentence exactly as written. The structure is a guide, not a script that must be memorized.',
+
+    // Suggestions - 3. 4F Reflection
+    'reflectionSuggestions.heading': '4F Reflection Writing Guide',
+    'reflectionSuggestions.subheading': 'Guiding prompts for Facts - Feelings - Findings - Future:',
+    'reflectionSuggestions.factsTitle': 'Facts (Process & Reality)',
+    'reflectionSuggestions.facts1': 'Which parts of the website did you create?',
+    'reflectionSuggestions.facts2': 'What challenges or memorable moments did you encounter?',
+    'reflectionSuggestions.facts3': 'What feedback did you receive from viewers?',
+    
+    'reflectionSuggestions.feelingsTitle': 'Feelings (Emotions & Experiences)',
+    'reflectionSuggestions.feelings1': 'How did you feel when starting and finishing the website?',
+    'reflectionSuggestions.feelings2': 'Which part made you happiest, most challenged, or most surprised?',
+    'reflectionSuggestions.feelings3': 'How did your feelings evolve after receiving feedback?',
+
+    'reflectionSuggestions.findingsTitle': 'Findings (Lessons Learned)',
+    'reflectionSuggestions.findings1': 'What did you learn about building a website?',
+    'reflectionSuggestions.findings2': 'What more did you understand about your audience and their needs?',
+    'reflectionSuggestions.findings3': 'What on your website changed after testing with users?',
+
+    'reflectionSuggestions.futureTitle': 'Future (Next Steps & Applications)',
+    'reflectionSuggestions.future1': 'If you had more time, what would you improve?',
+    'reflectionSuggestions.future2': 'How will you make the website even more valuable for viewers?',
+    'reflectionSuggestions.future3': 'Which future project do you want to apply these lessons to?',
+
+    'reflectionSuggestions.note': 'Write in your own words. You don’t need fancy wording or try to chase high AI scores; what matters is truly understanding what you learned and what you will do next.',
 
     // How to Join
     'howToJoin.heading': 'How to Join',

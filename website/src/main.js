@@ -14,10 +14,11 @@ import { CONFIG } from './config.js';
 import { t, getLang } from './i18n.js';
 import { renderNavbar, updateActiveNav } from './components/navbar.js';
 import { renderOverviewPage } from './components/overview-page.js';
+import { renderSuggestionsPage } from './components/suggestions.js';
 import { renderRubricsPage } from './components/rubrics.js';
 import { renderFAQPage } from './components/faq.js';
 
-// Router to handle 3 dedicated pages
+// Router to handle 4 dedicated pages
 function handleRoute() {
   const app = document.getElementById('app');
   if (!app) return;
@@ -25,7 +26,9 @@ function handleRoute() {
   const rawHash = window.location.hash || '#/';
   // Normalize route
   let route = 'overview';
-  if (rawHash.startsWith('#/rubrics')) {
+  if (rawHash.startsWith('#/suggestions')) {
+    route = 'suggestions';
+  } else if (rawHash.startsWith('#/rubrics')) {
     route = 'rubrics';
   } else if (rawHash.startsWith('#/faq')) {
     route = 'faq';
@@ -37,7 +40,9 @@ function handleRoute() {
   app.innerHTML = '';
 
   // Render dedicated page
-  if (route === 'rubrics') {
+  if (route === 'suggestions') {
+    app.appendChild(renderSuggestionsPage());
+  } else if (route === 'rubrics') {
     app.appendChild(renderRubricsPage());
   } else if (route === 'faq') {
     app.appendChild(renderFAQPage());

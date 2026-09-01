@@ -12,6 +12,7 @@ export function renderNavbar() {
 
   const pages = [
     { route: 'overview', key: 'nav.overview', href: '#/' },
+    { route: 'suggestions', key: 'nav.suggestions', href: '#/suggestions' },
     { route: 'rubrics', key: 'nav.rubrics', href: '#/rubrics' },
     { route: 'faq', key: 'nav.faq', href: '#/faq' },
   ];

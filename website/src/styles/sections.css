@@ -857,4 +857,107 @@
   line-height: 1.6;
 }
 
+/* ---------- 4F Reflection Suggestions Styles ---------- */
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.reflection-card {
+  background: var(--color-sand-beige);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: all var(--transition-fast);
+}
+
+.reflection-card:hover {
+  border-color: var(--color-sunset-orange);
+  box-shadow: var(--shadow-sm);
+}
+
+.reflection-card__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.reflection-card__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.reflection-card--facts .reflection-card__icon {
+  border-color: #3B82F6;
+  background: rgba(59, 130, 246, 0.08);
+}
+.reflection-card--facts .reflection-card__icon .icon {
+  stroke: #2563EB;
+}
+
+.reflection-card--feelings .reflection-card__icon {
+  border-color: #EC4899;
+  background: rgba(236, 72, 153, 0.08);
+}
+.reflection-card--feelings .reflection-card__icon .icon {
+  stroke: #DB2777;
+}
+
+.reflection-card--findings .reflection-card__icon {
+  border-color: #EAB308;
+  background: rgba(234, 179, 8, 0.08);
+}
+.reflection-card--findings .reflection-card__icon .icon {
+  stroke: #CA8A04;
+}
+
+.reflection-card--future .reflection-card__icon {
+  border-color: #10B981;
+  background: rgba(16, 185, 129, 0.08);
+}
+.reflection-card--future .reflection-card__icon .icon {
+  stroke: #059669;
+}
+
+.reflection-card__title {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-midnight-blue);
+}
+
+.reflection-card__list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reflection-card__list li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .reflection-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
