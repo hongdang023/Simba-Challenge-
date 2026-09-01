@@ -2,7 +2,7 @@ import { t, getLang } from "../i18n.js";
 import { TIMELINE_DATA } from "../timeline-data.js";
 
 /**
- * Timeline component — Lịch trình cuộc thi chi tiết & Lưu ý quan trọng
+ * Timeline component — Lịch trình cuộc thi chi tiết (2 cột: Thời gian | Học sinh cần làm) & Lưu ý quan trọng
  */
 export function renderTimeline() {
   const section = document.createElement("section");
@@ -26,10 +26,8 @@ export function renderTimeline() {
         <table class="timeline-table">
           <thead>
             <tr>
-              <th style="width: 22%;" data-i18n="timeline.thTime">${t("timeline.thTime")}</th>
-              <th style="width: 28%;" data-i18n="timeline.thActivity">${t("timeline.thActivity")}</th>
-              <th style="width: 20%;" data-i18n="timeline.thChannel">${t("timeline.thChannel")}</th>
-              <th style="width: 30%;" data-i18n="timeline.thPurpose">${t("timeline.thPurpose")}</th>
+              <th style="width: 28%;" data-i18n="timeline.thTime">${t("timeline.thTime")}</th>
+              <th style="width: 72%;" data-i18n="timeline.thStudentAction">${t("timeline.thStudentAction")}</th>
             </tr>
           </thead>
           <tbody>
@@ -43,12 +41,6 @@ export function renderTimeline() {
                   </td>
                   <td class="timeline-cell-activity">
                     <span>${data.activity}</span>
-                  </td>
-                  <td class="timeline-cell-channel">
-                    <span class="timeline-channel-tag">${data.channel}</span>
-                  </td>
-                  <td class="timeline-cell-purpose">
-                    <span>${data.purpose}</span>
                   </td>
                 </tr>
               `;

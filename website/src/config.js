@@ -9,6 +9,7 @@ export const CONFIG = {
   deadline: '2026-09-06T23:59:00+07:00',
   simbaUrl: 'https://simba.sutucon.com/',
   zaloGroupUrl: 'https://zalo.me/g/hyr5ti6kuvnyj4hgtvgj',
+  videoDriveUrl: 'https://drive.google.com/drive/folders/1mNEV0iGc9y3sPwZIVIEWsNLNwmTU7aX3?usp=drive_link',
   logoSrc: '/assets/sutucon-logo-horizontal-light.svg',
   iconSrc: '/assets/sutucon-icon-orange.svg',
   mentorDomains: [

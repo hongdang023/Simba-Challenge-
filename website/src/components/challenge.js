@@ -51,7 +51,7 @@ export function renderChallenge() {
           </div>
           <h4 data-i18n="howToJoin.sub3Title">${t('howToJoin.sub3Title')}</h4>
           <p class="submission-card__what" data-i18n="howToJoin.sub3What">${t('howToJoin.sub3What')}</p>
-          <a href="${CONFIG.zaloGroupUrl}" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="howToJoin.videoNote">${t('howToJoin.videoNote')}</a>
+          <a href="${CONFIG.videoDriveUrl}" target="_blank" rel="noopener" class="btn btn--primary btn--small" data-i18n="howToJoin.ctaVideo">${t('howToJoin.ctaVideo')}</a>
         </div>
       </div>
     </div>
