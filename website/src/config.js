@@ -15,5 +15,7 @@ export const CONFIG = {
   mentorDomains: [
     { name: 'Mentor Anh Đắc', domain: 'anhdac.com', url: 'https://anhdac.com' },
     { name: 'Mentor Thông Phan', domain: 'thongphan.com', url: 'https://thongphan.com' },
+    { name: 'Mentor Đặng Hồng', domain: 'danghong.me', url: 'https://danghong.me' },
+    { name: 'Mentor Phan Việt', domain: 'phanviet.me', url: 'https://phanviet.me' },
   ],
 };

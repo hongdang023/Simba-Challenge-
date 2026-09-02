@@ -166,7 +166,7 @@ const translations = {
     'awards.award3Desc': 'Bài phản tư 4F sâu sắc và hành động tương lai rõ ràng nhất.',
     
     'awards.certBadge': 'Kèm Chứng nhận Top 3',
-    'awards.mentorTitle': 'THAM KHẢO DOMAIN CỦA CÁC MENTOR',
+    'awards.mentorTitle': 'THAM KHẢO WEBSITE CỦA CÁC MENTOR',
 
     // Rubrics
     'rubrics.heading': 'Tiêu chuẩn đánh giá',
@@ -380,7 +380,7 @@ const translations = {
     'awards.award3Desc': 'Deepest reflection with actionable next steps.',
     
     'awards.certBadge': 'Includes Top 3 Certificate',
-    'awards.mentorTitle': 'EXPLORE MENTORS\' DOMAINS',
+    'awards.mentorTitle': 'EXPLORE MENTORS\' WEBSITES',
 
     // Rubrics
     'rubrics.heading': 'Assessment Rubrics',
