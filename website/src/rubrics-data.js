@@ -180,7 +180,7 @@ export const RUBRICS_DATA = {
 
     video: {
       title: 'Tiêu chuẩn đánh giá Video',
-      desc: 'Mentor đánh giá video dựa trên 4 tiêu chí theo 5 cấp độ chuẩn hoá.',
+      desc: 'Mentor đánh giá video dựa trên 5 tiêu chí theo 5 cấp độ chuẩn hoá.',
       criteria: [
         {
           id: 'criterion-1',
@@ -228,6 +228,18 @@ export const RUBRICS_DATA = {
             { lvl: '2. DEVELOPING', text: 'Học sinh nhắc đến bài học hoặc bước tiếp theo chung chung, chưa liên kết chặt chẽ với quá trình làm bài.' },
             { lvl: '3. PROFICIENT', text: 'Học sinh giải thích một điều cụ thể mình đã học/đã làm và một bước đi thực tế tiếp theo.' },
             { lvl: '4. EXCELLENT', text: 'Học sinh chia sẻ một Finding sâu sắc và một hành động Future cụ thể, cho thấy trải nghiệm này định hình sản phẩm tương lai ra sao.' },
+          ]
+        },
+        {
+          id: 'criterion-5',
+          title: '5. Quy chuẩn video & Tính chân thực',
+          desc: 'Đánh giá việc tuân thủ thời lượng 60–90s, sự xuất hiện của khuôn mặt thật, giọng nói thật và thao tác quay màn hình website.',
+          levels: [
+            { lvl: '0. NOVICE', text: 'Không có mặt thật hoặc không có giọng nói thật; không quay màn hình website hoặc video không xem được.' },
+            { lvl: '1. BEGINNER', text: 'Video quá ngắn (<45s) hoặc quá dài (>2 phút); thiếu mặt thật hoặc dùng giọng đọc AI/nhạc nền át tiếng nói.' },
+            { lvl: '2. DEVELOPING', text: 'Có mặt thật và giọng thật nhưng thao tác trên màn hình web chưa rõ ràng, hoặc thời lượng còn lệch nhẹ so với chuẩn 60–90s.' },
+            { lvl: '3. PROFICIENT', text: 'Đạt chuẩn 100%: thời lượng 60–90s, xuất hiện khuôn mặt rõ ràng, giọng nói tự nhiên và quay màn hình website đang hoạt động mượt mà.' },
+            { lvl: '4. EXCELLENT', text: 'Video đạt chuẩn thời lượng 60–90s hoàn hảo; hình ảnh/âm thanh sắc nét; phong thái tự tin, tương tác mượt mà và cuốn hút giữa người nói và màn hình web.' },
           ]
         }
       ]
@@ -410,7 +422,7 @@ export const RUBRICS_DATA = {
 
     video: {
       title: 'Video Assessment Rubric',
-      desc: 'The mentor assesses the video using four criteria across five standardized levels.',
+      desc: 'The mentor assesses the video using five criteria across five standardized levels.',
       criteria: [
         {
           id: 'criterion-1',
@@ -458,6 +470,18 @@ export const RUBRICS_DATA = {
             { lvl: '2. DEVELOPING', text: 'The student mentions a general lesson or next step, but it is not connected clearly to the process.' },
             { lvl: '3. PROFICIENT', text: 'The student explains one specific thing they learned or did, and one realistic next step.' },
             { lvl: '4. EXCELLENT', text: 'The student explains a meaningful Finding and a concrete Future action, showing how the experience may influence their next product or learning activity.' },
+          ]
+        },
+        {
+          id: 'criterion-5',
+          title: '5. Video Standards & Authenticity',
+          desc: 'Evaluates adherence to 60–90s duration, real face, real voice, and on-screen website interaction.',
+          levels: [
+            { lvl: '0. NOVICE', text: 'No real face or real voice; does not show website on screen or video cannot be viewed.' },
+            { lvl: '1. BEGINNER', text: 'Video is too short (<45s) or too long (>2 mins); missing real face or uses AI voice/loud background music.' },
+            { lvl: '2. DEVELOPING', text: 'Has real face and voice, but website screen interaction is unclear, or duration is slightly off 60–90s.' },
+            { lvl: '3. PROFICIENT', text: 'Fully meets standards: 60–90s duration, clear face visibility, natural voice, and smooth live website demonstration.' },
+            { lvl: '4. EXCELLENT', text: 'Flawless 60–90s duration; crisp video and audio; confident delivery with engaging and seamless interaction between presenter and website.' },
           ]
         }
       ]
