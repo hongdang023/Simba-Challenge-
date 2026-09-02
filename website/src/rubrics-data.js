@@ -12,7 +12,7 @@ export const RUBRICS_DATA = {
         {
           id: 'user-understanding',
           name: '1. Hiểu người dùng',
-          desc: 'Product cho thấy con hiểu rõ người dùng và nhu cầu thật của họ.',
+          desc: 'Product cho thấy em hiểu rõ người dùng và nhu cầu thật của họ.',
           criteria: [
             {
               title: 'Mô tả audience cụ thể',
@@ -29,7 +29,7 @@ export const RUBRICS_DATA = {
               levels: [
                 { lvl: '0. NOVICE', text: 'Chưa nêu được nhu cầu của người xem.' },
                 { lvl: '1. BEGINNER', text: 'Nhu cầu còn mông lung, chưa gắn liền với nội dung web.' },
-                { lvl: '2. DEVELOPING', text: 'Chỉ ra được nhu cầu cơ bản (muốn biết thông tin về con).' },
+                { lvl: '2. DEVELOPING', text: 'Chỉ ra được nhu cầu cơ bản (muốn biết thông tin về em).' },
                 { lvl: '3. PROFICIENT', text: 'Nêu rõ nhu cầu cụ thể của người xem và cách website đáp ứng.' },
                 { lvl: '4. EXCELLENT', text: 'Lập luận sắc bén về nhu cầu và kỳ vọng của người xem khi trải nghiệm trang web.' },
               ]
@@ -66,8 +66,8 @@ export const RUBRICS_DATA = {
               levels: [
                 { lvl: '0. NOVICE', text: 'Người xem không nhận được giá trị gì sau khi đọc.' },
                 { lvl: '1. BEGINNER', text: 'Người xem nắm được thông tin sơ lược nhưng chưa ấn tượng.' },
-                { lvl: '2. DEVELOPING', text: 'Người xem hiểu được con là ai và biết thêm một sở thích hoặc thành tích.' },
-                { lvl: '3. PROFICIENT', text: 'Người xem cảm thấy thú vị, hiểu rõ thế giới và những điều con tự hào.' },
+                { lvl: '2. DEVELOPING', text: 'Người xem hiểu được em là ai và biết thêm một sở thích hoặc thành tích.' },
+                { lvl: '3. PROFICIENT', text: 'Người xem cảm thấy thú vị, hiểu rõ thế giới và những điều em tự hào.' },
                 { lvl: '4. EXCELLENT', text: 'Tạo cảm xúc mạnh mẽ, kết nối sâu sắc và truyền cảm hứng cho người xem.' },
               ]
             },
@@ -78,7 +78,7 @@ export const RUBRICS_DATA = {
                 { lvl: '1. BEGINNER', text: 'Xem được nhưng trải nghiệm chưa tối ưu trên các thiết bị.' },
                 { lvl: '2. DEVELOPING', text: 'Giao diện thân thiện, dễ đọc, hình ảnh hiển thị rõ ràng.' },
                 { lvl: '3. PROFICIENT', text: 'Trải nghiệm mượt mà trên cả máy tính và điện thoại, ngôn từ tự nhiên.' },
-                { lvl: '4. EXCELLENT', text: 'Phong cách thiết kế hoàn toàn ăn khớp với tính cách của con và người xem.' },
+                { lvl: '4. EXCELLENT', text: 'Phong cách thiết kế hoàn toàn ăn khớp với tính cách của em và người xem.' },
               ]
             }
           ]
